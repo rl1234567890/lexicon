@@ -1,0 +1,4259 @@
+\documentclass{book}
+\usepackage[margin=0.5in, paperwidth=6in, paperheight=9in]{geometry}
+%\usepackage{titlesec}
+
+\usepackage{fancyhdr}
+
+\usepackage{multicol}
+
+% xindy -C utf8 -M texindy -M page-ranges -M RL_module.xdy -I latex lexicon.idx
+
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+ \usepackage{times}
+\usepackage{polyglossia}
+\setmainlanguage[variant=ancient]{greek}
+
+\usepackage{makeidx}
+\makeatletter
+  \def\@wrindex#1{%
+    \protected@write\@indexfile{}%
+      {\string\indexentry{#1}{\thesubsection}}
+    \endgroup
+  \@esphack}
+
+
+ \setromanfont{FreeSerif}
+\setsansfont{FreeSans}
+\setmonofont{FreeMono}
+\setmainfont{DejaVuSerif}
+
+%
+\usepackage{chngcntr}
+\counterwithout{section}{chapter}
+
+% \makeindex[columns=1,options=-M texindy -L greek -C utf8]
+\makeindex
+
+
+
+\title{ΛΕΞΙΚΟΝ ΕΛΛΗΝΙΚΟΝ}
+\author{}
+\date{ }
+
+%
+%\titlespacing\subsection{0pt}{20pt plus 4pt minus 2pt}{20pt plus 2pt minus 2pt}
+
+\begin{document}
+%\pagestyle{fancy}
+%\fancyhead[RE,LO]{}
+%\renewcommand{\headrulewidth}{0pt}
+\frontmatter                            % only in book class (roman page #s)
+%\maketitle
+
+% \setlength\parindent{0pt}
+\setlength\parskip{0pt} 
+\renewcommand\contentsname{περιεχόμενα}
+\renewcommand\indexname{εὑρετήριον}
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{2}
+
+
+%\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+%                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+%                                     {1.5ex \@plus .2ex}%
+%                                     {\normalfont}}% from \large
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {0ex\@plus -1ex \@minus -.2ex}%
+                                     {0ex \@plus .2ex}%
+                                     {\raggedright\normalfont}}% from \large
+
+\newcommand{\e}[1]{\subsection{#1}\index{#1}}
+\newcommand{\ee}[1]{~\\ #1\index{#1}}
+\begin{titlepage}
+~\vspace{2cm}
+\begin{center}
+{\Huge ΛΕΞΙΚΟΝ ΕΛΛΗΝΙΚΟΝ}    \\[1cm]
+ἔκδοσις 1.1 \\[1cm]
+\large ὑπὸ Βεδυεροῦ παρεσκευασμένον \\
+καὶ \\
+ὑπὸ Νικολάου Νικολάου διωρθωμένον 
+%\Large Bedwere \\[2cm] % \textit{et al.} 
+%\normalsize 5th Revision
+\end{center}
+\vfill
+\begin{center}
+\includegraphics[width=2cm]{templars.eps}\\
+Κύριε Ἰησοῦ Χριστέ, Υἱὲ τοῦ Θεοῦ,\\
+ ἐλέησόν με τὸν ἁμαρτωλόν.
+\end{center}
+\newpage
+\thispagestyle{empty}
+~\vfill
+\href{https://creativecommons.org/licenses/by/4.0/}{
+\begin{center}
+%\includegraphics[width=2cm]{320px-CC-BY-SA_icon.svg.png}
+\includegraphics[width=2cm]{by.pdf} \\
+CC BY 4.0
+\end{center}}
+
+\end{titlepage}
+\mainmatter                             % only in book class (arabic page #s)
+
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\pagestyle{plain}
+\section*{εἰσαγωγή}
+\addcontentsline{toc}{section}{εἰσαγωγή}
+χαῖρε, ὦ φίλε ἀναγνῶστα. σύγε τούτῳ τῷ λεξικῷ χρώμενος, οὐ μόνον γράψεις τε καὶ
+λαλήσεις περὶ τὰ καθ' ἡμέραν τῶν  ἀρχαίων Ἑλλήνων ἀλλὰ καὶ περὶ τὰ τῶν νῦν ἀνθρώπων. 
+αὕτη γάρ ἐστιν ἡ εἰς τὴν Ἑλληνικὴν γλῶσσαν μετάφρασις τοῦδε τοῦ ἐνδόξου Ῥωμαϊκοῦ λεξικοῦ 
+\begin{flushleft}
+Sigrides Albert  \\
+Imaginum Vocabularium Latinum  \\
+Secunda editio aucta. \\
+Saraviponti 2009 \\
+ISBN 978-3-923587-55-4 \\
+\url{http://www.voxlatina.uni-saarland.de/}
+\end{flushleft}
+χάριν δὲ πολλὴν ἔχω τῇ Σιγρίδει Ἄλβερτ ὅτι ἐξουσίαν  μοι ἔδωκε τοῦ Ἑλληνιστὶ
+ἑρμηνεῦσαι τὸ ἔργον αὐτῆς.  τοῦτο  μέντοι τὸ λεξικὸν οὐκ ἔχει τὰς τοῦ Ῥωμαϊκοῦ 
+εἰκόνας. χρὴ οὖν σε πρότερον πρίασθαι τὸ τῆς Σιγρίδους λεξικὸν ἵνα 
+κατανοήσας ἐκείνας
+ συνιῇς τὰς  Ἑλληνικὰς λέξεις.  ἐνθάδε ὅμως εὑρίσκεται ἓν εἰκονίδιον  περὶ τῶν  τυπογραφικῶν σημείων τῶν ἀπὸ τῆς Ῥωμαϊκῆς φωνῆς ἀπόντων.  
+τὸ μὲν λεξικὸν τῆς Σιγρίδους Ἄλβερτ ἔχει ἓξ εὑρητήρια, δηλαδὴ 
+ τό τε Ῥωμαϊκὸν τό τε Γερμανικὸν τό τε
+Ἰταλικὸν τό τε Ἱσπανικὸν τό τε Γαλλικὸν καὶ τὸ Βρεταννικόν.
+ ἐν δὲ τῷ τέλει τοῦ βιβλίου τούτου ἓν 
+τῶν Ἑλληνικῶν λέξεων
+εὑρητήριόν ἐστιν.  
+πολλάκις μὲν ἔννοιας νέας ἐκφράσαι ῥήσεις νεοελληνικὰς προσήγαγον· ἄλλοτε δὲ νεολογισμούς. σημειοῦνταί γε ὡς ἑξῆς·
+\begin{itemize}
+\item † ῥήσεις σημειοῦνται αἳ νῦν ἐν τῇ νεοελληνικῇ λέγονται.
+\item ‡ ῥήσεις σημειοῦνται αἳ πρότερον ἐν τῇ μεσαιωνικῇ εἴτ' ἐν τῇ νεοελληνικῇ ἐλέγοντο, ἰδίᾳ δ' ἐν τῇ καθαρευούσῃ.
+\item * νεολογισμοὶ σημειοῦνται, οἳ μηδ' ἐν τῇ ἀρχαίᾳ μηδ' ἐν τῇ νέᾳ γλώττῃ λέγονται.
+\end{itemize}
+εὐχαριστῶ δὲ τοῖς  τῆς
+\href{http://www.textkit.com/greek-latin-forum/}{Textkit}\footnote{\url{http://www.textkit.com/greek-latin-forum/}} ἀγορᾶς
+ἑταίροις τοῖς βοηθήσασί μοι καὶ μάλιστα τῷ  Νικολάῳ Νικολάου. ἐὰν δ' εὕρῃς 
+σφάλματα
+ἐν τούτῳ τῷ ὕφει -- καὶ θαῦμα γ' οὐδέν, ἁμαρτωλὸς γάρ εἰμι καὶ ἀδίδακτος --
+  ἀντιβολῶ σε, τῇδε τῇ ἠλεκτρονικῇ ἐπιγραφῇ  
+\begin{flushleft}
+\href{mailto:bedwere@yahoo.com}{\texttt{bedwere@yahoo.com}}
+\end{flushleft}
+γράψον πρὸς ἐμὲ δεικνὺς 
+ὅσα ἂν δῇ διορθωθῆναι.
+καὶ ἐπισκοποίης ἂν τὸ ἰστολόγιόν μου ·
+\begin{flushleft}
+\url{http://heautonpaideuomenos.blogspot.com}
+\end{flushleft}
+πάντα δ' ἐνταῦθα κείμενα ἐκδίδοται κατὰ τὴν
+\href{https://creativecommons.org/licenses/by/4.0/}{CC~BY~4.0}\footnote{\url{https://creativecommons.org/licenses/by/4.0/}} ἄδειαν.
+ἐλπίζων οὖν τοῦτο τὸ ἔργον χρήσιμον ἔσεσθαί σοι, ἀσπάζομαί σε.
+\begin{flushright}
+ἐκ Διδακουπόλεως ἐν Καλιφορνίᾳ, ε' τοῦ Ἰουλίου, ἔτει ͵βιη' \\
+~\\
+\href{mailto:bedwere@yahoo.com}{Βεδυερός} \\
+\end{flushright}
+\newpage
+\chapter*{πίνακες}
+\addcontentsline{toc}{chapter}{πίνακες}
+\thispagestyle{empty}
+\newpage
+\pagestyle{fancy}
+\fancyhead[RE,LO]{}
+\renewcommand{\headrulewidth}{0pt}
+\pagenumbering{arabic}
+\setcounter{page}{1} \raggedright
+\begin{multicols}{2}[\section{τὸ ἀνθρώπινον σῶμα (α')}]
+\subsection{κεφᾰλή, ἡ} % \index{κεφαλή, ἡ} 
+ \index{κεφᾰλή, ἡ}
+\subsection{τράχηλος [ᾰ], ὁ}
+\index{τράχηλος [ᾰ], ὁ}
+\subsection{ὦμος, ὁ}          
+\index{ὦμος, ὁ}          
+\subsection{τιτθός, ὁ}       \index{τιτθός, ὁ}         ~\\
+μαστός, ὁ \index{μαστός, ὁ} 
+\subsection{θηλή, ἡ}
+\index{θηλή, ἡ}
+\subsection{βρᾰχ-ίων [ῑ], ονος, ὁ}
+\index{βρᾰχ-ίων [ῑ], ονος, ὁ}
+\subsection{ἁρμός, ὁ}
+\index{ἁρμός, ὁ}
+\subsection{ἀγκάλη [ᾰ], ἡ} \index{ἀγκάλη [ᾰ], ἡ}  ~\\
+ἀγκᾰλ-ίς, ἡ \index{ἀγκᾰλ-ίς, ἡ}
+\subsection{χείρ, ἡ, χειρός}
+\index{χείρ, ἡ, χειρός}
+\subsection{καρπός, ὁ}
+\index{καρπός, ὁ}
+\subsection{μέση, ἡ}
+\index{μέση, ἡ}
+\subsection{ὀμφᾰλός, ὁ}
+\index{ὀμφᾰλός, ὁ}
+\subsection{κοιλί-α, ἡ} \index{κοιλί-α, ἡ}  ~\\
+γαστήρ, ἡ, έρος  \index{γαστήρ, ἡ, έρος}
+\e{γενν-ητικὰ ὄργανα, τά}
+\ee{γενν-ητικὰ μόρια, τά}
+\e{γῠναικ-εῖα γενν-ητικὰ ὄργανα, τά}
+\ee{γῠναικ-εῖα γενν-ητικὰ μόρια, τά}
+\e{ἀνδρικὰ γενν-ητικὰ ὄργανα, τά}
+\ee{ἀνδρικὰ γενν-ητικὰ μόρια, τά}
+\subsection{μηρός, ὁ}
+\index{μηρός, ὁ}
+\subsection{σκέλος, εος, τό}
+\index{σκέλος, εος, τό}
+\subsection{κνήμ-η, ἡ}
+\index{κνήμ-η, ἡ}          
+\subsection{γαστρο-κνήμη, ἡ}
+\index{γαστρο-κνήμη, ἡ}
+\subsection{γόνῠ, γόνατος, τό}
+\index{γόνῠ, γόνατος, τό}
+\subsection{ἐπιγουν-ίς, ίδος, ἡ}
+\index{ἐπιγουν-ίς, ίδος, ἡ}
+\subsection{πούς, ὁ, ποδός}      
+\index{πούς, ὁ, ποδός}      
+\subsection{δάκτῠλοι τοῦ ποδός, οἱ}
+\index{δάκτῠλοι τοῦ ποδός, οἱ}
+\subsection{μέγας δάχτῠλος, ὁ}     
+\index{μέγας δάχτῠλος, ὁ}     
+\subsection{πτέρνη (\textit{ὕστερον} πτέρνᾰ), ἡ}
+\index{πτέρνη (\textit{ὕστερον} πτέρνᾰ), ἡ}
+\subsection{σφῠρ-όν, τό}                  \index{σφῠρ-όν, τό}  ~\\
+ἀστράγᾰλος [ρᾰ], ὁ \index{ἀστράγᾰλος [ρᾰ], ὁ}
+\subsection{μασχάλ-η [χᾰ], ἡ}     
+\index{μασχάλ-η [χᾰ], ἡ}     
+\subsection{στέρνον, τό}                  \index{στέρνον, τό}  ~\\
+στῆθος, εος, τό     \index{στῆθος, εος, τό}
+\subsection{δέρμα, ατος, τό}
+\index{δέρμα, ατος, τό}
+\subsection{νῶτον, τό, ἢ νῶτος, ὁ}
+\index{νῶτον, τό, ἢ νῶτος, ὁ}
+\subsection{γλουτός, ὁ}          \index{γλουτός, ὁ} ~\\
+πῡγ-ή, ῆς, ἡ \\
+πῡγ-αῖον, τό\index{πῡγ-ή, ῆς} \index{πῡγ-αῖον, τό}
+\subsection{ἰγνύα, ἡ}
+\index{ἰγνύα, ἡ}
+\subsection{πυγμ-ή, ἡ}
+\index{πυγμ-ή, ἡ}
+\subsection{πᾰλᾰμ-η, ἡ}
+\index{πᾰλᾰμ-η, ἡ}
+\subsection{δάκτῠλος, ὁ}
+\index{δάκτῠλος, ὁ}
+\subsection{ἀντίχειρ, ὁ}
+\index{ἀντίχειρ, ὁ}
+\subsection{λῐχᾰνός (δάκτῠλος), ὁ}
+\index{λῐχᾰνός (δάκτῠλος), ὁ}
+\subsection{μέσος (δάκτῠλος), ὁ}
+\index{μέσος (δάκτῠλος), ὁ}
+\subsection{παράμεσος (δάκτῠλος), ὁ}
+\index{παράμεσος (δάκτῠλος), ὁ}
+\subsection{μικρός (δάκτῠλος), ὁ}
+\index{μικρός (δάκτῠλος), ὁ}
+\subsection{ὄνυξ, ῠχος, ὁ}
+\index{ὄνυξ, ῠχος, ὁ}
+~
+
+\end{multicols}
+\newpage
+\begin{multicols}{2}[\section{τὸ ἀνθρώπινον σῶμα (β') · ἡ κεφαλή}]
+\subsection{κεφᾰλή, ἡ}
+\index{κεφᾰλή, ἡ}
+\subsection{πρόσωπον, τό}
+\index{πρόσωπον, τό}
+\subsection{μέτωπ-ον, τό}
+\index{μέτωπ-ον, τό}
+\subsection{ῥῠτίς, ίδος, ἡ}
+\index{ῥῠτίς, ίδος, ἡ}
+\subsection{ὀφθαλμός, ὁ}   
+\index{ὀφθαλμός, ὁ}   
+\subsection{ῥίς, ἡ, ῥῑνός}
+\index{ῥίς, ἡ, ῥῑνός}
+\subsection{στόμα, τό}       
+\index{στόμα, τό}       
+\subsection{γένει-ον, τό}    
+\index{γένει-ον, τό}    
+\subsection{τράχηλος [ᾰ], ὁ} 
+\index{τράχηλος [ᾰ], ὁ} 
+\subsection{μῆλον τοῦ Ἀδάμ, τό} \index{μῆλον τοῦ Ἀδάμ, τό} ~\\
+λήκῠθος, ἡ \index{λήκῠθος, ἡ}  \\
+βρόχθος, ὁ \index{βρόχθος, ὁ}
+\subsection{λάρυγξ [ᾰ], υγγος, ὁ}
+\index{λάρυγξ [ᾰ], υγγος, ὁ}
+\subsection{θρίξ, ἡ, τρῐχός} \index{θρίξ, ἡ, τρῐχός} ~\\
+κόμ-η, ἡ \index{κόμ-η, ἡ}
+\subsection{χώρ-ισμα, ατος, τό} 
+\index{χώρ-ισμα, ατος, τό} 
+\subsection{κοτ(τ)ίς, ίδος, ἡ} 
+\index{κοτ(τ)ίς, ίδος, ἡ} 
+\subsection{κρότᾰφ-ος, ὁ}        
+\index{κρότᾰφ-ος, ὁ}        
+\subsection{πᾰρειά, ἡ}
+\index{πᾰρειά, ἡ}
+\subsection{αὐχήν, ένος, ὁ}
+\index{αὐχήν, ένος, ὁ}
+\subsection{γνάθ-ος [ᾰ], ἡ} \index{γνάθ-ος [ᾰ], ἡ} ~\\
+γένῠς, υος, ἡ \index{γένῠς, υος, ἡ}
+\subsection{χείλη, χειλῶν, τά}
+\index{χείλη, χειλῶν, τά}
+\subsection{γλῶσσα, ἡ}
+\index{γλῶσσα, ἡ}
+\subsection{ὀφρῦς, ύος, ἡ}
+\index{ὀφρῦς, ύος, ἡ}
+\subsection{βλέφᾰρον, τό}
+\index{βλέφᾰρον, τό}
+\subsection{βλεφᾰρ-ίς, ίδος, ἡ}
+\index{βλεφᾰρ-ίς, ίδος, ἡ}
+\subsection{θρίξ βλεφᾰρίδος, ἡ, τρῐχός}
+\index{θρίξ βλεφᾰρίδος, ἡ, τρῐχός}
+\subsection{κόρη, ἡ}
+\index{κόρη, ἡ}
+\subsection{ἶρις, ιδος, ἡ}
+\index{ἶρις, ιδος, ἡ}
+\subsection{οὖς, τό, ὠτός}
+\index{οὖς, τό, ὠτός}
+\subsection{λοβ-ός, ὁ}
+\index{λοβ-ός, ὁ}
+\subsection{μυκτήρ, ῆρος, ὁ}
+\index{μυκτήρ, ῆρος, ὁ}
+\subsection{οὖλον, τό}
+\index{οὖλον, τό}
+\subsection{ὀδούς, όντος, ὁ}
+\index{ὀδούς, όντος, ὁ}
+\subsection{γένῠς, υος, ἡ}        
+\index{γένῠς, υος, ἡ}        
+
+~
+\end{multicols}
+\newpage
+\begin{multicols}{2}[\section{τὸ ἀνθρώπινον σῶμα (γ') · τὰ ἐνδότερα}]
+\subsection{ἀδήν, ένος, ἡ,}
+\index{ἀδήν, ένος, ἡ,}
+\subsection{πλεύμων ἢ πνεύμων, ονος, ὁ}
+\index{πλεύμων ἢ πνεύμων, ονος, ὁ}
+\subsection{καρδί-α, ἡ}
+\index{καρδί-α, ἡ}
+\subsection{ἧπαρ, ᾰτος, τό}
+\index{ἧπαρ, ᾰτος, τό}
+\subsection{χοληδόχος κύστις, εως, ἡ}
+\index{χοληδόχος κύστις, εως, ἡ}
+\subsection{στόμᾰχ-ος, ὁ}      
+\index{στόμᾰχ-ος, ὁ}      
+\subsection{αἷμα, ατος, τό}    
+\index{αἷμα, ατος, τό}    
+\subsection{κύστις, εως, ἡ}
+\index{κύστις, εως, ἡ}
+\subsection{νεφρ-ός, ὁ}    
+\index{νεφρ-ός, ὁ}         
+\subsection{σπλήν, ὁ, σπληνός}
+\index{σπλήν, ὁ, σπληνός}  
+\subsection{ὀστέον (ὀστοῦν), τό}          
+\index{ὀστέον (ὀστοῦν), τό}          
+\subsection{ἄρθρον, τό}                   
+\index{ἄρθρον, τό}                   
+\subsection{θῠρεο-ειδὴς κύστις, εως, ἡ}
+\index{θῠρεο-ειδὴς κύστις, εως, ἡ}
+\subsection{σπονδῠλικὴ στήλη, ἡ} \index{σπονδῠλικὴ στήλη, ἡ} ~\\
+νωτ-ιαία ἄκανθ-α [ᾰκ], ης, ἡ \index{νωτ-ιαία ἄκανθ-α [ᾰκ], ης, ἡ} ~\\
+νωτ-ιαῖα ἄρθρα, τά            \index{νωτ-ιαῖα ἄρθρα, τά} ~\\
+ῥᾰχ-ις, εως, ἡ \index{ῥᾰχ-ις, εως, ἡ} 
+\subsection{σφόνδῠλ-ος ἢ σπόνδῠλ-ος, ὁ}
+\index{σφόνδῠλ-ος ἢ σπόνδῠλ-ος, ὁ}
+\subsection{πλευρ-ά, ᾶς, ἡ}
+\index{πλευρ-ά, ᾶς, ἡ}
+\subsection{νεῦρον, τό}
+\index{νεῦρον, τό}
+\subsection{φλέψ, ἡ, φλεβός}
+\index{φλέψ, ἡ, φλεβός}
+\subsection{ἀρτηρία, ἡ}
+\index{ἀρτηρία, ἡ}
+\subsection{μῦς, ὁ}        
+\index{μῦς, ὁ}         
+\subsection{σπλάγχνα, τά}   
+\index{σπλάγχνα, τά} ~ \\ 
+ἔντερα, τά  \index{ἔντερα, τά}  \\
+ἐντόσθια, τά \index{ἐντόσθια, τά}
+\subsection{τένων, οντος, ὁ}
+\index{τένων, οντος, ὁ}
+\subsection{σφυγ-μὸς φλεβῶν, ὁ}        
+\index{σφυγ-μὸς φλεβῶν, ὁ}        
+~
+\end{multicols}
+\newpage
+\begin{multicols}{2}[\section{τὰ ἱμάτια (α')}]
+{\renewcommand \thesubsection {\thesection} \index{ἱμάτιον [ῑμᾰ-], τό}}
+\e{χῐτών, ῶνος, ὁ}
+\ee{καμίσιον, τό}
+\ee{κάμισον, τό}
+\e{λαιμο-δέτης\textsuperscript{\textdagger}, ου, ὁ} 
+\e{ὑπεν-δύτης [δῠ], ου, ὁ} % https://archive.org/stream/aconcisediction00unkngoog#page/n444/mode/2up
+\ee{κολόβ-ιον, τό}
+\subsection{βράκαι, ῶν, αἱ}
+\index{βράκαι, ῶν, αἱ}
+%\subsection{ἀναξυρίδες, ίδων, αἱ} 
+%\index{ἀναξυρίδες, ίδων, αἱ} % ~\\
+\e{μαρσίπιον, τό}                                         
+\subsection{χῐτών-ιον, τό}         
+\index{χῐτών-ιον, τό}         
+\subsection{χῐτων-ίσκος, ὁ}        
+\index{χῐτων-ίσκος, ὁ}        
+\subsection{μεσο-χῐτών-ιον, τό}
+\index{μεσο-χῐτών-ιον, τό}    
+\subsection{περιτρᾰχήλ-ιον, τό}     
+\index{περιτρᾰχήλ-ιον, τό}     
+\subsection{χειρ-ίς, ῖδος, ἡ}     
+\index{χειρ-ίς, ῖδος, ἡ}     
+\e{χλαῖνα, ης, ἡ}
+\ee{ἔνδῡμα, ατος, τό}
+%\subsection{κνημῖδες, ίδων, αἱ}
+\subsection{περισκελ-ίδες, ίδων, αἱ} \index{περισκελ-ίδες, ίδων, αἱ}
+%\index{κνημῖδες, ίδων, αἱ}
+\subsection{ἐσθής, ῆτος, ἡ}
+\index{ἐσθής, ῆτος, ἡ}          
+\e{ὠμιαῖον μάλαγμ-α [μᾰ], ατος, τό}
+\ee{στοιβ-ή, ἡ}
+\ee{ἀνα-ληπτρίς, ίδος, ἡ}        
+\subsection{ῥᾰφ-ή, ἡ}                    
+\index{ῥᾰφ-ή, ἡ}                    
+\e{βρογχωτήρ, ῆρος, ὁ}           
+\subsection{θερίστριον, τό}              
+\index{θερίστριον, τό}               
+\subsection{στρόφ-ος, ὁ}              
+\index{στρόφ-ος, ὁ}                  
+\subsection{ποδ-εῖα, τά}              
+\index{ποδ-εῖα, τά}                  
+%\subsection{κνημῖδες, ίδων, αἱ}            
+\subsection{διαζώματα, ων, τά}             
+\index{διαζώματα, ων, τά}             
+\subsection{στρόφ-ιον, τό}            \index{στρόφ-ιον, τό}  ~\\
+ἀπόδεσμ-ος, ὁ              \index{ἀπόδεσμ-ος, ὁ}
+\subsection{περισκελ-ῆ, ῶν, τά} 
+\index{περισκελ-ῆ, ῶν, τά}
+\subsection{περί-ζωμα, ατος, τό}
+\index{περί-ζωμα, ατος, τό}
+\e{ἀδιά-βροχ-ον\textsuperscript{\textdagger} ἱμάτιον [ῑμᾰ-], τό}
+\subsection{ὑποδῠτ-ης, ου, ὁ}
+\index{ὑποδῠτ-ης, ου, ὁ}
+\e{ὑποζώνη, ἡ}
+\ee{ὑποζώνιον, τό}       
+\subsection{Γενουαϊκαὶ\textsuperscript{\textdaggerdbl} βράκαι, ῶν, αἱ}  
+\index{γενουαϊκαὶ βράκαι, ῶν, αἱ@Γενουαϊκαὶ\textsuperscript{\textdaggerdbl} βράκαι, ῶν, αἱ}           
+\subsection{κόθορνος, ὁ}  \index{κόθορνος, ὁ}             ~\\
+ἀρβύλη [ῠ], ἡ \index{ἀρβύλη [ῠ], ἡ} ~\\
+κρηπίς, ῖδος, ἡ \index{κρηπίς, ῖδος, ἡ} ~\\
+ἐμβᾰτ-ης [ᾰ], ου, ὁ \index{ἐμβᾰτ-ης [ᾰ], ου, ὁ} ~\\
+ἐνδρομ-ίς, ίδος, ἡ \index{ἐνδρομ-ίς, ίδος, ἡ}
+\subsection{ἔρ-εισμα, ατος, τό} 
+\index{ἔρ-εισμα, ατος, τό}  
+\subsection{πέλμα, ατος, τό}         
+\index{πέλμα, ατος, τό}         
+\subsection{σάνδᾰλ-ον, τό}           \index{σάνδᾰλ-ον, τό}   ~\\
+σανδάλ-ιον [ᾰ], τό \index{σανδάλ-ιον [ᾰ], τό}
+\subsection{ἱμάς, ὁ, ἱμάντος}  
+\index{ἱμάς, ὁ, ἱμάντος}        
+\subsection{ὑπόδημ-α, ατος, τό}
+\index{ὑπόδημ-α, ατος, τό}
+~
+\end{multicols}
+\newpage
+\begin{multicols}{2}[\section{τὰ ἱμάτια (β')}]
+{\renewcommand \thesubsection {\thesection} \index{ἱμάτιον [ῑμᾰ-], τό}}
+\subsection{σύν-θεσις, εως, ἡ}
+\index{σύν-θεσις, εως, ἡ}
+\subsection{ἐρεοῦς θώραξ, ᾱκος, ὁ}
+\index{ἐρεοῦς θώραξ, ᾱκος, ὁ}
+\subsection{ἀναξυρίδες, ίδων, αἱ} \index{ἀναξυρίδες, ίδων, αἱ}  ~\\
+θύλᾰκοι [ῡ], οἱ \index{θύλᾰκοι [ῡ], οἱ} ~\\
+σαράβᾱρα, τά \index{σαράβᾱρα, τά}
+\subsection{λου-τρικὸν περί-ζωμα, ατος, τό}
+\index{λου-τρικὸν περί-ζωμα, ατος, τό}
+\e{ἀδιά-βροχ-ος\textsuperscript{\textdagger} χῐτων-ίσκος, ὁ}
+\subsection{λου-τρικὴ ἐσθής, ῆτος, ἡ}        
+\index{λου-τρικὴ ἐσθής, ῆτος, ἡ}        
+\subsection{ἐγκόμβ-ωμα, ατος, τό}
+\index{ἐγκόμβ-ωμα, ατος, τό}
+\subsection{λου-τρικὸν ἱμάτιον [ῑμᾰ-], τό}
+\index{λου-τρικὸν ἱμάτιον [ῑμᾰ-], τό}
+\subsection{κοιτων-ικὴ ἐσθής, ῆτος, ἡ}
+\index{κοιτων-ικὴ ἐσθής, ῆτος, ἡ}
+\subsection{νυκτηρινὸς χῐτών, ῶνος, ὁ}
+\index{νυκτηρινὸς χῐτών, ῶνος, ὁ}
+
+~
+\end{multicols}
+\newpage
+\begin{multicols}{2}[\section{τὰ πρὸς τὰς ἑσθῆτας φέροντα}]
+\subsection{σφαῖρᾰ, ας, ἡ} \index{σφαῖρᾰ, ας, ἡ}  ~\\
+σφαίρ-ωμα, ατος, τό        \index{σφαίρ-ωμα, ατος, τό}         ~\\
+τρόχισκ-ος, ὁ \index{τρόχισκ-ος, ὁ}
+\subsection{ὀλισθ-ηρὸν κλείδ-ωμα, ατος, τό} 
+\index{ὀλισθ-ηρὸν κλείδ-ωμα, ατος, τό}
+\subsection{πέτᾰσ-ος, ὁ}
+\index{πέτᾰσ-ος, ὁ}
+\subsection{ὑψηλὸς πέτᾰσ-ος, ὁ}
+\index{ὑψηλὸς πέτᾰσ-ος, ὁ}
+\subsection{πῖλος, ὁ}
+\index{πῖλος, ὁ}
+\e{Βασκῐκὸς\textsuperscript{\textdagger} πῖλος, ὁ}
+\index{βασκῐκὸς πῖλος, ὁ@Βασκῐκὸς\textsuperscript{\textdagger} πῖλος, ὁ}
+\subsection{ἀναβολ-άδιον, τό} \index{ἀναβολ-άδιον, τό} ~\\
+{ἐπωμ-ίς, ίδος, ἡ} \index{ἐπωμ-ίς, ίδος, ἡ}
+\subsection{περι-δέραιον ῥάκος [ᾰ], εος, τό}
+\index{περι-δέραιον ῥάκος [ᾰ], εος, τό}
+\subsection{χειρίδ-ιον, τό} \index{χειρίδ-ιον, τό} ~\\
+δακτῠλ-ήθρα, ἡ
+\index{δακτῠλ-ήθρα, ἡ}
+\subsection{πήρα, ἡ}          
+\index{πήρα, ἡ}          
+\subsection{ῥῑνομάκτρον, τό}
+\index{ῥῑνομάκτρον, τό}
+\subsection{θήκ-η, ἡ}
+\index{θήκ-η, ἡ}
+\subsection{σκῐάδειον [ᾰ], τό}
+\index{σκῐάδειον [ᾰ], τό}
+\subsection{μάρσιππος, ὁ} \index{μάρσιππος, ὁ} ~\\
+βαλλάντιον, τό \index{βαλλάντιον, τό}
+\e{διόπτρ-α\textsuperscript{\textdaggerdbl}, τά}
+\e{προσπεπηγμένα διόπτρ-α\textsuperscript{\textdaggerdbl}, τά}
+\e{ἡλιᾰκὰ διόπτρ-α\textsuperscript{\textdaggerdbl}, τά}
+\subsection{σφαῖρᾰ περιχερίδων, ας, ἡ}         
+\index{σφαῖρᾰ περιχερίδων, ας, ἡ}
+\subsection{μαργᾰρ-ίτης [ῑ], ου, ὁ}
+\index{μαργᾰρ-ίτης [ῑ], ου, ὁ}
+\subsection{περι-δέραιον, τό} 
+\index{περι-δέραιον, τό} 
+\subsection{δακτύλιος [ῠ], ὁ}
+\index{δακτύλιος [ῠ], ὁ}
+\subsection{κόσμ-ημα, ατος, τό}
+\index{κόσμ-ημα, ατος, τό}
+\subsection{ἐνώτιον, τό}
+\index{ἐνώτιον, τό}
+\subsection{ὡρολόγ-ιον, τό}
+\index{ὡρολόγ-ιον, τό}
+\subsection{σάκκος ἢ σάκος, ὁ}
+\index{σάκκος ἢ σάκος, ὁ}
+\subsection{περόν-η, ἡ} \index{περόν-η, ἡ} ~\\
+πόρπ-η, ἡ \index{πόρπ-η, ἡ} 
+\subsection{πολυ-τελὴς λίθος [ῐ], ου, ὁ}
+\index{πολυ-τελὴς λίθος [ῐ], ου, ὁ}
+\subsection{ψέλ(λ)ιον, τό}
+\index{ψέλ(λ)ιον, τό}
+
+~
+\end{multicols}
+\newpage
+\begin{multicols}{2}[\section{αἱ σχέσεις τοῦ σώματος}]
+\subsection{ὑγι-εινός [ῠ], ή, όν}
+\index{ὑγι-εινός [ῠ], ή, όν}
+\subsection{ἄρρωστ-ος, ον}           
+\index{ἄρρωστ-ος, ον}           
+\subsection{κατά-ψυξις, εως, ἡ}     
+\index{κατά-ψυξις, εως, ἡ}      
+\subsection{φλέγμα, ατος, τό}       \index{φλέγμα, ατος, τό}        ~\\
+κόρυζ-α, ης, ἡ
+\index{κόρυζ-α, ης, ἡ}
+\subsection{πταρ-μός, ὁ} ~\\
+πταίρω (πτάρ-νυμαι), ἔπταρον \index{πταίρω (πτάρ-νυμαι), ἔπταρον}
+\index{πταρ-μός, ὁ}
+\subsection{βήξ, βηχός, ὁ (ἡ)} \index{βήξ, βηχός, ὁ (ἡ)} ~\\
+βήσσω
+\index{βήσσω}
+\e{τεχν-ητὴ ὀδοντοστοιχ-ία\textsuperscript{\textdagger}, ἡ} 
+\ee{ὀδοντ-ικὴ πρόσ-θεσις, εως, ἡ}
+\subsection{κάταγμα τοῦ σκέλεος, ατος, τό}
+\index{κάταγμα τοῦ σκέλεος, ατος, τό}
+\subsection{ὀδοντ-αλγία, ἡ}
+\index{ὀδοντ-αλγία, ἡ}
+\subsection{ὀσφῠαλγ-ία, ἡ}
+\index{ὀσφῠαλγ-ία, ἡ}
+\subsection{συμβουλ-εύομαι τῷ ἰᾱτρῷ}
+\index{συμβουλ-εύομαι τῷ ἰᾱτρῷ}
+\subsection{φάρμᾰκον, τό} \index{φάρμᾰκον, τό} ~\\
+ἴᾱμα, ατος, τό \index{ἴᾱμα, ατος, τό}
+\subsection{πρόσ-ταγμα τοῦ ἰᾱτροῦ, ατος, τό}
+\index{πρόσ-ταγμα τοῦ ἰᾱτροῦ, ατος, τό}
+\subsection{ἀτον-ία, ἡ} \index{ἀτον-ία, ἡ} ~\\
+μᾰλᾰκ-ία, ἡ \index{μᾰλᾰκ-ία, ἡ}
+\subsection{ἔμετ-ος, ὁ}   ~\\
+ἐμέω \index{ἔμετ-ος, ὁ} \index{ἐμέω}
+\subsection{ἐξανθ-ήματα, ατων, τά}
+\index{ἐξανθ-ήματα, ατων, τά}
+\subsection{κεφᾰλαλγ-ία, ἡ}
+\index{κεφᾰλαλγ-ία, ἡ}
+\subsection{νύστ-αξις, εως, ἡ} \index{νύστ-αξις, εως, ἡ} ~\\
+νυστ-αγμός, ὁ \index{νυστ-αγμός, ὁ}
+\subsection{ἴλιγγ-ος, ὁ} 
+\index{ἴλιγγ-ος, ὁ}
+\subsection{πῠρετ-ός, ὁ}
+\index{πῠρετ-ός, ὁ}
+\e{ἐμβολιασμός\textsuperscript{\textdagger}, οῦ, ὁ}
+~
+\end{multicols}
+\newpage
+\begin{multicols}{2}[\section{αἱ καθ' ἡμέραν πράξεις (α')}]
+\subsection{ἀνίσταμαι, ἀναστήσομαι, ἀνέστην, ἀνέστηκα, ἀνεστάθην}
+\index{ἀνίσταμαι, ἀναστήσομαι, ἀνέστην, ἀνέστηκα, ἀνεστάθην}
+\subsection{κατα-κλίνομαι, -κλινήσομαι, -κέκλιμαι, -εκλίνην}
+\index{κατα-κλίνομαι, -κλινήσομαι, -κέκλιμαι, -εκλίνην} ~\\
+κοιμ-άομαι \index{κοιμ-άομαι}
+\subsection{κᾰθαίρω τοὺς ὀδόντας} \index{κᾰθαίρω τοὺς ὀδόντας} ~\\
+ἀποδοντόω \index{ἀποδοντόω}
+\subsection{νίζω, νίψομαι, ἔνιψα, νένιμμαι, ἐνίφθην} 
+\index{νίζω, νίψομαι, ἔνιψα, νένιμμαι, ἐνίφθην}
+\subsection{λούομαι} 
+\index{λούομαι}
+\subsection{λούομαι τῷ καταχύτλῳ} 
+\index{λούομαι τῷ καταχύτλῳ}
+\subsection{ἀκρᾱτ-ισμός, ὁ} \index{ἀκρᾱτ-ισμός, ὁ} ~\\
+ἀκρᾱτ-ισμα, ατος, τό \index{ἀκρᾱτ-ισμα, ατος, τό} ~\\
+ἀκρᾱτ-ίζομαι \index{ἀκρᾱτ-ίζομαι}
+\subsection{ἄριστον, τό} \index{ἄριστον, τό} ~\\
+ἄριστον ποιέομαι  \index{ἄριστον ποιέομαι} ~\\
+ἄριστον αἱρέομαι, αἱρήσομαι, εἱλόμην, ᾕρημαι  \index{ἄριστον αἱρέομαι, αἱρήσομαι, εἱλόμην, ᾕρημαι} 
+\subsection{δεῖπνον, τό} \index{δεῖπνον, τό} ~\\
+δειπν-έω \index{δειπν-έω}
+\subsection{ἀναγι(γ)νώσκω, ἀναγνώσομαι, ἀνέγνων, ἀνέγνωκα, ἀνέγνωσμαι, ἀνεγνώσθην} 
+\index{ἀναγι(γ)νώσκω, ἀναγνώσομαι, ἀνέγνων, ἀνέγνωκα, ἀνέγνωσμαι, ἀνεγνώσθην} 
+~
+\end{multicols}
+\newpage
+\begin{multicols}{2}[\section{αἱ καθ' ἡμέραν πράξεις (β')}]
+\subsection{πον-έω}
+\index{πον-έω}
+\e{θεάομαι τὴν τηλε-όρ-ᾱσιν\textsuperscript{\textdagger}}
+\subsection{κῠβερν-άω τὸ αὐτο-κῑν-ητόν} \index{κῠβερν-άω τὸ αὐτο-κῑν-ητόν} ~\\
+ὀχέομαι τῷ αὐτο-κῑν-ητῷ \index{ὀχέομαι τῷ αὐτο-κῑν-ητῷ}
+\subsection{ἀγοράζω [ᾰγ]}
+\index{ἀγοράζω [ᾰγ]}
+\subsection{ἀπο-πλύνω τὰ σκεύη}
+\index{ἀπο-πλύνω τὰ σκεύη}
+\subsection{ἐνδύομαι τὰ ἱμάτια [ῑμᾰ-]}
+\index{ἐνδύομαι τὰ ἱμάτια [ῑμᾰ-]}
+\subsection{ἐκ-, ἀπο-δύομαι τὰ ἱμάτια [ῑμᾰ-]}
+\index{ἐκ-δύομαι τὰ ἱμάτια [ῑμᾰ-]} \index{ἀπο-δύομαι τὰ ἱμάτια [ῑμᾰ-]}
+\subsection{ἕψω, ἑψήσομαι, ἥψησα, ἥψημαι, ἡψήθην}
+\index{ἕψω, ἑψήσομαι, ἥψησα, ἥψημαι, ἡψήθην}
+\subsection{ῥάπτω, ῥάψω, ἔρραψα, ἔρραμαι, ἐρράφην} ~\\
+\index{ῥάπτω, ῥάψω, ἔρραψα, ἔρραμαι, ἐρράφην}
+ἀκέομαι [ᾰ] \index{ἀκέομαι [ᾰ]}
+\subsection{ῥᾰφίς, ίδος, ἡ}
+\index{ῥᾰφίς, ίδος, ἡ}
+\subsection{νῆμα, ατος, τό} 
+\index{νῆμα, ατος, τό} 
+\subsection{κᾰθαρ-ίζω}
+\index{κᾰθαρ-ίζω}
+
+~
+\end{multicols}
+\newpage
+\begin{multicols}{2}[\section{ἡ μετάδοσις}]
+{\renewcommand \thesubsection {\thesection} \index{μετά-δοσις, εως, ἡ}}
+\subsection{ἀσπ-ασμός, ὁ} \index{ἀσπ-ασμός, ὁ} ~\\
+ἀσπάζομαι \index{ἀσπάζομαι}
+\subsection{γέλως, ὁ, γέλωτος} \index{γέλως, ὁ, γέλωτος} ~\\
+γελάω \index{γελάω}
+\subsection{ἀσπ-ασμὸς τοῦ ἀπιόντος, ὁ} \index{ἀσπ-ασμὸς τοῦ ἀπιόντος, ὁ} ~\\
+ἀσπάζομαι ὡς ἀπιών \index{ἀσπάζομαι ὡς ἀπιών}
+\subsection{λόγος, ὁ}           
+\index{λόγος, ὁ}           
+\subsection{ἐπιστολ-ὴν γράφω [ᾰ], γράψω, ἔγραψα, γέγραφα, γέγραμμαι, ἐγράφην}
+\index{ἐπιστολ-ὴν γράφω [ᾰ], γράψω, ἔγραψα, γέγραφα, γέγραμμαι, ἐγράφην}
+\subsection{κλαυθμ-ός, ὁ} \index{κλαυθμ-ός, ὁ} ~\\
+κλαίω [ᾱ], κλαύσομαι / κλᾱήσω, ἔκλαυσα, κέκλαυμαι / κέκλαυσμαι, ἐκλαύσθην
+\index{κλαίω [ᾱ], κλαύσομαι / κλᾱήσω, ἔκλαυσα, κέκλαυμαι / κέκλαυσμαι, ἐκλαύσθην}
+\subsection{δάκρυον, τό}
+\index{δάκρυον, τό}
+\subsection{ὄνειδ-ος, εος, τό}     \index{ὄνειδ-ος, εος, τό}   ~\\
+λοιδορ-έω \index{λοιδορ-έω}
+\subsection{ἔρις, ιδος, ἡ}
+\index{ἔρις, ιδος, ἡ}
+\subsection{ἀκρό-ᾱσις, εως, ἡ}
+\index{ἀκρό-ᾱσις, εως, ἡ}
+\subsection{διάλεξις, εως, ἡ}
+\index{διάλεξις, εως, ἡ}
+\subsection{ἄπο-κρῐσις, εως, ἡ}
+\index{ἄπο-κρῐσις, εως, ἡ}
+\subsection{ἐρώτ-ημα, ατος, τό} \index{ἐρώτ-ημα, ατος, τό} ~\\
+ἐρώτ-ησις, εως, ἡ
+\index{ἐρώτ-ησις, εως, ἡ}
+\subsection{ῥέγκ-ω}
+\index{ῥέγκ-ω}
+\subsection{ῥάπ-ισμα [ᾰ], ατος, τό} \index{ῥάπ-ισμα [ᾰ], ατος, τό} ~\\
+κόλᾰφ-ος, ὁ 
+\index{κόλᾰφ-ος, ὁ}
+\e{τηλε-φών-ημα\textsuperscript{\textdagger}, ατος, τό}
+\subsection{τὰς ὀφρῦς συνάγω [ᾰ]}
+\index{τὰς ὀφρῦς συνάγω [ᾰ]}
+\subsection{παιδ-ιά, ᾶς, ἡ}
+\index{παιδ-ιά, ᾶς, ἡ}
+\subsection{φίλημ-α [ῐ], ατος, τό}
+\index{φίλημ-α [ῐ], ατος, τό}
+\subsection{ἐπερώτ-ησις, εως, ἡ}
+\index{ἐπερώτ-ησις, εως, ἡ}
+\subsection{ἐπερωτ-ητής, οῦ, ὁ}
+\index{ἐπερωτ-ητής, οῦ, ὁ}
+\subsection{χάσμ-η, ἡ} \index{χάσμ-η, ἡ} ~\\
+χασμ-άομαι \index{χασμ-άομαι}
+\subsection{ὁμῑλ-ία, ἡ}
+\index{ὁμῑλ-ία, ἡ} ~\\
+κήρυγ-μα, ατος, τό
+\index{κήρυγ-μα, ατος, τό}
+~
+\end{multicols}
+\newpage
+\begin{multicols}{2}[\section{τὰ ἔργα καὶ τὰ ἐπαγγέλματα (α')}]
+\e{τῠπό-γρᾰφ-ος\textsuperscript{\textdagger}, ου, ὁ}
+\subsection{μηχᾰν-ικός, ου, ὁ} \index{μηχᾰν-ικός, ου, ὁ} ~\\
+μηχᾰν-ική, ἡ \index{μηχᾰν-ική, ἡ}
+\subsection{φῠσικός, ου, ὁ} \index{φῠσικός, ου, ὁ}  ~\\
+φῠσική, ἡ \index{φῠσική, ἡ}
+\subsection{ὀρυκ-τήρ, ῆρος, ὁ}
+\index{ὀρυκ-τήρ, ῆρος, ὁ}
+\subsection{ξῠλουργ-ός, ὁ}
+\index{ξῠλουργ-ός, ὁ}
+\subsection{ἀρτο-ποιός, ὁ} \index{ἀρτο-ποιός, ὁ} ~\\
+ἀρτο-κόπος, ὁ, ἡ \index{ἀρτο-κόπος, ὁ, ἡ}
+\subsection{κουρ-εύτρια, ἡ} \index{κουρ-εύτρια, ἡ} ~\\
+κουρ-εύς, έως, ὁ \index{κουρ-εύς, έως, ὁ} 
+\subsection{κλειδοποιός, ὁ, ἡ} \index{κλειδοποιός, ὁ, ἡ} ~\\
+κλειθροποιός, ὁ, ἡ \index{κλειθροποιός, ὁ, ἡ}
+~
+\end{multicols}
+\newpage
+\begin{multicols}{2}[\section{τὰ ἔργα καὶ τὰ ἐπαγγέλματα (β')}]
+\subsection{ἰᾱτρός, ὁ, ἡ} 
+\index{ἰᾱτρός, ὁ, ἡ}
+\e{ὀδοντο-ἰᾱτρός\textsuperscript{\textdagger}, ὁ, ἡ}
+\subsection{νοσο-κόμα, ης, ἡ} \index{νοσο-κόμα, ης, ἡ} ~\\
+νοσο-κόμος, ὁ \index{νοσο-κόμος, ὁ}
+\subsection{γραμμᾰτ-εύς, έως, ὁ, ἡ}
+\index{γραμμᾰτ-εύς, έως, ὁ, ἡ}
+\e{κτην-ίατρος\textsuperscript{\textdagger}, ὁ, ἡ}
+\subsection{συνήγορ-ος, ὁ, ἡ} \index{συνήγορ-ος, ὁ, ἡ} ~\\
+σύνδῐκ-ος, ὁ, ἡ \index{σύνδῐκ-ος, ὁ, ἡ}
+\subsection{ἱερ-εύς [ῐ], έως, ὁ}
+\index{ἱερ-εύς [ῐ], έως, ὁ}
+\e{δείκ-τρια\textsuperscript{\textdagger} ἱματίων [ῑμᾰ-], ἡ}
+\ee{δείκ-της ἱματίων [ῑμᾰ-], ου, ὁ}
+\subsection{ἀκέσ-τρια [ᾰ], ἡ} \index{ἀκέσ-τρια [ᾰ], ἡ} ~\\
+ῥάπ-τρια, ἡ \index{ῥάπ-τρια, ἡ} ~\\
+ἀκεσ-τής [ᾰ], οῦ, ὁ \index{ἀκεσ-τής [ᾰ], οῦ, ὁ} ~\\
+ῥάπ-της, ου, ὁ \index{ῥάπ-της, ου, ὁ}
+\e{καπνο-δοχο-κᾰθᾰρ-ιστής\textsuperscript{\textdagger}, οῦ, ὁ}
+\subsection{ἐργᾰτ-ης, ου, ὁ} \index{ἐργᾰτ-ης, ου, ὁ} ~\\
+ἐργάτ-ῐς, ιδος, ἡ \index{ἐργάτ-ῐς, ιδος, ἡ}
+\e{ἀρχι-τέκτων, ονος, ὁ} 
+\ee{ἀρχι-τεκτόν-ισσα\textsuperscript{\textdagger}, ἡ}
+\subsection{τέκτων, ονος, ὁ}
+\index{τέκτων, ονος, ὁ}
+\subsection{κρεο-πώλης, ου, ὁ}
+\index{κρεο-πώλης, ου, ὁ}
+\e{κοσμ-ητής, οῦ, ὁ}
+\subsection{σκῡτοτόμ-ος, ὁ}
+\index{σκῡτοτόμ-ος, ὁ}
+\e{χρωμᾰτ-ιστής\textsuperscript{\textdagger}, οῦ, ὁ} 
+\ee{χρωμᾰτ-ίστρια\textsuperscript{\textdagger}, ἡ}
+\subsection{φαρμᾰκο-ποιός, ὁ, ἡ} \index{φαρμᾰκο-ποιός, ὁ, ἡ} %  ~\\
+% φαρμᾰκο-πώλης, ου, ὁ \index{φαρμᾰκο-πώλης, ου, ὁ} ~\\
+% φαρμᾰκο-πωλήτρια, ἡ \index{φαρμᾰκο-πωλήτρια, ἡ}
+\subsection{λῐθο-δόμος, ὁ} \index{λῐθο-δόμος, ὁ} ~\\
+λῐθόλογ-ος, ὁ \index{λῐθόλογ-ος, ὁ}
+\subsection{ἐρευν-ητής, οῦ, ὁ} \index{ἐρευν-ητής, οῦ, ὁ} ~\\
+ἐρευν-ήτρια, ἡ \index{ἐρευν-ήτρια, ἡ}
+\e{χημῐκός\textsuperscript{\textdagger}, ὁ}
+\ee{χημῐκή\textsuperscript{\textdagger}, ἡ}
+\subsection{γεωργ-ός, ὁ}
+\index{γεωργ-ός, ὁ}
+\e{ὑδρ-αυλικός\textsuperscript{\textdagger} [ῠ], ὁ}
+~
+\end{multicols}
+\newpage
+\begin{multicols}{2}[\section{τὰ ἰατρικά}]
+%\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+\subsection{χειρουργός, ὁ}
+\index{χειρουργός, ὁ}
+\e{ὀδοντο-ἰᾱτρός\textsuperscript{\textdagger}, ὁ, ἡ}
+\subsection{ἀκτῑνο-λόγος\textsuperscript{*}\protect\footnote{ἀπὸ τοῦ \emph{ἀκτίς, [ῑ] ῖνος, ἡ} καὶ τοῦ \emph{λέγω.}}, ὁ}
+\index{ἀκτῑνο-λόγος\textsuperscript{*}, ὁ}
+\e{ὠτο-ρῑνο-λᾰρυγγο-λόγος\textsuperscript{\textdagger}, ὁ}
+\e{ὀφθαλμο-λόγος\textsuperscript{\textdagger}, ὁ}
+\e{ἀσθενο-φόρον\textsuperscript{\textdagger}, τό} 
+\ee{ἀσθενούχ-ημα\textsuperscript{\textdagger}, ατος, τό}
+\e{οὐρο-λόγος\textsuperscript{\textdagger}, ὁ}
+\subsection{φάρμᾰκον, τό} \index{φάρμᾰκον, τό} ~\\
+ἴᾱμα, ατος, τό 
+\index{ἴᾱμα, ατος, τό}
+\subsection{κατά-ποτον, τό}
+\index{κατά-ποτον, τό}
+\subsection{μαῖα, ἡ} \index{μαῖα, ἡ} ~\\
+μαι-εύτρια, ἡ
+\index{μαι-εύτρια, ἡ}
+\e{φάρμᾰκο-πώλιον\textsuperscript{\textdagger}, τό}
+\subsection{φαρμᾰκο-πώλης, ου, ὁ}
+\index{φαρμᾰκο-πώλης, ου, ὁ}
+\subsection{νοσο-κομεῖον, τό}
+\index{νοσο-κομεῖον, τό}
+\e{γῠναικο-λόγος\textsuperscript{\textdagger}, ὁ}
+\subsection{πρόσ-ταγμα τοῦ ἰᾱτροῦ, ατος, τό}
+\index{πρόσ-ταγμα τοῦ ἰᾱτροῦ, ατος, τό}
+\e{νοσο-κόμα\textsuperscript{\textdagger}, ης, ἡ}
+\ee{νοσο-κόμος, ὁ}
+\subsection{ἀσθεν-ής, οῦς, ὁ}
+\index{ἀσθεν-ής, οῦς, ὁ}
+~
+\end{multicols}
+\newpage
+\begin{multicols}{2}[\section{τὰ διδασκαλικά}] 
+% http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0063:entry=ludus-litterarius-cn
+\subsection{δῐδασκᾰλ-εῖον, τό} \index{δῐδασκᾰλ-εῖον, τό} ~\\
+παιδᾰγωγ-εῖον, τό
+\index{παιδᾰγωγ-εῖον, τό}
+\subsection{μᾰθητ-ής, οῦ, ὁ} \index{μᾰθητ-ής, οῦ, ὁ} ~\\
+μᾰθήτ-ρια, ἡ \index{μᾰθήτ-ρια, ἡ}
+\subsection{δῐδάσκᾰλ-ος, ὁ, ἡ}
+\index{δῐδάσκᾰλ-ος, ὁ, ἡ}
+\subsection{πίναξ [ῐ], ᾰκος, ὁ}
+\index{πίναξ [ῐ], ᾰκος, ὁ}
+\subsection{βῆμα, ατος, τό}
+\index{βῆμα, ατος, τό}
+\subsection{γεωγρᾰφ-ικὸς χάρτ-ης, ου, ὁ}
+\index{γεωγρᾰφ-ικὸς χάρτ-ης, ου, ὁ}
+\subsection{σπόγγος, ὁ}
+\index{σπόγγος, ὁ}
+\subsection{κῐμωλία (γῆ), ἡ}
+\index{κῐμωλία (γῆ), ἡ}
+\subsection{χαρτίνη δέλτος, ἡ}
+\index{χαρτίνη δέλτος, ἡ}
+\subsection{κρικ-ωτὸν γραμμᾰτ-εῖον, τό}
+\index{κρικ-ωτὸν γραμμᾰτ-εῖον, τό}
+\subsection{δῐδασκᾰλ-ικὸν βιβλίον, τό}
+\index{δῐδασκᾰλ-ικὸν βιβλίον, τό}
+\subsection{κᾰνών, όνος, ὁ}
+\index{κᾰνών, όνος, ὁ}
+\subsection{πιλ-ητὸν γρᾰφ-εῖον, τό}
+\index{πιλ-ητὸν γρᾰφ-εῖον, τό}
+\subsection{διαρκ-ὴς στῦλος, ὁ}
+\index{διαρκ-ὴς στῦλος, ὁ}
+\subsection{μολύβδ-ῐνος στῦλος, ὁ}
+\index{μολύβδ-ῐνος στῦλος, ὁ}
+\subsection{ὀξυν-τήρ, ῆρος, ὁ}
+\index{ὀξυν-τήρ, ῆρος, ὁ}
+\e{στῡλο-γράφος\textsuperscript{\textdagger} [ᾰ], ὁ}
+\subsection{ἔλεγχος, ὁ}
+\index{ἔλεγχος, ὁ}
+\subsection{αὐλὴ τοῦ δῐδασκᾰλείου, ἡ}
+\index{αὐλὴ τοῦ δῐδασκᾰλείου, ἡ}
+\subsection{ἀρτί-διον, τό}
+\index{ἀρτί-διον, τό}
+\subsection{οἶκος τῶν δῐδασκάλων [ᾰ], ὁ}
+\index{οἶκος τῶν δῐδασκάλων [ᾰ], ὁ}
+\subsection{γλωττ-ικὸν ἐργᾰσ-τήριον, τό}
+\index{γλωττ-ικὸν ἐργᾰσ-τήριον, τό}
+~
+\end{multicols}
+\newpage
+\begin{multicols}{2}[\section{τὸ πανεπιστήμιον}] 
+\e{πᾱν-επιστήμιον\textsuperscript{\textdagger}, τό}
+\subsection{ἀκρο-ᾱτήριον, τό}
+\index{ἀκρο-ᾱτήριον, τό}
+\subsection{ἀκρό-ᾱσις, εως, ἡ}
+\index{ἀκρό-ᾱσις, εως, ἡ}
+\subsection{φοιτ-ητής, οῦ, ὁ} 
+\index{φοιτ-ητής, οῦ, ὁ} 
+\e{φοιτ-ήτρια\textsuperscript{\textdagger}, ἡ}
+\subsection{ἀναγν-ωστήριον, τό}
+\index{ἀναγν-ωστήριον, τό}
+\subsection{βιβλιο-θήκη, ἡ}
+\index{βιβλιο-θήκη, ἡ}
+\subsection{μάθ-ημα, ατος, τό}
+\index{μάθ-ημα, ατος, τό}
+\e{ἐπίκουρ-ος καθηγ-ητής, οῦ, ὁ} 
+\ee{ἐπίκουρ-ος καθηγ-ήτρια\textsuperscript{\textdagger}, ἡ}
+\e{ἀναπληρωτὴς\textsuperscript{\textdagger} καθηγ-ητής, οῦ, ὁ}
+\ee{ἀναπληρώτρια\textsuperscript{\textdagger} καθηγ-ήτρια\textsuperscript{\textdagger}, ἡ}
+\e{καθηγ-ητής, οῦ, ὁ}
+\ee{καθηγ-ήτρια\textsuperscript{\textdagger}, ἡ}
+\subsection{κοσμ-ήτωρ, ορος, ὁ}
+\index{κοσμ-ήτωρ, ορος, ὁ}
+\subsection{πρύτᾰν-ις [ῠ], εως, ὁ}
+\index{πρύτᾰν-ις [ῠ], εως, ὁ}
+\e{δῐδακ-τορικὴ\textsuperscript{\textdagger} προᾰγωγ-ή, ἡ}
+~
+\end{multicols}
+\newpage
+\begin{multicols}{2}[\section{αἱ ἑορταί τε καὶ τὰ ἐκπρεπῆ (α')}] 
+\subsection{ἡ γένν-ησις τοῦ Χριστοῦ, εως, ἡ}
+\index{ἡ γένν-ησις τοῦ Χριστοῦ, εως, ἡ} ~\\
+Χριστούγεννα\textsuperscript{\textdagger}, τά
+\index{χριστούγεννα, τά@Χριστούγεννα\textsuperscript{\textdagger}, τά}
+\subsection{χριστουγεννιάτικον\textsuperscript{\textdagger} δένδρον, τό}
+\index{χριστουγεννιάτικον\textsuperscript{\textdagger} δένδρον, τό}
+\subsection{φάτν-η, ἡ}
+\index{φάτν-η, ἡ}
+\e{στέφᾰνος τῆς νηστ-είας τῶν Χριστουγέννων\textsuperscript{\textdagger}, ὁ}
+\subsection{πάσχα, τό}
+\index{πάσχα, τό}
+\subsection{πεντηκοστ-ή, ἡ}
+\index{πεντηκοστ-ή, ἡ}
+\e{ἀπόκρεως\textsuperscript{\textdaggerdbl}, ω, ἡ}
+\subsection{γάμος [ᾰ], ὁ}
+\index{γάμος [ᾰ], ὁ}
+\subsection{νυμφ-ίος, ὁ}
+\index{νυμφ-ίος, ὁ}
+\subsection{νύμφ-η, ἡ}
+\index{νύμφ-η, ἡ}
+\subsection{βάπτ-ισμα, ατος, τό}
+\index{βάπτ-ισμα, ατος, τό}
+~
+\end{multicols}
+\newpage
+\begin{multicols}{2}[\section{αἱ ἑορταί τε καὶ τὰ ἐκπρεπῆ (β')}] 
+\subsection{διαζύγιον [ῠ], τό}
+\index{διαζύγιον [ῠ], τό}
+\subsection{γενέθλια, τά}
+\index{γενέθλια, τά}
+\subsection{δῶρον, τό}
+\index{δῶρον, τό}
+\subsection{ταφ-ή, ἡ}
+\index{ταφ-ή, ἡ}
+\e{πῠρο-τεχν-ήματα\textsuperscript{\textdagger}, άτων, τά}
+\subsection{παννῠχ-ὶς τοῦ νέου ἔτους, ίδος, ἡ}
+\index{παννῠχ-ίς τοῦ νέου ἔτους, ίδος, ἡ}
+~
+\end{multicols}
+\newpage
+\begin{multicols}{2}[\section{ἡ σχολή (α')}] 
+\subsection{σχολή, ἡ}
+\index{σχολή, ἡ}
+\subsection{ἑορτ-ή, ἡ}
+\index{ἑορτ-ή, ἡ}
+\subsection{σκην-ὴ ἱππο-δρόμου, ἡ}
+\index{σκην-ὴ ἱππο-δρόμου, ἡ}
+\subsection{πετευρ-ιστής, οῦ, ὁ} \index{πετευρ-ιστής, οῦ, ὁ} ~\\
+πετευρ-ίστρια\textsuperscript{*}\footnote{θηλυκὸν τοῦ \emph{πετευρ-ιστής, οῦ, ὁ}}, ἡ \index{πετευρ-ίστρια\textsuperscript{*}, ἡ}
+\subsection{γελωτο-ποιός, ὁ}
+\index{γελωτο-ποιός, ὁ}
+\subsection{πέτᾰσ-ος, ὁ}
+\index{πέτᾰσ-ος, ὁ}
+\subsection{χῐτών-ιον, τό}         
+\index{χῐτών-ιον, τό}         
+\subsection{βράκαι, ῶν, αἱ}
+\index{βράκαι, ῶν, αἱ}
+\subsection{κώρῠκος, ὁ}
+\index{κώρῠκος, ὁ}
+\subsection{φώκη, ἡ}
+\index{φώκη, ἡ}
+\subsection{τῐθᾰσ-ευτής τῶν θηρίων, οῦ, ὁ}
+\index{τῐθᾰσ-ευτής τῶν θηρίων, οῦ, ὁ} ~\\
+δᾰμαντὴρ τῶν θηρίων, ῆρος, ὁ \index{δᾰμαντὴρ τῶν θηρίων, ῆρος, ὁ} \\
+δᾰμάτειρα\textsuperscript{*}\footnote{θηλυκὸν τοῦ \emph{δᾰμαντὴρ, ῆρος, ὁ}} [μᾰ] τῶν θηρίων, ἡ
+\index{δᾰμάτειρα\textsuperscript{*} [μᾰ] τῶν θηρίων, ἡ}
+\subsection{ἱππο-δρόμια, τά}
+\index{ἱππο-δρόμια, τά}
+\subsection{νευροσπαστ-ικὸν θέᾱτρον, τό}
+\index{νευροσπαστ-ικὸν θέᾱτρον, τό}
+\subsection{ὄρχ-ησις, εως, ἡ}
+\index{ὄρχ-ησις, εως, ἡ}
+\subsection{λῠρ-ιστής, οῦ, ὁ}
+\index{λῠρ-ιστής, οῦ, ὁ}
+\subsection{πληκτρο-κυμβᾰλ-ιστής\textsuperscript{*}\protect\footnote{ἀπὸ τοῦ \emph{πλῆκ-τρον, τό} καὶ τοῦ \emph{κυμβᾰλ-ιστής, οῦ, ὁ}}, οῦ, ὁ}
+\index{πληκτρο-κυμβᾰλ-ιστής\textsuperscript{*}, οῦ, ὁ} 
+\subsection{ζεῦγος ὀρχουμένων, εος, τό}
+\index{ζεῦγος ὀρχουμένων, εος, τό} \subsection{ὀρχηστ-ρίς, ίδος, ἡ}
+\index{ὀρχηστ-ρίς, ίδος, ἡ} \subsection{ὀρχ-ηστής, οῦ, ὁ}
+\index{ὀρχ-ηστής, οῦ, ὁ} \subsection{ἑορτ-αστικὴ σκην-ή, ἡ}
+\index{ἑορτ-αστικὴ σκην-ή, ἡ} \subsection{περιᾰγωγ-ή, ἡ}
+\index{περιᾰγωγ-ή, ἡ} \subsection{πᾰρᾰδεισ-ος, ὁ}
+\index{πᾰρᾰδεισ-ος, ὁ} \subsection{πᾰνηγῠρ-ιστήριον, τό}
+\index{πᾰνηγῠρ-ιστήριον, τό} \subsection{θέᾱτρον ποικῐλ-ίας, τό}
+\index{θέᾱτρον ποικῐλ-ίας, τό}
+\subsection{παικ-τικὴ σχέδ-η, ἡ}
+\index{παικ-τικὴ σχέδ-η, ἡ}
+\subsection{παίγν-ιον τῶν σχε-δῶν, τό}
+\index{παίγν-ιον τῶν σχε-δῶν, τό}
+\subsection{παίκ-της, ου, ὁ}
+\index{παίκ-της, ου, ὁ}
+\subsection{κῠβεία, ἡ}
+\index{κῠβεία, ἡ}
+\subsection{κύβος, ὁ} \index{κύβος, ὁ} ~\\
+ἀστράγᾰλος [ρᾰ], ὁ \index{ἀστράγᾰλος [ρᾰ], ὁ}
+\e{ζατρίκιον\textsuperscript{\textdaggerdbl}, τό}
+\subsection{χωρίον κατασκην-ώσεως, τό}
+\index{χωρίον κατασκην-ώσεως, τό}
+\subsection{χᾰράκ-ωμα, ατος, τό}
+\index{χᾰράκ-ωμα, ατος, τό}
+\subsection{σκην-ή, ἡ}
+\index{σκην-ή, ἡ}
+\subsection{πάσσᾰλος, ὁ}
+\index{πάσσᾰλος, ὁ}
+\subsection{κρίκ-ος [ῐ], ὁ}
+\index{κρίκ-ος [ῐ], ὁ}
+\subsection{αἰώρα, ἡ}
+\index{αἰώρα, ἡ}
+\subsection{δένδρον, τό}
+\index{δένδρον, τό}
+~
+\end{multicols}
+\newpage
+\begin{multicols}{2}[\section{ἡ σχολή (β')}] 
+\subsection{ὑπνο-σάκκος\textsuperscript{\textdagger}, ὁ}
+\index{ὑπνο-σάκκος, ὁ}
+\subsection{φῡσ-ητὸν στρῶμα, ατος, τό}
+\index{φῡσ-ητὸν στρῶμα, ατος, τό}
+\subsection{κλῑνο-καθέδριον, τό}
+\index{κλῑνο-καθέδριον, τό}
+\subsection{ἡλῐ-ωσις, εως, ἡ}
+\index{ἡλῐ-ωσις, εως, ἡ}
+\subsection{ἀγκιστρ-εία, ἡ}
+\index{ἀγκιστρ-εία, ἡ}
+\subsection{ἁλι-ευτικὸς κάλᾰμος [κᾰ], ὁ}
+\index{ἁλι-ευτικὸς κάλᾰμος [κᾰ], ὁ}
+\subsection{ἁλι-ευτικὸν λίνον [ῐ], τό}
+\index{ἁλι-ευτικὸν λίνον [ῐ], τό}
+\subsection{ἄγκιστρον, τό}
+\index{ἄγκιστρον, τό}
+\subsection{δέλε-αρ, ατος, τό}
+\index{δέλε-αρ, ατος, τό}
+\subsection{ἁλι-εύς, έως, ὁ}
+\index{ἁλι-εύς, έως, ὁ}
+\subsection{ἰχθῦς, ύος, ὁ}
+\index{ἰχθῦς, ύος, ὁ}
+\subsection{λεπ-ίς, ίδος, ἡ}
+\index{λεπ-ίς, ίδος, ἡ}
+~
+\end{multicols}
+\newpage
+\begin{multicols}{2}[\section{τὰ παίγνια}] 
+\e{ζατρίκιον\textsuperscript{\textdaggerdbl}, τό}
+\e{πεσσὸς τοῦ ζατρικίου\textsuperscript{\textdaggerdbl}, ὁ} 
+\e{ζατρικίζω\textsuperscript{\textdaggerdbl}}
+\subsection{τρῐόδ-ιον, τό} % https://la.wikipedia.org/wiki/Ludus_tabularis Triodium sive merelli https://issuu.com/pispasba/docs/___________________________________
+\index{τρῐόδ-ιον, τό}
+\subsection{παικ-τικὴ ψῆφος, ἡ}
+\index{παικ-τικὴ ψῆφος, ἡ}
+\subsection{σφαιρ-ιστήριον, τό}
+\index{σφαιρ-ιστήριον, τό}
+\subsection{παικ-τικὴ τράπεζ-α [τρᾰ], ης, ἡ}
+\index{παικ-τικὴ τράπεζ-α [τρᾰ], ης, ἡ}
+\subsection{τῠχ-αῖος τροχίσκ-ος, ὁ}
+\index{τῠχ-αῖος τροχίσκ-ος, ὁ}
+\e{ἐπιτρᾰπέζ-ιον ποδό-σφαιρον\textsuperscript{\textdagger}, τό}
+~
+\end{multicols}
+\newpage
+\begin{multicols}{2}[\section{ἡ μουσική / τὸ θέατρον (α')}] 
+\subsection{μουσῐκὴ κλείς, ἡ, κλειδός}
+\index{μουσῐκὴ κλείς, ἡ, κλειδός}
+\subsection{φθόγγ-ος, ὁ}
+\index{φθόγγ-ος, ὁ}        
+\subsection{στέλεχ-ος, εος, τό}
+\index{στέλεχ-ος, εος, τό}
+\subsection{μείζων κλῖμαξ, ᾰκος, ἡ}
+\index{μείζων κλῖμαξ, ᾰκος, ἡ}
+\subsection{μικροτέρα κλῖμαξ, ᾰκος, ἡ}
+\index{μικροτέρα κλῖμαξ, ᾰκος, ἡ}
+\subsection{μονῳδ-ία, ἡ}
+\index{μονῳδ-ία, ἡ}
+\subsection{διῳδ-ία, ἡ}
+\index{διῳδ-ία, ἡ}
+\subsection{συμφων-ία, ἡ}
+\index{συμφων-ία, ἡ}
+\e{διευθῡν-τής\textsuperscript{\textdagger}, οῦ, ὁ}
+\subsection{ᾄδουσα, ἡ} \index{ᾄδουσα, ἡ} ~\\
+ᾠδός, ἡ \index{ᾠδός, ἡ}
+\subsection{ᾄδων, οντος, ὁ} \index{ᾄδων, οντος, ὁ} ~\\
+ᾠδός, ὁ \index{ᾠδός, ὁ}
+\subsection{ὄρχ-ησις ἐπὶ σκην-ῆς, εως, ἡ}
+\index{ὄρχ-ησις ἐπὶ σκην-ῆς, εως, ἡ}
+\e{μελο-δρᾱμᾰτ-ικὸν\textsuperscript{\textdagger} θέᾱτρον, τό}
+\e{σκηνο-θέτης\textsuperscript{\textdagger} , ου, ὁ}
+\subsection{θέᾱτρον, τό}
+\index{θέᾱτρον, τό}
+\e{θεᾱτρικὸς διόφθαλμος\textsuperscript{\textdagger}, ὁ}
+\subsection{θεᾱτρικὸν πρόγραμμα, ατος, τό}
+\index{θεᾱτρικὸν πρόγραμμα, ατος, τό}
+\e{ὑπο-κρῐτής, οῦ, ὁ} 
+\ee{μῖμος, ου, ὁ}
+\ee{ὑπο-κρίτρια\textsuperscript{\textdagger}, ἡ}
+\subsection{κωφὸν πρόσωπον, τό}
+\index{κωφὸν πρόσωπον, τό} ~\\
+δορῠφόρ-ημα, ατος, τό
+\index{δορῠφόρ-ημα, ατος, τό}
+\e{μελό-δρᾱμα\textsuperscript{\textdagger}, ατος, τό}
+\e{ὑψί-φωνος\textsuperscript{\textdagger} [ῐ], ἡ}
+\e{μεσό-φωνος\textsuperscript{\textdagger} [ῐ], ἡ}
+\e{ὀξύ-φωνος\textsuperscript{\textdagger} [ῠ], ὁ} %% https://el.wikipedia.org/wiki/%CE%9A%CE%BF%CE%BD%CF%84%CF%81%CE%AC%CE%BB%CF%84%CE%BF
+\e{βᾰρύ-φωνος\textsuperscript{\textdagger} [ῠ], ὁ}
+\e{βᾰθύ-φωνος\textsuperscript{\textdagger} [ῠ], ὁ}
+~
+\end{multicols}
+\newpage
+\begin{multicols}{2}[\section{ἡ μουσική / τὸ θέατρον (β')}] 
+\subsection{χορός, ὁ}
+\index{χορός, ὁ}
+\subsection{σκην-ή, ἡ}
+\index{σκην-ή, ἡ}
+\subsection{συμφων-ιᾰκοί, οἱ}
+\index{συμφων-ιᾰκοί, οἱ}
+\subsection{θέᾱτρον, τό}
+\index{θέᾱτρον, τό}
+\subsection{πρῶτον διάζωμα, ατος, τό}
+\index{πρῶτον διάζωμα, ατος, τό}
+\subsection{δεύτερον διάζωμα, ατος, τό}
+\index{δεύτερον διάζωμα, ατος, τό}
+\subsection{ἄκρον διάζωμα, ατος, τό}
+\index{ἄκρον διάζωμα, ατος, τό} ~\\
+ἐξ-ώστρα, ἡ
+\index{ἐξ-ώστρα, ἡ}
+\subsection{πρόθυρ-ον θεάτρου, τό}
+\index{πρόθυρ-ον θεάτρου, τό}
+\subsection{δρᾶμα, ατος, τό}
+\index{δρᾶμα, ατος, τό}
+\subsection{κωμῳδ-ία, ἡ}
+\index{κωμῳδ-ία, ἡ}
+\subsection{τρᾰγῳδ-ία, ἡ}
+\index{τρᾰγῳδ-ία, ἡ}
+\e{μελό-δρᾱμᾰτ-ιον\textsuperscript{\textdagger}, τό}
+\subsection{ἱμᾰτιο-φῠλάκιον, τό}
+\index{ἱμᾰτιο-φῠλάκιον, τό} ~\\
+ἱμᾰτιο-θήκη [ῑμ], ἡ
+\index{ἱμᾰτιο-θήκη [ῑμ], ἡ}
+~
+\end{multicols}
+\newpage
+\begin{multicols}{2}[\section{τὰ μουσικὰ ὄργανα}] 
+\e{τύμπᾰνον, τό}
+\e{χέλυς, ῠος, ἡ} 
+\ee{λύρα [ῠ], ἡ} 
+\ee{βιολίον\textsuperscript{\textdagger}, τό}
+\subsection{χορδ-ή, ἡ}
+\index{χορδ-ή, ἡ}
+\e{βάρβῐτ-ος, ἡ ἢ ὁ} 
+\ee{βᾰθύ-χορδον, τό} 
+\ee{βιολοντσέλλον\textsuperscript{\textdagger}, τό}
+\subsection{ὁλκωτὴ σάλπ-ιγξ, ιγγος, ἡ}
+\index{ὁλκωτὴ σάλπ-ιγξ, ιγγος, ἡ}
+\e{σαξόφωνον\textsuperscript{\textdagger}, τό}
+\subsection{βᾰρῠ-τονος σάλπ-ιγξ, ιγγος, ἡ}
+\index{βᾰρῠ-τονος σάλπ-ιγξ, ιγγος, ἡ}
+\subsection{αὐλός, ὁ}
+\index{αὐλός, ὁ}
+\subsection{συμφώνιον, τό}
+\index{συμφώνιον, τό}
+\subsection{αὐλὸς ὀργάνου, ὁ}
+\index{αὐλὸς ὀργάνου, ὁ}
+\subsection{Ἱσπᾱνικὴ κῐθάρ-α [θᾰ], ἡ}
+\index{ἱσπᾱνικὴ κῐθάρ-α [θᾰ], ἡ@Ἱσπᾱνικὴ κῐθάρ-α [θᾰ], ἡ}
+\subsection{τρίγωνον [ῐ], τό}
+\index{τρίγωνον [ῐ], τό}
+\subsection{ψαλ-τήριον, τό}
+\index{ψαλ-τήριον, τό} ~\\
+ἅρπη, ἡ \index{ἅρπη, ἡ}
+\e{ἀλπικὴ\textsuperscript{\textdagger} κῐθάρ-α [θᾰ], ἡ}
+\subsection{σάλπ-ιγξ, ιγγος, ἡ}
+\index{σάλπ-ιγξ, ιγγος, ἡ}
+\e{εὐθύ-αυλος\textsuperscript{\textdagger}, ὁ}
+\subsection{ἁρμον-ική, ἡ}
+\index{ἁρμον-ική, ἡ}
+\subsection{ἐκκλησι-αστικὸν ὄργανον, τό}
+\index{ἐκκλησι-αστικὸν ὄργανον, τό}
+\e{αὐτό-μᾰτον κλειδο-κύμβᾰλον\textsuperscript{\textdagger}, τό}
+\subsection{οὐρ-αῖον πληκτρο-κύμβᾰλον\textsuperscript{*}\protect\footnote{ἀπὸ τοῦ \emph{πλῆκ-τρον, τό} καὶ τοῦ \emph{κύμβᾰλον, τό}}, τό}
+\index{οὐρ-αῖον πληκτρο-κύμβᾰλον\textsuperscript{*}, τό}
+\e{πληκτρο-κύμβᾰλον\textsuperscript{*\number\value{footnote}}, τό}
+\subsection{ἁρμόν-ιον, τό}
+\index{ἁρμόν-ιον, τό}
+~
+\end{multicols}
+\newpage 
+\begin{multicols}{2}[\section{τὰ ἀθλητικά · οἱ κοῦφοι ἀθλητικοὶ ἀγῶνες (α')}] % http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0063:id=athletae-cn The athletic contests, just as were the “weights” in the Ring in England, were divided into “light” (κοῦφα) and “heavy” (βαρέα) or “violent” (βιαια):
+{\renewcommand \thesubsection {\thesection} \index{κοῦφοι ἀθλ-ητικοὶ ἀγῶνες [ᾰ], οἱ}}
+\e{γυμνᾰσ-τής, οῦ, ὁ}
+\ee{γυμνάσ-τρια\textsuperscript{\textdagger}, ἡ}
+\subsection{ἀθλ-ητικὴ ἐσθής, ῆτος, ἡ}
+\index{ἀθλ-ητικὴ ἐσθής, ῆτος, ἡ}
+\subsection{ἀθλ-ητικὰ ὑποδήματα, άτων, τά}
+\index{ἀθλ-ητικὰ ὑποδήματα, άτων, τά}
+\subsection{βρᾰχεῖαι βράκαι, ῶν, αἱ}
+\index{βρᾰχεῖαι βράκαι, ῶν, αἱ}
+\subsection{βρᾰχὺς δρόμος, ὁ}
+\index{βρᾰχὺς δρόμος, ὁ}
+\subsection{δρομ-εύς, έως, ὁ}
+\index{δρομ-εύς, έως, ὁ}
+\subsection{δρόμος ἑκᾰτὸν μέτρων, ὁ}
+\index{δρόμος ἑκᾰτὸν μέτρων, ὁ}
+\subsection{τέρμα, ατος, τό} % http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0063:entry=stadium-cn&highlight=
+\index{τέρμα, ατος, τό} ~\\
+τέλος, εος, τό \index{τέλος, εος, τό} ~\\
+καμπ-τήρ, ῆρος, ὁ \index{καμπ-τήρ, ῆρος, ὁ} ~\\
+νύσσα, ης, ἡ \index{νύσσα, ης, ἡ}
+\subsection{ἄφεσις, εως, ἡ} 
+\index{ἄφεσις, εως, ἡ} ~\\
+γραμμή, ἡ \index{γραμμή, ἡ}
+\subsection{δρόμος μετ' ἐμποδ-ίων, ὁ}
+\index{δρόμος μετ' ἐμποδ-ίων, ὁ}
+\subsection{ἀνώμᾰλ-ος δρόμος, ὁ}
+\index{ἀνώμᾰλ-ος δρόμος, ὁ}
+\subsection{δρόμος μετὰ [ᾰ] φῠσικῶν ἐμποδ-ίων, ὁ}
+\index{δρόμος μετὰ [ᾰ] φῠσικῶν ἐμποδ-ίων, ὁ}
+\subsection{δρόμος πεντᾰκισ-χιλίων [χῑ] μέτρων, ὁ}
+\index{δρόμος πεντᾰκισ-χιλίων [χῑ] μέτρων, ὁ}
+\subsection{δρόμος τρισ-χιλίων [χῑ] μέτρων, ὁ}
+\index{δρόμος τρισ-χιλίων [χῑ] μέτρων, ὁ}
+\subsection{δόλιχος, ὁ}
+\index{δόλιχος, ὁ}
+~
+\end{multicols}
+\newpage 
+\begin{multicols}{2}[\section{τὰ ἀθλητικά · οἱ κοῦφοι ἀθλητικοὶ ἀγῶνες (β')}]
+{\renewcommand \thesubsection {\thesection} \index{κοῦφοι ἀθλ-ητικοὶ ἀγῶνες [ᾰ], οἱ}}
+\subsection{τριπλ-οῦν ἅλμα, ατος, τό}
+\index{τριπλ-πλοῦν ἅλμα, ατος, τό}
+\subsection{ἅλμα εἰς ὕψος, ατος, τό}
+\index{ἅλμα εἰς ὕψος, ατος, τό}
+\subsection{ἅλμα εἰς μῆκος, ατος, τό}
+\index{ἅλμα εἰς μῆκος, ατος, τό}
+\subsection{δισκο-βολία, ἡ}             
+\index{δισκο-βολία, ἡ}             
+\subsection{ἀκοντ-ισμός, ὁ}             
+\index{ἀκοντ-ισμός, ὁ}             
+\subsection{πένταθλ-ον, τό}
+\index{πένταθλ-ον, τό}
+\e{δέκαθλ-ον\textsuperscript{\textdagger}, τό}
+\subsection{ἅλμα ἐπὶ κοντῷ, ατος, τό}
+\index{ἅλμα ἐπὶ κοντῷ, ατος, τό}
+\e{σφῡροβολία\textsuperscript{\textdagger}, ἡ}
+~
+\end{multicols}
+\newpage 
+\begin{multicols}{2}[\section{τὰ ἀθλητικά · ἡ γυμναστική}]
+\subsection{γυμνᾰσ-τικὴ τῶν ὀργάνων, ἡ}
+\index{γυμνᾰσ-τικὴ τῶν ὀργάνων, ἡ}
+\e{ἵππος, ὁ} 
+\ee{ἱππικὸν ἐφαλτήριον\textsuperscript{\textdagger}, τό}
+\subsection{κρίκ-οι [ῐ], οἱ}
+\index{κρίκ-οι [ῐ], οἱ}
+\subsection{σύντονον στρῶμα, ατος, τό}
+\index{σύντονον στρῶμα, ατος, τό}
+\subsection{δοκὸς ἰσορροπ-ίας, ἡ}
+\index{δοκὸς ἰσορροπ-ίας, ἡ}
+\e{μονόζυγον\textsuperscript{\textdagger}, τό}
+\subsection{παράλληλοι ζυγοί, οἱ}
+\index{παράλληλοι ζυγοί, οἱ}
+\subsection{γυμνάσ-ιον [ᾰ], τό}
+\index{γυμνάσ-ιον [ᾰ], τό}
+\subsection{γυμν-ᾰσία ἀσκ-ήσεις, εων, αἱ}
+\index{γυμν-ᾰσία ἀσκ-ήσεις, εων, αἱ}
+\subsection{ἐπίπεδ-ος γυμναστική, ἡ}
+\index{ἐπίπεδ-ος γυμναστική, ἡ}
+\subsection{λαμβάνω (λήψομαι, ἔλαβον, εἴληφα, εἴλημμαι, ἐλήφθην) ψῆφον}
+\index{λαμβάνω (λήψομαι, ἔλαβον, εἴληφα, εἴλημμαι, ἐλήφθην) ψῆφον}
+\subsection{γυμνάσ-ια [ᾰ], τά}
+\index{γυμνάσ-ια [ᾰ], τά} ~\\
+γυμνᾰσ-τικὴ τέχν-η, ἡ \index{γυμνᾰσ-τικὴ τέχν-η, ἡ}
+\subsection{γυμνᾰσ-τικὰ ὄργανα, τά}
+\index{γυμνᾰσ-τικὰ ὄργανα, τά}
+\subsection{ἐπικράτ-ησις [ᾰ] τῶν ψήφων, εως, ἡ}
+\index{ἐπικράτ-ησις [ᾰ] τῶν ψήφων, εως, ἡ}
+\subsection{χρῡσοῦν ἆθλον, τό}
+\index{χρῡσοῦν ἆθλον, τό}
+\subsection{ἀργῠροῦν ἆθλον, τό}
+\index{ἀργῠροῦν ἆθλον, τό}
+\subsection{χαλκοῦν ἆθλον, τό}
+\index{χαλκοῦν ἆθλον, τό} ~\\
+ὀρει-χάλκῐνον ἆθλον, τό
+\index{ὀρει-χάλκῐνον ἆθλον, τό}
+~
+\end{multicols}
+\newpage 
+\begin{multicols}{2}[\section{τὰ ἀθλητικά · ἡ ποδοσφαίρισις\textsuperscript{\textdagger} (α')}]
+{\renewcommand \thesubsection {\thesection} \index{ποδο-σφαίρ-ισις\textsuperscript{\textdagger}, εως, ἡ}}
+\e{ποδο-σφαιρ-ικὸν\textsuperscript{\textdagger} πεδίον, τό}
+\ee{παικ-τικὸν πεδίον, τό} 
+\ee{ἀγων-ιστικὸν πεδίον, τό}
+\e{τερματο-φύλαξ\textsuperscript{\textdagger} [ῠ], ᾰκος, ὁ}
+\e{ἵημι (ἥσω, ἧκα, εἷκα, εἷμαι, εἵθην) τὴν ποδό-σφαιρᾰν\textsuperscript{\textdagger} εἰς τὸ τέρμα} 
+\ee{βάλλω (βαλῶ, ἔβαλον, βέβληκα, βέβλημαι, ἐβλήθην) τὴν ποδό-σφαιρᾰν\textsuperscript{\textdagger} εἰς τὸ τέρμα} 
+\ee{σημει-όω τέρμα}
+\subsection{σφαῖρᾰ, ας, ἡ}
+\index{σφαῖρᾰ, ας, ἡ}
+\e{ποδό-σφαιρᾰ\textsuperscript{\textdagger}, ας, ἡ}
+\subsection{κενὴ σφαῖρᾰ, ας, ἡ}
+\index{κενὴ σφαῖρᾰ, ας, ἡ}
+\subsection{ἀμυν-τικὸς παίκ-της, ου, ὁ}
+\index{ἀμυν-τικὸς παίκ-της, ου, ὁ}
+\subsection{ἐπιθετ-ικὸς παίκ-της, ου, ὁ}
+\index{ἐπιθετ-ικὸς παίκ-της, ου, ὁ}
+\subsection{ἐλεύθερος παίκ-της, ου, ὁ}
+\index{ἐλεύθερος παίκ-της, ου, ὁ}
+\subsection{τὸ κόκκ-ῐνον [κίτρῐνον] χαρτίον δείκνυμι (δείξω, ἔδειξα, δέδειχα, δέδειγμαι, ἐδείχθην)}
+\index{τὸ κόκκ-ῐνον [κίτρῐνον] χαρτίον δείκνυμι (δείξω, ἔδειξα, δέδειχα, δέδειγμαι, ἐδείχθην)}
+\subsection{δῐαιτ-ητής, οῦ, ὁ}
+\index{δῐαιτ-ητής, οῦ, ὁ}
+\subsection{δοκὸς τέρματος, ἡ}
+\index{δοκὸς τέρματος, ἡ}
+\subsection{τέρμα, ατος, τό}
+\index{τέρμα, ατος, τό}
+\subsection{δίκτῠον, τό}
+\index{δίκτῠον, τό}
+\subsection{περιοχ-ὴ τέρματος, ἡ}
+\index{περιοχ-ὴ τέρματος, ἡ} ~\\
+μικρὰ περιοχ-ή, ἡ
+\index{μικρὰ περιοχ-ή, ἡ}
+\subsection{περιοχ-ὴ ποιν-ῆς, ἡ}
+\index{περιοχ-ὴ ποιν-ῆς, ἡ} ~\\
+μεγάλη [ᾰ] περιοχ-ή, ἡ
+\index{μεγάλη [ᾰ] περιοχ-ή, ἡ}
+\subsection{ἀρχηγὸν σύριγ-μα [ῡ], ατος, τό}
+\index{ἀρχηγὸν σύριγ-μα [ῡ], ατος, τό}
+\subsection{ἐπανορθωτικὸν λάκτ-ισμα, ατος, τό}
+\index{ἐπανορθωτικὸν λάκτ-ισμα, ατος, τό} ~\\
+ποίν-ῐμον λάκτ-ισμα, ατος, τό
+\index{ποίν-ῐμον λάκτ-ισμα, ατος, τό}
+\e{ἡμί-χρονον\textsuperscript{\textdagger}, τό}
+\e{ποδο-σφαιρ-ιστής\textsuperscript{\textdagger}, οῦ, ὁ}
+\e{παίζω τὸ ποδό-σφαιρον\textsuperscript{\textdagger}}
+\subsection{ἀποβάλλω (-βαλῶ, ἀπέβαλον, -βέβληκα, -βέβλημαι, ἀπἐβλήθην) τινὰ ἀπὸ τοῦ πεδίου}
+\index{ἀποβάλλω (-βαλῶ, ἀπέβαλον, -βέβληκα, -βέβλημαι, ἀπἐβλήθην) τινὰ ἀπὸ τοῦ πεδίου}
+\subsection{παραβαίνω, -βήσομαι, παρέβην, -βέβηκα}
+\index{παραβαίνω, -βήσομαι, παρέβην, -βέβηκα} ~\\
+ποιῶ (ποιέω) παράβασιν
+\index{ποιῶ (ποιέω) παράβασιν}
+\subsection{ἐπανα-φορὰ ἀπὸ τῆς πλᾰγίας [ᾰ] γραμμῆς, ἡ}
+\index{ἐπανα-φορὰ ἀπὸ τῆς πλᾰγίας [ᾰ] γραμμῆς, ἡ}
+~
+\end{multicols}
+\newpage 
+\begin{multicols}{2}[\section{τὰ ἀθλητικά · ἡ ποδοσφαίρισις\textsuperscript{\textdagger} (β')}]
+{\renewcommand \thesubsection {\thesection} \index{ποδο-σφαίρ-ισις\textsuperscript{\textdagger}, εως, ἡ}}
+\subsection{γωνι-ακὸν λάκτ-ισμα, ατος, τό}
+\index{γωνι-ακὸν λάκτ-ισμα, ατος, τό} 
+\subsection{βοηθὸς δῐαιτ-ητής, οῦ, ὁ}
+\index{βοηθὸς δῐαιτ-ητής, οῦ, ὁ}
+\subsection{πλᾰγία [ᾰ] γραμμή, ἡ}
+\index{πλᾰγία [ᾰ] γραμμή, ἡ}
+\subsection{τελικὸν σύριγ-μα [ῡ], ατος, τό}
+\index{τελικὸν σύριγ-μα [ῡ], ατος, τό}
+\subsection{τελικὸς ἀριθμός [ᾰ], ὁ}
+\index{τελικὸς ἀριθμός [ᾰ], ὁ}
+\subsection{ἐκτὸς παιδ-ιᾶς εἰμί (ἔσομαι)}
+\index{ἐκτὸς παιδ-ιᾶς εἰμί (ἔσομαι)}
+~
+\end{multicols}
+\newpage 
+\begin{multicols}{2}[\section{τὰ ἀθλητικά · οἱ βαρεῖς ἀθλητικοὶ ἀγῶνες}] % http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0063:id=athletae-cn The athletic contests, just as were the “weights” in the Ring in England, were divided into “light” (κοῦφα) and “heavy” (βαρέα) or “violent” (βιαια):
+{\renewcommand \thesubsection {\thesection} \index{βᾰρεῖς ἀθλ-ητικοὶ ἀγῶνες [ᾰ], οἱ}}
+\subsection{ἄρσις βᾰρῶν, εως, ἡ}
+\index{ἄρσις βᾰρῶν, εως, ἡ}
+\subsection{πᾰλαιστής, οῦ, ὁ}
+\index{πᾰλαιστής, οῦ, ὁ}
+\subsection{Ἑλληνορωμαϊκὴ πάλη [ᾰ], ἡ}
+\index{ἑλληνορωμαϊκὴ πάλη [ᾰ], ἡ@Ἑλληνορωμαϊκὴ πάλη [ᾰ], ἡ}
+\subsection{ἐλευθέρα πάλη [ᾰ], ἡ}
+\index{ἐλευθέρα πάλη [ᾰ], ἡ}
+\subsection{κᾰρᾱτῐκὴ πάλη [ᾰ], ἡ}
+\index{κᾰρᾱτῐκὴ πάλη [ᾰ], ἡ}
+\subsection{πυγμᾰχ-ία, ἡ}
+\index{πυγμᾰχ-ία, ἡ} ~\\
+πυγμ-ή, ἡ \index{πυγμ-ή, ἡ}
+\subsection{πάλαισ-μα, ατος, τό}
+\index{πάλαισ-μα, ατος, τό}
+\subsection{ἰουδοικὴ πάλη [ᾰ], ἡ}
+\index{ἰουδοικὴ πάλη [ᾰ], ἡ}
+\subsection{πύγμᾰχ-ος, ὁ}
+\index{πύγμᾰχ-ος, ὁ} ~\\
+πύκτης, ου, ὁ \index{πύκτης, ου, ὁ}
+\subsection{λόχος, ὁ}
+\index{λόχος, ὁ} ~\\
+σπεῖρα, ἡ
+\index{σπεῖρα, ἡ}
+~
+\end{multicols}
+\newpage 
+\begin{multicols}{2}[\section{τὰ ἀθλητικά · τὰ μετὰ τῆς σφαίρας παίγνια}]
+\subsection{χειρο-σφαίρ-ισις, εως, ἡ}
+\index{χειρο-σφαίρ-ισις, εως, ἡ}
+\subsection{χειρο-σφαιρ-ιστής, οῦ, ὁ}
+\index{χειρο-σφαιρ-ιστής, οῦ, ὁ}
+\subsection{ἐπανορθωτικὴ βολή, ἡ}
+\index{ἐπανορθωτικὴ βολή, ἡ} ~\\
+ποίν-ῐμος βολή, ἡ
+\index{ποίν-ῐμος βολή, ἡ}
+\subsection{πετο-σφαίρ-ισις, εως, ἡ}
+\index{πετο-σφαίρ-ισις, εως, ἡ}
+\subsection{ἐπιθετ-ικὸς παίκ-της, ου, ὁ}
+\index{ἐπιθετ-ικὸς παίκ-της, ου, ὁ}
+\subsection{κᾰλᾰθο-σφαίρ-ισις, εως, ἡ}
+\index{κᾰλᾰθο-σφαίρ-ισις, εως, ἡ}
+\subsection{ἵημι (ἥσω, ἧκα, εἷκα, εἷμαι, εἵθην) τὴν σφαῖρᾰν διὰ τοῦ κᾰλάθου [ᾰ]}
+\index{ἵημι (ἥσω, ἧκα, εἷκα, εἷμαι, εἵθην) τὴν σφαῖρᾰν διὰ τοῦ κᾰλάθου [ᾰ]} ~\\
+βάλλω (βαλῶ, ἔβαλον, βέβληκα, βέβλημαι, ἐβλήθην) τὴν φαῖρᾰν διὰ τοῦ κᾰλάθου [ᾰ]
+\index{βάλλω (βαλῶ, ἔβαλον, βέβληκα, βέβλημαι, ἐβλήθην) τὴν σφαῖρᾰν διὰ τοῦ κᾰλάθου [ᾰ]} 
+\subsection{γρονθο-σφαίρ-ισις, εως, ἡ}
+\index{γρονθο-σφαίρ-ισις, εως, ἡ}
+\subsection{ἁρπαστόν, τό}
+\index{ἁρπαστόν, τό}
+\subsection{βᾰσεω-σφαίρ-ισις, εως, ἡ}
+\index{βᾰσεω-σφαίρ-ισις, εως, ἡ}
+\subsection{λήπ-της, ου, ὁ}
+\index{λήπ-της, ου, ὁ}
+\subsection{ῥοπᾰλοφόρος, ὁ}
+\index{ῥοπᾰλοφόρος, ὁ}
+\subsection{ῥίπτης, ου, ὁ}
+\index{ῥίπτης, ου, ὁ}
+\subsection{ῥόπᾰλον, τό}
+\index{ῥόπᾰλον, τό}
+\subsection{μικρὰ σφαῖρᾰ, ας, ἡ}
+\index{μικρὰ σφαῖρᾰ, ας, ἡ}
+~
+\end{multicols}
+\newpage 
+\begin{multicols}{2}[\section{τὰ ἀθλητικά · ἡ ἀντισφαίρισις}]
+\subsection{ἀντι-σφαίρ-ισις, εως, ἡ}
+\index{ἀντι-σφαίρ-ισις, εως, ἡ}
+\subsection{μόνος ἀγών [ᾰ], ῶνος, ὁ}
+\index{μόνος ἀγών [ᾰ], ῶνος, ὁ}
+\subsection{ἀντι-σφαίρ-ισις ἐπὶ χόρτου, εως, ἡ}
+\index{ἀντι-σφαίρ-ισις ἐπὶ χόρτου, εως, ἡ}
+\subsection{ἀντι-σφαίρ-ισις ἐπὶ πεδίου σκληροῦ, εως, ἡ}
+\index{ἀντι-σφαίρ-ισις ἐπὶ πεδίου σκληροῦ, εως, ἡ}
+\subsection{διπλοῦς ἀγών [ᾰ], ῶνος, ὁ}
+\index{διπλοῦς ἀγών [ᾰ], ῶνος, ὁ}
+\subsection{μικτὸς διπλοῦς ἀγών [ᾰ], ῶνος, ὁ}
+\index{μικτὸς διπλοῦς ἀγών [ᾰ], ῶνος, ὁ}
+\subsection{ἀντι-σφαιρ-ίστρια, ἡ}
+\index{ἀντι-σφαιρ-ίστρια, ἡ}
+\subsection{ἀντι-σφαιρ-ιστής, οῦ, ὁ}
+\index{ἀντι-σφαιρ-ιστής, οῦ, ὁ}
+\subsection{δικτῠ-ωτὸν πλῆκ-τρον, τό}
+\index{δικτῠ-ωτὸν πλῆκ-τρον, τό}
+\subsection{σφαῖρᾰ ἀντι-σφαιρ-ίσεως, ας, ἡ}
+\index{σφαῖρᾰ ἀντι-σφαιρ-ίσεως, ας, ἡ}
+\subsection{δίκτῠον, τό}
+\index{δίκτῠον, τό}
+\subsection{συλλογ-εὺς τὰς σφαίρας, έως, ὁ}
+\index{συλλογ-εὺς τὰς σφαίρας, έως, ὁ}
+\subsection{πεδίον ἀντι-σφαιρ-ίσεως, τό}
+\index{πεδίον ἀντι-σφαιρ-ίσεως, τό}
+\subsection{ὑπτί-α πληγ-ή, ἡ}
+\index{ὑπτί-α πληγ-ή, ἡ}
+\subsection{ἐκβολ-ή, ἡ}
+\index{ἐκβολ-ή, ἡ}
+\subsection{τύμμα, ατος, τό}
+\index{τύμμα, ατος, τό}
+\subsection{εὐθεῖα πληγ-ή, ἡ}
+\index{εὐθεῖα πληγ-ή, ἡ}
+\subsection{ἐπιτρᾰπέζ-ιος ἀντι-σφαίρ-ισις, εως, ἡ}
+\index{ἐπιτρᾰπέζ-ιος ἀντι-σφαίρ-ισις, εως, ἡ}
+\subsection{ἀντι-πτέρισις, εως, ἡ}
+\index{ἀντι-πτέρισις, εως, ἡ}
+~
+\end{multicols}
+\newpage  % https://incubator.wikimedia.org/wiki/Wp/grc/%CE%92%CE%B9%CE%BA%CE%B9%CF%80%CE%B1%CE%B9%CE%B4%CE%B5%CE%AF%CE%B1:%E1%BC%88%CE%B3%CE%BF%CF%81%CE%AC/%CE%9B%CF%8C%CE%B3%CE%B9%CE%BF%CE%B9_%E1%BC%99%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%BF%E1%BD%B6_%E1%BD%85%CF%81%CE%BF%CE%B9_%CF%80%CE%B5%CF%81%E1%BD%B6_%CF%83%CF%85%CE%B3%CF%87%CF%81%CF%8C%CE%BD%CF%89%CE%BD_%E1%BC%90%CE%BD%CE%BD%CE%BF%CE%B9%E1%BF%B6%CE%BD
+\begin{multicols}{2}[\section{τὰ ἀθλητικά ·  ἡ ῥοπτροσφαίρισις καὶ ἄλλα}]
+\subsection{ῥοπᾰλο-σφαίρ-ισις, εως, ἡ}
+\index{ῥοπᾰλο-σφαίρ-ισις, εως, ἡ}
+\subsection{ῥαβδο-σφαίρ-ισις, εως, ἡ}
+\index{ῥαβδο-σφαίρ-ισις, εως, ἡ}
+\subsection{ῥαβδο-σφαιρ-ιστής, οῦ, ὁ}
+\index{ῥαβδο-σφαιρ-ιστής, οῦ, ὁ}
+\subsection{σφαῖρᾰ ῥαβδο-σφαιρ-ίσεως, ας, ἡ}
+\index{σφαῖρᾰ ῥαβδο-σφαιρ-ίσεως, ας, ἡ}
+\subsection{ἀνά-σῑμος ῥάβδος, ἡ}
+\index{ἀνά-σῑμος ῥάβδος, ἡ}
+\subsection{πεδίον ῥοπτρο-σφαιρ-ίσεως, τό}
+\index{πεδίον ῥοπτρο-σφαιρ-ίσεως, τό}
+\subsection{πεδίον ὀκτω-καίδεκα ὀπῶν, τό}
+\index{πεδίον ὀκτω-καίδεκα ὀπῶν, τό}
+\subsection{ῥοπτρο-σφαίρ-ισις, εως, ἡ}
+\index{ῥοπτρο-σφαίρ-ισις, εως, ἡ}
+\subsection{βολή, ἡ}
+\index{βολή, ἡ}
+\subsection{κορύν-η, ἡ}
+\index{κορύν-η, ἡ}
+\subsection{μπόδ-ιον, τό } \index{μπόδ-ιον, τό } ~\\
+κώλ-ῡμα, ατος, τό
+\index{κώλ-ῡμα, ατος, τό}
+\subsection{ὀπή, ἡ}
+\index{ὀπή, ἡ}
+\subsection{ἱππο-σφαίρ-ισις, εως, ἡ}
+\index{ἱππο-σφαίρ-ισις, εως, ἡ} ~\\
+ἱππικὴ σφαιρο-μᾰχία, ἡ
+\index{ἱππικὴ σφαιρο-μᾰχία, ἡ}
+\subsection{διαξῐφ-ισμός, ὁ}
+\index{διαξῐφ-ισμός, ὁ}
+\subsection{τύμμα, ατος, τό}
+\index{τύμμα, ατος, τό}
+\subsection{τύπτω}
+\index{τύπτω}
+\subsection{ξίφος [ῐ] ἀσκ-ήσεως, εος, τό}
+\index{ξίφος [ῐ] ἀσκ-ήσεως, εος, τό}
+\subsection{ξίφος [ῐ] μονομᾰχ-ίας, εος, τό}
+\index{ξίφος [ῐ] μονομᾰχ-ίας, εος, τό}
+\subsection{σπᾰθ-η, ἡ}
+\index{σπᾰθ-η, ἡ}
+\index{ἀντι-πτέρισις, εως, ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ἀθλητικά · ἡ ἱππασία}]
+\subsection{ἱππ-εύω}
+\index{ἱππ-εύω} ~\\
+ἱππ-άζομαι
+\index{ἱππ-άζομαι} ~\\
+ἐλαύνω (ἐλῶ, ἤλασα) ἵππον
+\index{ἐλαύνω (ἐλῶ, ἤλασα) ἵππον}
+\subsection{κέλης, ητος, ὁ} \index{κέλης, ητος, ὁ} ~\\
+μόνιππος, ὁ
+\index{μόνιππος, ὁ}
+\subsection{ἱππικὴ ἐσθής, ῆτος, ἡ}
+\index{ἱππικὴ ἐσθής, ῆτος, ἡ}
+\subsection{μάστ-ιξ, ῑγος, ἡ}
+\index{μάστ-ιξ, ῑγος, ἡ}
+\subsection{ἱππικοὶ ἐμβάτ-αι [ᾰ], ῶν, οἱ}
+\index{ἱππικοὶ ἐμβάτ-αι [ᾰ], ῶν, οἱ}
+\subsection{χᾰλῑνός, ὁ}
+\index{χᾰλῑνός, ὁ}
+\subsection{στόμιον, τό} \index{στόμιον, τό} ~\\
+στομίς, ίδος, ἡ \index{στομίς, ίδος, ἡ}
+\subsection{κημός, ὁ} \index{κημός, ὁ} ~\\
+φορβ-ειά, ἡ \index{φορβ-ειά, ἡ} ~\\
+φῑμ-ός, ὁ \index{φῑμ-ός, ὁ}
+\subsection{ἐφίππ-ιον, τό}
+\index{ἐφίππ-ιον, τό}
+\subsection{ἀναβολ-εύς, έως, ὁ}
+\index{ἀναβολ-εύς, έως, ὁ}
+\subsection{ἱππικὸς δρόμος μετ' ἐμποδ-ίων, ὁ}
+\index{ἱππικὸς δρόμος μετ' ἐμποδ-ίων, ὁ}
+\subsection{ἐκτεν-ὴς ἢ ἐκτεταμένος δρόμος, ὁ}
+\index{ἐκτεν-ὴς ἢ ἐκτεταμένος δρόμος, ὁ}
+\subsection{κάλπη, ἡ}
+\index{κάλπη, ἡ} ~\\
+ἐκτενέστερος δρόμος, ὁ
+\index{ἐκτενέστερος δρόμος, ὁ}
+\subsection{οἰκ-ήματα, ατῶν, τά}
+\index{οἰκ-ήματα, ατῶν, τά}
+\subsection{ἄφεσις τῶν ἵππων, εως, ἡ}
+\index{ἄφεσις τῶν ἵππων, εως, ἡ}
+\subsection{ἱππο-δρομία μετ' ἐμποδ-ίων, ἡ}                
+\index{ἱππο-δρομία μετ' ἐμποδ-ίων, ἡ}                
+\subsection{λήπ-της ἐνεχύρ-ων [ῠ], ου, ὁ}
+\index{λήπ-της ἐνεχύρ-ων [ῠ], ου, ὁ} ~\\
+πράκ-τωρ στοιχ-ημάτων, ορος, ὁ
+\index{πράκ-τωρ στοιχ-ημάτων, ορος, ὁ}
+\subsection{περίδοσις, εως, ἡ}
+\index{περίδοσις, εως, ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ἀθλητικά · ἡ ὀρεινὴ ἀθλητικὴ καὶ ἄλλα}]
+\subsection{ὀρειβασία [ᾰ], ἡ}
+\index{ὀρειβασία [ᾰ], ἡ}
+\subsection{ὀρει-βάτης [ᾰ], ου, ὁ}
+\index{ὀρει-βάτης [ᾰ], ου, ὁ} ~\\
+ὀρει-βά-τρια, ἡ \index{ὀρει-βά-τρια, ἡ}
+\subsection{πετρο-βάτης [ᾰ], ου, ὁ}
+\index{πετρο-βάτης [ᾰ], ου, ὁ} ~\\
+ἀναρρῐχ-ητής, ου, ὁ \index{ἀναρρῐχ-ητής, ου, ὁ}
+\subsection{κάρφος σχισ-μῆς, εος, τό}
+\index{κάρφος σχισ-μῆς, εος, τό}
+\subsection{ἀκρο-βᾰτικὸς σχοῖνος, ὁ}
+\index{ἀκρο-βᾰτικὸς σχοῖνος, ὁ}
+\subsection{ἀσφάλ-εια [φᾰ], ας, ἡ}
+\index{ἀσφάλ-εια [φᾰ], ας, ἡ}
+\subsection{προσδέομαι (-δέω, -δήσω, -ἔδησα, -δέδεκα, -δέδεμαι, -εδέθην) τῷ σχοίνῳ}
+\index{προσδέομαι (-δέω, -δήσω, -ἔδησα, -δέδεκα, -δέδεμαι, -εδέθην) τῷ σχοίνῳ}
+\subsection{καταβαίνω (-βήσομαι, -έβην, -βέβηκα) τοῦ σχοίνου}
+\index{καταβαίνω (-βήσομαι, -έβην, -βέβηκα) τοῦ σχοίνου}
+\subsection{ὀρεινοὶ σωτήρ-ιοι, οἱ}
+\index{ὀρεινοὶ σωτήρ-ιοι, οἱ}
+\subsection{ἱστιο-φόρος σκάφη, ἡ}
+\index{ἱστιο-φόρος σκάφη, ἡ}
+\subsection{ἱστίον, τό} \index{ἱστίον, τό} ~\\
+ὀθόν-η, ἡ \index{ὀθόν-η, ἡ}
+\subsection{ἱστός, ὁ}
+\index{ἱστός, ὁ}
+\subsection{ἱστιο-πλοΐα, ἡ}
+\index{ἱστιο-πλοΐα, ἡ}
+\subsection{ἱστιο-πλοϊκὸς ἀγών [ᾰ], ῶνος, ὁ}
+\index{ἱστιο-πλοϊκὸς ἀγών [ᾰ], ῶνος, ὁ}
+\subsection{νηνεμ-ία, ἡ} \index{νηνεμ-ία, ἡ} ~\\
+εὐδία, ἡ \index{εὐδία, ἡ} ~\\
+γᾰλήν-η, ἡ \index{γᾰλήν-η, ἡ}
+\subsection{ἱστιο-σᾰνίς, ίδος, ἡ}
+\index{ἱστιο-σᾰνίς, ίδος, ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ἀθλητικά · οἱ ὑγροὶ ἀθλητικοὶ ἀγῶνες (α')}]
+{\renewcommand \thesubsection {\thesection} \index{ὑγροὶ ἀθλ-ητικοὶ ἀγῶνες [ᾰ], οἱ}}
+\subsection{εἰρεσία, ἡ} \index{εἰρεσία, ἡ}  ~\\
+κωπ-ηλᾰσία, ἡ \index{κωπ-ηλᾰσία, ἡ} ~\\
+ἐρέσσω \index{ἐρέσσω} ~\\
+κωπ-ηλᾰτέω \index{κωπ-ηλᾰτέω}
+\subsection{κωπ-ῆρες σκάφος, εος, τό} \index{κωπ-ῆρες σκάφος, εος, τό} ~\\
+κωπ-ήρης σκάφη, ἡ
+\index{κωπ-ήρης σκάφη, ἡ}
+\subsection{κώπ-η, ἡ}
+\index{κώπ-η, ἡ}
+\subsection{τετρά-κωπος [ᾰ] λέμβ-ος χωρὶς κελευσ-τοῦ, ὁ}
+\index{τετρά-κωπος [ᾰ] λέμβ-ος χωρὶς κελευσ-τοῦ, ὁ}
+\subsection{τετρά-κωπος [ᾰ] λέμβ-ος μετὰ [ᾰ] κελευσ-τοῦ, ὁ}
+\index{τετρά-κωπος [ᾰ] λέμβ-ος μετὰ [ᾰ] κελευσ-τοῦ, ὁ}
+\subsection{μονό-ζῠγος λέμβ-ος, ὁ}
+\index{μονό-ζῠγος λέμβ-ος, ὁ}
+\subsection{ἐρέτ-ης, ου, ὁ} \index{ἐρέτ-ης, ου, ὁ} ~\\
+κωπ-ηλάτης [ᾰ], ου, ὁ \index{κωπ-ηλάτης [ᾰ], ου, ὁ}
+\subsection{φῠλᾰκ-τικὴ τῶν σκαφῶν στέγ-η, ἡ}
+\index{φῠλᾰκ-τικὴ τῶν σκαφῶν στέγ-η, ἡ}
+\subsection{δί-ζῠγος λέμβ-ος, ὁ}
+\index{δί-ζῠγος λέμβ-ος, ὁ}
+\subsection{ὀκτώ-κωπος λέμβ-ος, ὁ}
+\index{ὀκτώ-κωπος λέμβ-ος, ὁ}
+\subsection{τᾰχῠ-πλοον (ταχύπλουν) σκάφος, εος, τό}
+\index{τᾰχῠ-πλοον (ταχύπλουν) σκάφος, εος, τό}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ἀθλητικά · οἱ ὑγροὶ ἀθλητικοὶ ἀγῶνες (β')}]
+{\renewcommand \thesubsection {\thesection} \index{ὑγροὶ ἀθλ-ητικοὶ ἀγῶνες [ᾰ], οἱ}}
+\subsection{νῆξις, εως, ἡ}
+\index{νῆξις, εως, ἡ} ~\\
+κολύμβ-ησις, εως, ἡ \index{κολύμβ-ησις, εως, ἡ}
+\subsection{κολυμβ-ητικὸς παιδ-ευτής, οῦ, ὁ}
+\index{κολυμβ-ητικὸς παιδ-ευτής, οῦ, ὁ}
+\subsection{νηχεῖον, τό}
+\index{νηχεῖον, τό} ~\\
+κολυμβ-ήθρα, ἡ
+\index{κολυμβ-ήθρα, ἡ}
+\subsection{βᾰλᾰν-εύς, έως, ὁ}
+\index{βᾰλᾰν-εύς, έως, ὁ}
+\subsection{κολυμβ-ητής, οῦ, ὁ}
+\index{κολυμβ-ητής, οῦ, ὁ} ~\\
+κολυμβ-ήτρια, ἡ \index{κολυμβ-ήτρια, ἡ}
+\subsection{ἐλευθέρα κολύμβ-ησις, εως, ἡ}
+\index{ἐλευθέρα κολύμβ-ησις, εως, ἡ}
+\subsection{προσθία κολύμβ-ησις, εως, ἡ}
+\index{προσθία κολύμβ-ησις, εως, ἡ}
+\subsection{ὑπτί-α κολύμβ-ησις, εως, ἡ}
+\index{ὑπτί-α κολύμβ-ησις, εως, ἡ}
+\subsection{σκῠλᾰκώδης κολύμβ-ησις, εως, ἡ}
+\index{σκῠλᾰκώδης κολύμβ-ησις, εως, ἡ}
+\subsection{βᾰτ-ήρ, ῆρος, ὁ}
+\index{βᾰτ-ήρ, ῆρος, ὁ}
+\subsection{κατά-δῠσις ἐκ τοῦ βᾰτ-ῆρος, εως, ἡ}
+\index{κατά-δῠσις ἐκ τοῦ βᾰτ-ῆρος, εως, ἡ}
+\subsection{κατά-δῠσις ἐκ τῶν ἰκρίων, εως, ἡ}
+\index{κατά-δῠσις τῶν ἰκρίων, εως, ἡ}
+\subsection{κατά-δῠσις διπλ-ώσεως, εως, ἡ}
+\index{κατά-δῠσις διπλ-ώσεως, εως, ἡ}
+\subsection{νηκ-τικὸς ἀγών [ᾰ], ῶνος, ὁ}
+\index{νηκ-τικὸς ἀγών [ᾰ], ῶνος, ὁ} ~\\
+{κολυμβ-ητικὸς ἀγών [ᾰ], ῶνος, ὁ}
+\index{κολυμβ-ητικὸς ἀγών [ᾰ], ῶνος, ὁ}
+\subsection{πήδ-ημα εἰς τὸ ὕδωρ [ῠ], ατος, τό}
+\index{πήδ-ημα εἰς τὸ ὕδωρ [ῠ], ατος, τό}
+\subsection{ὑδατο-σφαίρ-ισις [ῠ], εως, ἡ}
+\index{ὑδατο-σφαίρ-ισις [ῠ], εως, ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ἀθλητικά · ἡ χιονοδρομία}]
+\subsection{χῐονο-δρομία, ἡ}
+\index{χῐονο-δρομία, ἡ}
+\subsection{χῐονο-δρόμος, ὁ}
+\index{χῐονο-δρόμος, ὁ} ~\\
+χῐονο-δρόμος, ἡ \index{χῐονο-δρόμος, ἡ}
+\subsection{χῐονο-πέδῑλον, τό}
+\index{χῐονο-πέδῑλον, τό}
+\subsection{χῐονο-δρομ-ικὴ βακτηρ-ία, ἡ}
+\index{χῐονο-δρομ-ικὴ βακτηρ-ία, ἡ}
+\subsection{χῐονο-δρομ-ικὴ κρηπίς, ῖδος, ἡ}
+\index{χῐονο-δρομ-ικὴ κρηπίς, ῖδος, ἡ}
+\subsection{δεσμὸς τοῦ χῐονο-πεδίλου [ῑ], ὁ}
+\index{δεσμὸς τοῦ χῐονο-πεδίλου [ῑ], ὁ}
+\subsection{προσάπτ-ω (-άψω, -ῆψα, -ῆμμαι, -ήφθην) τὰ χῐονο-πέδῑλα}
+\index{προσάπτ-ω (-άψω, -ῆψα, -ῆμμαι, -ήφθην) τὰ χῐονο-πέδῑλα}
+\subsection{λύω τὰ χῐονο-πέδῑλα}
+\index{λύω τὰ χῐονο-πέδῑλα}
+\subsection{χῐονο-δρομ-ικὴ κᾰλῠβ-η, ἡ}   
+\index{χῐονο-δρομ-ικὴ κᾰλῠβ-η, ἡ}   
+\subsection{κατά-βᾰσις, εως, ἡ}
+\index{κατά-βᾰσις, εως, ἡ}
+\subsection{ἀνώμᾰλ-ος χῐονο-δρομία, ἡ}
+\index{ἀνώμᾰλ-ος χῐονο-δρομία, ἡ}
+\subsection{χῐονο-δρόμιον, τό}
+\index{χῐονο-δρόμιον, τό}
+\subsection{πολυ-καμπὴς κατά-βᾰσις, εως, ἡ}
+\index{πολυ-καμπὴς κατά-βᾰσις, εως, ἡ}
+\subsection{χῐον-ικὸν στρῶμα, ατος, τό}
+\index{χῐον-ικὸν στρῶμα, ατος, τό}
+\subsection{πεπηγυῖα χιών, όνος, ἡ}
+\index{πεπηγυῖα χιών, όνος, ἡ} % Intr. pf.  http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0057%3Aentry%3Dph%2Fgnumi
+\subsection{βᾰτ-ήρ, ῆρος, ὁ}
+\index{βᾰτ-ήρ, ῆρος, ὁ}
+\subsection{χῐονο-δρομ-ικὸν ἅλμα, τό}
+\index{χῐονο-δρομ-ικὸν ἅλμα, τό}
+\subsection{παράλληλος στροφ-ή, ἡ}
+\index{παράλληλος στροφ-ή, ἡ}
+\subsection{τᾰλαντ-οόμενος καταβαίνω (-βήσομαι, -έβην, -βέβηκα)}
+\index{τᾰλαντ-οόμενος καταβαίνω (-βήσομαι, -έβην, -βέβηκα)}
+\subsection{νέα χιών, όνος, ἡ}
+\index{νέα χιών, όνος, ἡ} ~\\
+κονιώδης χιών, όνος, ἡ
+\index{κονιώδης χιών, όνος, ἡ} ~\\
+ἀλευρώδης χιών, όνος, ἡ
+\index{ἀλευρώδης χιών, όνος, ἡ} 
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ἀθλητικά · οἱ χειμερινοὶ ἀθλητικοὶ ἀγῶνες}]
+{\renewcommand \thesubsection {\thesection} \index{χειμερ-ῐνοὶ ἀθλ-ητικοὶ ἀγῶνες [ᾰ], οἱ}}
+\subsection{πᾰγο-δρομία, ἡ}
+\index{πᾰγο-δρομία, ἡ}
+\subsection{πᾰγο-δρόμος, ὁ}
+\index{πᾰγο-δρόμος, ὁ} ~\\
+πᾰγο-δρόμος, ἡ \index{πᾰγο-δρόμος, ἡ}
+\subsection{τεχν-ικὴ πᾰγο-δρομία, ἡ}
+\index{τεχν-ικὴ πᾰγο-δρομία, ἡ}
+\subsection{πᾰγο-δρομ-ικὴ στρόβῑλ-ος, ὁ}
+\index{πᾰγο-δρομ-ικὴ στρόβῑλ-ος, ὁ}
+\subsection{πᾰγο-πέδῑλον, τό}
+\index{πᾰγο-πέδῑλον, τό}
+\subsection{δίσκος, ὁ}
+\index{δίσκος, ὁ}
+\subsection{ἀνά-σῑμος ῥάβδος, ἡ}
+\index{ἀνά-σῑμος ῥάβδος, ἡ}
+\subsection{κῑν-ητὸν τέρμα, ατος, τό}
+\index{κῑν-ητὸν τέρμα, ατος, τό}
+\subsection{ἐστελεωμένη πέτρα, ἡ}
+\index{ἐστελεωμένη πέτρα, ἡ}
+\subsection{παίγν-ιον τῶν πετρῶν ἐπὶ πάγου [ᾰ], τό}
+\index{παίγν-ιον τῶν πετρῶν ἐπὶ πάγου [ᾰ], τό}
+\subsection{τᾰχεῖα πᾰγο-δρομία, ἡ}
+\index{τᾰχεῖα πᾰγο-δρομία, ἡ}
+\subsection{ἕλκ-ηθρον, τό} \index{ἕλκ-ηθρον, τό} ~\\
+χῐονο-λισθ-ητήρ, ῆρος, ὁ
+\index{χῐονο-λισθ-ητήρ, ῆρος, ὁ}
+\subsection{ἔλ-ασμα, ατος, τό}
+\index{ἔλ-ασμα, ατος, τό}
+\subsection{πᾰγο-δρόμιον, τό}
+\index{πᾰγο-δρόμιον, τό}
+\subsection{ῥαβδο-σφαίρ-ισις ἐπὶ πάγου [ᾰ], εως, ἡ}
+\index{ῥαβδο-σφαίρ-ισις ἐπὶ πάγου [ᾰ], εως, ἡ}
+\subsection{χῐονο-δρόμιον τῶν ἑλκ-ήθρων, τό}
+\index{χῐονο-δρόμιον τῶν ἑλκ-ήθρων, τό}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ἀθλητικά · ποικίλα}]
+\subsection{τροχο-πεδῑλο-δρομία, ἡ}
+\index{τροχο-πεδῑλο-δρομία, ἡ}
+\subsection{τροχο-πέδῑλον, τό}
+\index{τροχο-πέδῑλον, τό}
+\subsection{κορύν-η, ἡ}
+\index{κορύν-η, ἡ}
+\subsection{κορυνο-σφαίρ-ισις, εως, ἡ}
+\index{κορυνο-σφαίρ-ισις, εως, ἡ}
+\subsection{διάδρομος, ὁ}
+\index{διάδρομος, ὁ}
+\subsection{πάσας τὰς κορύν-ας ἅμᾰ [ᾰμ] καταβάλλω 
+(-βαλῶ, κατέβαλον, -βέβληκα, -βέβλημαι, κατἐβλήθην)  /
+ἀνα-τρέπω (-τρέψω, -έτρεψα, -τέτροφα, τ-έτραμμαι, -ετρέφθην)}
+\index{πάσας τὰς κορύν-ας ἅμᾰ [ᾰμ] καταβάλλω 
+(-βαλῶ, κατέβαλον, -βέβληκα, -βέβλημαι, κατἐβλήθην)  /
+ἀνα-τρέπω (-τρέψω, -έτρεψα, -τέτροφα, τ-έτραμμαι, -ετρέφθην)}
+\subsection{πῠρο-βόλησις, εως, ἡ}
+\index{πῠρο-βόλησις, εως, ἡ}
+\subsection{πῠρο-βολητής, οῦ, ὁ}
+\index{πῠρο-βολητής, οῦ, ὁ}
+\subsection{πῠρο-βόλον ὅπλον, τό}
+\index{πῠρο-βόλον ὅπλον, τό}
+\subsection{ἑλῐκο-ειδὲς πῠρο-βόλον, τό}
+\index{ἑλῐκο-ειδὲς πῠρο-βόλον, τό}
+\subsection{κῠνηγ-ετικὸν πῠρο-βόλον, τό}
+\index{κῠνηγ-ετικὸν πῠρο-βόλον, τό}
+\subsection{πῠρο-βόλον χειρός, τό}
+\index{πῠρο-βόλον χειρός, τό}
+\subsection{αὐτό-μᾰτον πῠρο-βόλον, τό}
+\index{αὐτό-μᾰτον πῠρο-βόλον, τό}
+\subsection{τόξ-ευμα, ατος, τό}
+\index{τόξ-ευμα, ατος, τό} ~\\
+βέλος, εος, τό
+\index{βέλος, εος, τό}
+\subsection{τόξον, τό}
+\index{τόξον, τό}
+\subsection{χειρο-βαλλίστρα, ἡ}
+\index{χειρο-βαλλίστρα, ἡ}
+\subsection{τοξ-εία, ἡ}
+\index{τοξ-εία, ἡ}
+\subsection{θηρ-ευτής, οῦ, ὁ}
+\index{θηρ-ευτής, οῦ, ὁ} ~\\
+κῠνηγ-έτης, ου, ὁ \index{κῠνηγ-έτης, ου, ὁ}
+\subsection{θηρ-ευτικὸς κύων [ῠ], ὁ}
+\index{θηρ-ευτικὸς κύων [ῠ], ὁ}
+\subsection{βολὴ ἐπὶ πηλίνους [ῐ] σκοπ-ούς  / στόχους, ἡ}      
+\index{βολὴ ἐπὶ πηλίνους [ῐ] σκοπ-ούς  / στόχους, ἡ}      
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{ἡ χώρα}]
+\subsection{ὄρος, εος, τό}
+\index{ὄρος, εος, τό}
+\subsection{βουνός, ὁ}
+\index{βουνός, ὁ} ~\\
+λόφος, ὁ \index{λόφος, ὁ}
+\subsection{κώμη, ἡ}
+\index{κώμη, ἡ}
+\subsection{ποτᾰμός, ὁ}
+\index{ποτᾰμός, ὁ}
+\subsection{ῥεῖθρ-ον, τό}
+\index{ῥεῖθρ-ον, τό} ~\\
+χειμάρροος (χειμάρρους), ὁ
+\index{χειμάρροος (χειμάρρους), ὁ}
+\subsection{λειμών, ῶνος, ὁ}
+\index{λειμών, ῶνος, ὁ}
+\subsection{ἀγρός, οῦ, ὁ}
+\index{ἀγρός, οῦ, ὁ}
+\subsection{τρίβος [ῐ], ἡ}
+\index{τρίβος [ῐ], ἡ} ~\\
+ἀτρᾰπ-ός, ἡ  \index{ἀτρᾰπ-ός, ἡ}
+\subsection{ἄγκος, εος, τό}
+\index{ἄγκος, εος, τό}
+\subsection{πόλις, εως, ἡ}
+\index{πόλις, εως, ἡ}
+\subsection{ὁδός, ἡ}
+\index{ὁδός, ἡ}
+\subsection{δρῡμός, ὁ}
+\index{δρῡμός, ὁ} ~\\
+ὕλη [ῡ], ἡ \index{ὕλη [ῡ], ἡ}
+\subsection{θάμνος, ὁ}
+\index{θάμνος, ὁ}
+\subsection{λίμν-η, ἡ}
+\index{λίμν-η, ἡ}
+\subsection{πᾰρᾰδεισ-ος, ὁ}
+\index{πᾰρᾰδεισ-ος, ὁ} ~\\
+ἀλωή [ᾰ], ἡ
+\index{ἀλωή [ᾰ], ἡ}
+\subsection{ὀρεινὴ νομ-ή, ἡ} 
+\index{ὀρεινὴ νομ-ή, ἡ} 
+\subsection{καταρράκ-της, ου, ἢ κατ-ᾰράκτης, ὁ}
+\index{καταρράκ-της, ου, ἢ κατ-ᾰράκτης, ὁ}
+\subsection{νῆσος, ἡ}
+\index{νῆσος, ἡ}
+\subsection{θάλασσα [θᾰ], ἡ}
+\index{θάλασσα [θᾰ], ἡ}
+\subsection{αὐτο-φῠὴς ὕλη [ῡ], ἡ}
+\index{αὐτο-φῠὴς ὕλη [ῡ], ἡ}
+\subsection{αἰγιᾰλός, ὁ}
+\index{αἰγιᾰλός, ὁ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{ὁ οὐρανὸς καὶ τὰ μετέωρα}]
+\subsection{σελήν-η, ἡ}
+\index{σελήν-η, ἡ}
+\subsection{πανσέληνος (ὥρα), ἡ}
+\index{πανσέληνος (ὥρα), ἡ}
+\subsection{ἡμισέληνος (ὥρα), ἡ}
+\index{ἡμισέληνος (ὥρα), ἡ}
+\subsection{ἥλιος, ὁ}
+\index{ἥλιος, ὁ}
+\subsection{ἡλιᾰκὴ ἀκτίς, [ῑ] ῖνος, ἡ}
+\index{ἡλιᾰκὴ ἀκτίς, [ῑ] ῖνος, ἡ}
+\subsection{νέφος, εος, τό}
+\index{νέφος, εος, τό} ~\\
+νεφέλη, ἡ \index{νεφέλη, ἡ}
+\subsection{βροντ-ή, ἡ}
+\index{βροντ-ή, ἡ}
+\subsection{οὐράν-ιον [ᾰ] τόξον, τό}
+\index{οὐράν-ιον [ᾰ] τόξον, τό} ~\\
+ἶρις, ιδος, ἡ \index{ἶρις, ιδος, ἡ}
+\subsection{ὑετ-ός [ῡ], ὁ}
+\index{ὑετ-ός [ῡ], ὁ} ~\\
+βροχή, ἡ \index{βροχή, ἡ} ~\\
+ὄμβρος, ὁ [\textit{σφοδρός, βραχύς}]
+\index{ὄμβρος, ὁ [\textit{σφοδρός, βραχύς}]}
+\subsection{ἀστρᾰπ-ή, ἡ [\textit{τὸ φαινόμενον}]}
+\index{ἀστρᾰπ-ή, ἡ [\textit{τὸ φαινόμενον}]} ~\\
+κεραυνός, ὁ [\textit{τὸ πίπτον}]
+\index{κεραυνός, ὁ [\textit{τὸ πίπτον}]}
+\subsection{πληγ-ή κεραυνοῦ, ἡ}
+\index{πληγ-ή κεραυνοῦ, ἡ} ~\\
+{κεραυν-όεσθαι}
+\index{κεραυν-όεσθαι} ~\\
+κεραυνῷ πλάσσεσθαι 
+\index{κεραυνῷ πλάσσεσθαι}
+\subsection{ἀνατολὴ ἡλίου, ἡ}
+\index{ἀνατολὴ ἡλίου, ἡ}
+\subsection{δύσις [ῠ] ἡλίου, εως, ἡ}
+\index{δύσις [ῠ] ἡλίου, εως, ἡ} ~\\
+δυσμαὶ ἡλίου, αἱ
+\index{δυσμαὶ ἡλίου, αἱ}
+\subsection{ἀστήρ, έρος, ὁ}
+\index{ἀστήρ, έρος, ὁ}
+\subsection{χάλαζ-α [χᾰ], ης, ἡ}
+\index{χάλαζ-α [χᾰ], ης, ἡ}
+\subsection{ὀμίχλ-η, ἡ}
+\index{ὀμίχλ-η, ἡ}
+\subsection{δρόσος, ἡ}
+\index{δρόσος, ἡ}
+\subsection{χιών, όνος, ἡ}
+\index{χιών, όνος, ἡ}
+\subsection{νῐφ-άς, άδος, ἡ}
+\index{νῐφ-άς, άδος, ἡ}
+\subsection{κομήτης, ου, ὁ}
+\index{κομήτης, ου, ὁ}
+\subsection{ἀκρο-φύσιον, τό}
+\index{ἀκρο-φύσιον, τό} ~\\
+κόμ-η, ἡ \index{κόμ-η, ἡ}
+\subsection{ἄνεμος [ᾰ], ὁ}
+\index{ἄνεμος [ᾰ], ὁ} ~\\
+πνεῦμα, ατος, τό \index{πνεῦμα, ατος, τό}
+\subsection{ψῦχος, εος, τό}
+\index{ψῦχος, εος, τό}
+\subsection{καῦμα, ατος, τό}
+\index{καῦμα, ατος, τό}
+\subsection{ὄρθρος, ὁ}
+\index{ὄρθρος, ὁ}
+\subsection{κνέφᾰς, κνέφους, τό}
+\index{κνέφᾰς, κνέφους, τό}
+\subsection{σκότος, ὁ}
+\index{σκότος, ὁ}
+\subsection{κρυσταλλό-πηκτος σταλαγ-μός, ὁ}
+\index{κρυσταλλό-πηκτος σταλαγ-μός, ὁ}
+\subsection{ξηρότης, ητος, ἡ}
+\index{ξηρότης, ητος, ἡ}
+\subsection{χῐονο-στῐβάς, άδος, ἡ}
+\index{χῐονο-στῐβάς, άδος, ἡ}
+\subsection{κατα-κλυσμός, ὁ}
+\index{κατα-κλυσμός, ὁ}
+\subsection{βᾰρό-μετρον, τό}
+\index{βᾰρό-μετρον, τό} 
+\subsection{θερμό-μετρον, τό}
+\index{θερμό-μετρον, τό} 
+\subsection{σεισμ-ός, ὁ}
+\index{σεισμ-ός, ὁ}
+\subsection{πρό-γνωσις τοῦ οὐρᾰνοῦ, εως, ἡ}
+\index{πρό-γνωσις τοῦ οὐρᾰνοῦ, εως, ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ἔξω τῆς οἰκίας}]
+{\renewcommand \thesubsection {\thesection} \index{οἰκί-α, ἡ}}
+\subsection{καπνο-δόκη (\textit{ὕστερον} καπνο-δόχη), ἡ}
+\index{καπνο-δόκη (\textit{ὕστερον} καπνο-δόχη), ἡ} 
+\subsection{στέγος, εος, τό}
+\index{στέγος, εος, τό} ~\\
+τέγος, εος, τό \index{τέγος, εος, τό} ~\\
+στέγ-η, ἡ \index{στέγ-η, ἡ}
+\subsection{ὑπερῷον, τό}
+\index{ὑπερῷον, τό}
+\subsection{οἴκ-ημα, ατος, τό}
+\index{οἴκ-ημα, ατος, τό}
+\subsection{κατάγεια, τά}
+\index{κατάγεια, τά} ~\\
+ἐπίπεδ-α, τά \index{ἐπίπεδ-α, τά}
+\subsection{ὑπόγειον, τό}
+\index{ὑπόγειον, τό}
+\subsection{ἐξ-ώστρα, ἡ}
+\index{ἐξ-ώστρα, ἡ}
+\subsection{σταθμὸς ὀχ-ημάτῶν, ὁ}
+\index{σταθμὸς ὀχ-ημάτῶν, ὁ}
+\subsection{θύρα [ῠ], ἡ}
+\index{θύρα [ῠ], ἡ}
+\subsection{τεῖχος, εος, τό}
+\index{τεῖχος, εος, τό}
+\subsection{πλίνθος, ἡ}
+\index{πλίνθος, ἡ}
+\subsection{ἐπί-χρισμα, ατος, τό}
+\index{ἐπί-χρισμα, ατος, τό}
+\subsection{στεγ-αστήρ, ῆρος, ὁ}
+\index{στεγ-αστήρ, ῆρος, ὁ} ~\\
+κᾰλυπτ-ήρ, ῆρος, ὁ \index{κᾰλυπτ-ήρ, ῆρος, ὁ}
+\subsection{ὑδρο-ρρόα, ἡ}
+\index{ὑδρο-ρρόα, ἡ}
+\subsection{εὔστροφος καταρράκ-της, ου, ὁ}
+\index{εὔστροφος καταρράκ-της, ου, ὁ} ~\\
+παρα-θῠρό-φυλλ-ον, τό
+\index{παρα-θῠρό-φυλλ-ον, τό}
+\subsection{θῠρίς, ίδος, ἡ}
+\index{θῠρίς, ίδος, ἡ}
+\subsection{ξυσ-τός, ὁ}
+\index{ξυσ-τός, ὁ}
+\subsection{φράγ-μα, ατος, τό}
+\index{φράγ-μα, ατος, τό}
+\subsection{κῆπος, ὁ}
+\index{κῆπος, ὁ}
+\subsection{θῠρῐδεύς, έως, ὁ}
+\index{θῠρῐδεύς, έως, ὁ} ~\\
+{πλαίσῐ-ον θῠρίδος, τό}
+\index{πλαίσῐ-ον θῠρίδος, τό}
+\subsection{ὕᾰλος, ἡ}
+\index{ὕᾰλος, ἡ} ~\\
+ὑάλεος [ᾰ] / ὑάλινος  πίναξ [ῐ], ᾰκος, ὁ 
+\index{ὑάλεος [ᾰ] / ὑάλινος  πίναξ [ῐ], ᾰκος, ὁ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{ἡ ἀρχιτεκτονική (α')}]
+\subsection{πλεκ-τὴ ξῠλ-εία, ἡ}
+\index{πλεκ-τὴ ξῠλ-εία, ἡ}
+\subsection{μονο-κατοικ-ία, ἡ}
+\index{μονο-κατοικ-ία, ἡ}
+\subsection{πολυ-κατοικ-ία, ἡ}
+\index{πολυ-κατοικ-ία, ἡ}
+\subsection{γέφῡρα, ἡ}
+\index{γέφῡρα, ἡ}
+\subsection{κίων [ῑ] γεφύρας [ῡ], ονος, ἡ}
+\index{κίων [ῑ] γεφύρας [ῡ], ονος, ἡ}
+\subsection{κρεμ-αστὴ γέφῡρα, ἡ}
+\index{κρεμ-αστὴ γέφῡρα, ἡ}
+\subsection{περιαιρ-ετὴ γέφῡρα, ἡ}
+\index{περιαιρ-ετὴ γέφῡρα, ἡ}
+\subsection{ἐρείπ-ια, τά}
+\index{ἐρείπ-ια, τά}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{ἡ ἀρχιτεκτονική (β')}]
+\subsection{Γοτθικὸς τρόπος, ὁ}
+\index{γοτθικὸς τρόπος, ὁ@Γοτθικὸς τρόπος, ὁ}
+\subsection{Ῥωμανικὸς τρόπος, ὁ}
+\index{ῥωμανικὸς τρόπος, ὁ@Ῥωμανικὸς τρόπος, ὁ}
+\subsection{Βαρόκος τρόπος, ὁ}
+\index{βαρόκος τρόπος, ὁ@Βαρόκος τρόπος, ὁ}
+\subsection{κογχο-ειδὴς τρόπος, ὁ}
+\index{κογχο-ειδὴς τρόπος, ὁ}
+\subsection{ἀνθηρὸς τρόπος, ὁ}
+\index{ἀνθηρὸς τρόπος, ὁ}
+\subsection{ἐκφορ-ά, ἡ}         
+\index{ἐκφορ-ά, ἡ}         
+\subsection{δοκός, ἡ}
+\index{δοκός, ἡ}
+\subsection{ξύλον [ῠ], τό}
+\index{ξύλον [ῠ], τό}
+\subsection{πλίνθος, ἡ}
+\index{πλίνθος, ἡ}
+\subsection{ἀμμο-κονία, ἡ}
+\index{ἀμμο-κονία, ἡ} ~\\
+λῐθό-κολλα, ἡ
+\index{λῐθό-κολλα, ἡ}
+\subsection{ἰχνο-γρᾰφία, ἡ}
+\index{ἰχνο-γρᾰφία, ἡ}
+\subsection{ὀρθο-γρᾰφία, ἡ}
+\index{ὀρθο-γρᾰφία, ἡ}
+\subsection{σᾰνίδ-ιον [ῐδ] θῠρίδος, τό}
+\index{σᾰνίδ-ιον [ῐδ] θῠρίδος, τό}
+\subsection{πολύ-στεγος πύργος, ὁ}
+\index{πολύ-στεγος πύργος, ὁ}
+\subsection{ἐπίγειον οἰκοδόμ-ημα, ατος, τό}
+\index{ἐπίγειον οἰκοδόμ-ημα, ατος, τό}
+\subsection{ὑπόγειον οἰκοδόμ-ημα, ατος, τό}
+\index{ὑπόγειον οἰκοδόμ-ημα, ατος, τό}
+\subsection{συνᾰφὴς οἰκί-α, ἡ}
+\index{συνᾰφὴς οἰκί-α, ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ εἴσω τῆς οἰκίας}]
+\subsection{δίαιτα [ῐ], ἡ}
+\index{δίαιτα [ῐ], ἡ}
+\subsection{δωμάτ-ιον [ᾰ], τό}
+\index{δωμάτ-ιον [ᾰ], τό}
+\subsection{δῐαιτ-ητήριον, τό}
+\index{δῐαιτ-ητήριον, τό}
+\subsection{θάλᾰμος [θᾰ], ὁ}
+\index{θάλᾰμος [θᾰ], ὁ}
+\subsection{μᾰγειρ-εῖον, τό}
+\index{μᾰγειρ-εῖον, τό}
+\subsection{δειπν-ητήριον, τό}
+\index{δειπν-ητήριον, τό} 
+\e{κοιτὼν παιδίων, ῶνος, ὁ}
+\subsection{τοῖχος, ὁ}
+\index{τοῖχος, ὁ}
+\subsection{ἔδᾰφος, εος, τό}
+\index{ἔδᾰφος, εος, τό}
+\subsection{θέρμαν-σις, εως, ἡ}
+\index{θέρμαν-σις, εως, ἡ}
+\subsection{βᾰλᾰν-εῖον, τό}
+\index{βᾰλᾰν-εῖον, τό} ~\\
+λουτρόν, τό
+\index{λουτρόν, τό}
+\subsection{περίπᾰτ-ος, ὁ}
+\index{περίπᾰτ-ος, ὁ}
+\subsection{πρόθυρ-ον, τό}
+\index{πρόθυρ-ον, τό} ~\\
+πρόδομ-ος, ὁ
+\index{πρόδομ-ος, ὁ}
+\subsection{ἐξ-ώστρα, ἡ}
+\index{ἐξ-ώστρα, ἡ}
+\subsection{κλῑμᾰκο-στάσιον [ᾰ], τό}
+\index{κλῑμᾰκο-στάσιον [ᾰ], τό}
+\subsection{κλῖμαξ, ᾰκος, ἡ}
+\index{κλῖμαξ, ᾰκος, ἡ}
+\subsection{θριγκ-ὸς κλίμᾰκος, ὁ}
+\index{θριγκ-ὸς κλίμᾰκος, ὁ} ~\\
+δρύφακτ-ος [ῠ], ὁ
+\index{δρύφακτ-ος [ῠ], ὁ}
+\subsection{κλῑμακ-τήρ, ῆρος, ὁ}
+\index{κλῑμακ-τήρ, ῆρος, ὁ}
+\subsection{ἔμβολος, ὁ \textit{ἢ} ἔμβολον, τό}
+\index{ἔμβολος, ὁ \textit{ἢ} ἔμβολον, τό}
+\subsection{κλεῖθρ-ον, τό}
+\index{κλεῖθρ-ον, τό}
+\subsection{κλείς, κλειδός, ἡ} 
+\index{κλείς, κλειδός, ἡ} 
+\subsection{πλαίσῐ-ον θύρας [ῠ], τό}
+\index{πλαίσῐ-ον θύρας [ῠ], τό}
+\subsection{θύρα [ῠ], ἡ}
+\index{θύρα [ῠ], ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὸ δωμάτιον (α') · τὸ διαιτητήριον / ἡ κοίτη}]
+\subsection{\protect\hspace{-2ex}--\ref{46.8} ἔπιπλα, τά}
+\index{ἔπιπλα, τά} \setcounter{subsection}{0}
+\subsection{σκευο-θήκη, ἡ}
+\index{σκευο-θήκη, ἡ}
+\subsection{κλῑν-η, ἡ}
+\index{ἔπιπλα, τά} \index{κλῑν-η, ἡ}
+\subsection{εἰκών, όνος, ἡ}
+\index{ἔπιπλα, τά} \index{εἰκών, όνος, ἡ}
+\subsection{τάπης [ᾰ], ητος, ὁ}
+\index{τάπης [ᾰ], ητος, ὁ} \index{ἔπιπλα, τά}
+\subsection{τραπέζ-ιον, τό}
+\index{τραπέζ-ιον, τό}
+\index{ἔπιπλα, τά}
+\subsection{ἕδρ-α, ἡ}
+\index{ἕδρ-α, ἡ} \index{ἔπιπλα, τά}
+\subsection{[ἠλεκτρῐκὴ] λαμπάς, άδος, ἡ}
+\index{ἠλεκτρῐκὴ λαμπάς, άδος, ἡ@[ἠλεκτρῐκὴ] λαμπάς, άδος, ἡ}  \index{ἔπιπλα, τά} \index{λαμπάς, άδος, ἡ}
+\subsection{βιβλιο-φῠλάκιον [ᾰ], τό}
+\index{βιβλιο-φῠλάκιον [ᾰ], τό} \index{ἔπιπλα, τά}
+\label{46.8}
+\subsection{ζύγαστρον [ῠ], τό}
+\index{ζύγαστρον [ῠ], τό}
+\subsection{τράπεζ-α [τρᾰ], ης, ἡ}
+\index{τράπεζ-α [τρᾰ], ης, ἡ}
+\subsection{ἐπιτρᾰπέζ-ιος ὀθόν-η, ἡ}
+\index{ἐπιτρᾰπέζ-ιος ὀθόν-η, ἡ}
+\subsection{δίφρος, ὁ}
+\index{δίφρος, ὁ}
+\subsection{χειρό-μακτρον, τό}
+\index{χειρό-μακτρον, τό}
+\subsection{παραπέτασμα, ατος, τό}
+\index{παραπέτασμα, ατος, τό} ~\\
+καταπέτασμα, ατος, τό
+\index{καταπέτασμα, ατος, τό}
+\subsection{κοίτ-η, ἡ}
+\index{κοίτ-η, ἡ}
+\subsection{στρῶμα, ατος, τό}
+\index{στρῶμα, ατος, τό}
+\subsection{προσκεφᾰλ-αιον, τό}
+\index{προσκεφᾰλ-αιον, τό}
+\subsection{χλαῖνα, ης, ἡ}
+\index{χλαῖνα, ης, ἡ} ~\\
+σῐσύρα [ῠ], ἡ
+\index{σῐσύρα [ῠ], ἡ}
+\subsection{τηλε-οπτ-ικὸς δέκ-της, ου, ὁ}
+\index{τηλε-οπτ-ικὸς δέκ-της, ου, ὁ}
+\subsection{μεγά-φωνον [ᾰ], τό}
+\index{μεγά-φωνον [ᾰ], τό}
+\subsection{ἀκτῑνο-φων-ικὸς δέκ-της, ου, ὁ}
+\index{ἀκτῑνο-φων-ικὸς δέκ-της, ου, ὁ}
+\subsection{φωνο-γράφος, ὁ}
+\index{φωνο-γράφος, ὁ}
+\ee{γραμμό-φωνον, τό}
+\subsection{κλῑν-ίδιον, τό}
+\index{κλῑν-ίδιον, τό} ~\\
+σκᾰφ-η, ἡ
+\index{σκᾰφ-η, ἡ}
+\subsection{κρεμ-άστρα, ἡ}
+\index{κρεμ-άστρα, ἡ} ~\\
+σχαστήρ, ῆρος, ὁ
+\index{σχαστήρ, ῆρος, ὁ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὸ δωμάτιον (β') · τὸ βαλανεῖον}]
+\subsection{πῠελ-ος, ἡ}
+\index{πῠελ-ος, ἡ}
+\e{κατά-χυτλον, τό}
+\ee{ὑέτ-ιον λουτρόν, τό}
+\subsection{ἀφοδ-ευτήριον, τό}
+\index{ἀφοδ-ευτήριον, τό} ~\\
+σκωρᾰμίς, ίδος, ἡ 
+\index{σκωρᾰμίς, ίδος, ἡ} ~\\
+λάσᾰνον [λᾰ], τό 
+\index{λάσᾰνον [λᾰ], τό}
+\subsection{κάτοπτρον, τό}
+\index{κάτοπτρον, τό} ~\\
+ἔσοπτρον, τό
+\index{ἔσοπτρον, τό}
+\subsection{νιπτήρ, ῆρος, ὁ}
+\index{νιπτήρ, ῆρος, ὁ} ~\\
+λου-τήριον, τό
+\index{λου-τήριον, τό}
+\subsection{σήπων, ωνος, ὁ}
+\index{σήπων, ωνος, ὁ}
+\subsection{ὀδοντο-ξέστης, ου, ὁ}
+\index{ὀδοντο-ξέστης, ου, ὁ}
+\subsection{ὀδοντό-σμηγμα, ατος, τό}
+\index{ὀδοντό-σμηγμα, ατος, τό} ~\\
+ὀδοντό-τριμμα, ατος, τό
+\index{ὀδοντό-τριμμα, ατος, τό}
+\subsection{σπόγγος, ὁ}
+\index{σπόγγος, ὁ} ~\\
+σπογγ-ιά, ἡ
+\index{σπογγ-ιά, ἡ}
+\subsection{ψήκτρ-α κόμ-ης, ἡ}
+\index{ψήκτρ-α κόμ-ης, ἡ}
+\e{κτείς, κτενός, ὁ}
+\ee{κομμ-ώτριον, τό}
+\e{μάκτρον, τό}
+\ee{σωμᾰτ-εκμᾰγεῖον, τό}
+\subsection{κερᾰμ-εᾶ πλάξ, πλᾰκός, ἡ}
+\index{κερᾰμ-εᾶ πλάξ, πλᾰκός, ἡ}
+\subsection{ἐκμᾰγεῖον, τό}
+\index{ἐκμᾰγεῖον, τό}
+\subsection{λου-τρικὸν ῥάκος [ᾰ], εος, τό}
+\index{λου-τρικὸν ῥάκος [ᾰ], εος, τό}
+\subsection{[ἠλεκτρῐκὸν] ξῠρόν, τό}
+\index{ἠλεκτρῐκὸν ξῠρόν, τό@[ἠλεκτρῐκὸν] ξῠρόν, τό}
+\index{ξῠρόν, τό}
+\subsection{κουρ-ικὴ ψήκτρ-α, ἡ}
+\index{κουρ-ικὴ ψήκτρ-α, ἡ}
+\subsection{ἀνθρωπ-ίνη τρῡτάνη [ᾰ], ἡ}
+\index{ἀνθρωπ-ίνη τρῡτάνη [ᾰ], ἡ}
+\subsection{ὑγι-εινὸς χάρτ-ης, ου, ὁ}
+\index{ὑγι-εινὸς χάρτ-ης, ου, ὁ}
+\subsection{ἐπιτόν-ιον, τό}
+\index{ἐπιτόν-ιον, τό}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὸ δωμάτιον (γ') · τὸ μαγειρεῖον}]
+\subsection{ἐσχάρ-α [ᾰ], ἡ}
+\index{ἐσχάρ-α [ᾰ], ἡ} ~\\
+\subsection{ἰπν-ός, ὁ}
+\index{ἰπν-ός, ὁ} ~\\
+ὀπτᾰν-ιον, τό
+\index{ὀπτᾰν-ιον, τό}
+\subsection{μᾰγειρ-ικὴ εστία, ἡ}
+\index{μᾰγειρ-ικὴ εστία, ἡ}
+\subsection{πλῠν-τήριον σκευῶν, τό}
+\index{πλῠν-τήριον σκευῶν, τό}
+\subsection{ψῠγ-εῖον, τό}
+\index{ψῠγ-εῖον, τό}
+\subsection{κάλᾰθος [κᾰ], ὁ}
+\index{κάλᾰθος [κᾰ], ὁ}
+\subsection{χύτρ-α, ἡ}
+\index{χύτρ-α, ἡ}
+\subsection{σκευο-θήκη [τοῦ μᾰγειρ-είου], ἡ}
+\index{σκευο-θήκη [τοῦ μᾰγειρ-είου], ἡ}
+\subsection{δίφρος, ὁ}
+\index{δίφρος, ὁ}
+\subsection{τράπεζ-α [τρᾰ], ης, ἡ}
+\index{τράπεζ-α [τρᾰ], ης, ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ μαγειρικὰ σκεύη (α')}]
+\subsection{κᾰφεϊκὴ μηχᾰν-ή, ἡ}
+\index{κᾰφεϊκὴ μηχᾰν-ή, ἡ}
+\subsection{φρύγ-ετρον [ῡ], τό}
+\index{φρύγ-ετρον [ῡ], τό}
+\subsection{κόσκῐνον, τό}
+\index{κόσκῐνον, τό}
+\subsection{πίναξ [ῐ], ᾰκος, ὁ}
+\index{πίναξ [ῐ], ᾰκος, ὁ} ~\\
+λεκάν-η [ᾰ], ἡ
+\index{λεκάν-η [ᾰ], ἡ} ~\\
+λοπάς, άδος, ἡ
+\index{λοπάς, άδος, ἡ}
+\subsection{τρύβλιον, τό}
+\index{τρύβλιον, τό}
+\subsection{χύτρ-α, ἡ}
+\index{χύτρ-α, ἡ}
+\subsection{τάγηνον [ᾰ], τό}
+\index{τάγηνον [ᾰ], τό}
+\subsection{κῠλῐκ-ιον, τό}
+\index{κῠλῐκ-ιον, τό}
+\subsection{λεκάν-ιον, τό}
+\index{λεκάν-ιον, τό} ~\\
+λοπᾰδ-ιον, τό
+\index{λοπᾰδ-ιον, τό}
+\subsection{ὑᾰλ-ικὸν ποτήριον, τό}
+\index{ὑᾰλ-ικὸν ποτήριον, τό} ~\\
+ὑᾰλ-ικὸν ἔκ-πωμα, ατος, τό
+\index{ὑᾰλ-ικὸν ἔκ-πωμα, ατος, τό}
+\subsection{σκᾰφ-η, ἡ}
+\index{σκᾰφ-η, ἡ}
+\subsection{μᾰγειρ-ικὴ μηχᾰν-ή, ἡ}
+\index{μᾰγειρ-ικὴ μηχᾰν-ή, ἡ}
+\subsection{χοᾰν-η, ἡ}
+\index{χοᾰν-η, ἡ}
+\subsection{στελεός, ὁ}
+\index{στελεός, ὁ} ~\\
+πλαστήριον, τό
+\index{πλαστήριον, τό}
+\subsection{τρυηλίς, ίδος, ἡ}
+\index{τρυηλίς, ίδος, ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ μαγειρικὰ σκεύη (β')}]
+\subsection{κᾰφεϊκὸς μύλος [ῠ], ὁ}
+\index{κᾰφεϊκὸς μύλος [ῠ], ὁ}
+\subsection{ἐσχαρ-ίς, ίδος, ἡ}
+\index{ἐσχαρ-ίς, ίδος, ἡ}
+\subsection{κρεο-κοπτικὴ μηχᾰν-ή, ἡ}
+\index{κρεο-κοπτικὴ μηχᾰν-ή, ἡ}
+\subsection{κᾰρῠο-κατάκτης, ου, ὁ}
+\index{κᾰρῠο-κατάκτης, ου, ὁ} 
+\ee{κᾰρῠο-θραύσ-της, ου, ὁ} 
+\subsection{μ[ε]ιγνῦσα μηχᾰν-ή, ἡ}
+\index{μειγνῦσα μηχᾰν-ή, ἡ@μ[ε]ιγνῦσα μηχᾰν-ή, ἡ}
+\subsection{ἀρτ-όπτης, ου, ὁ}
+\index{ἀρτ-όπτης, ου, ὁ}
+\subsection{μᾰγειρ-ικὸν κοχλι-άριον, τό}
+\index{μᾰγειρ-ικὸν κοχλι-άριον, τό}
+\subsection{σπᾰθ-η, ἡ}
+\index{σπᾰθ-η, ἡ}
+\subsection{ἀνοικτήριον, τό}
+\index{ἀνοικτήριον, τό}
+\subsection{\protect\hspace{-2ex}--\ref{50.12} ἐπιτρᾰπέζ-ια σκεύη, τά}
+\index{ἐπιτρᾰπέζ-ια σκεύη, τά} \setcounter{subsection}{9}
+\subsection{κοχλι-άριον, τό}
+\index{κοχλι-άριον, τό} 
+\subsection{περόν-ιον, τό}
+\index{περόν-ιον, τό} 
+\subsection{μαχαίρ-ιον, τό}
+\index{μαχαίρ-ιον, τό} \label{50.12} \index{ἐπιτρᾰπέζ-ια σκεύη, τά} 
+\subsection{μικρὸν κοχλι-άριον, τό}
+\index{μικρὸν κοχλι-άριον, τό}
+\subsection{μαχαιρ-ίδιον [ῐ], τό}
+\index{μαχαιρ-ίδιον [ῐ], τό}
+\subsection{ἑλκ-υστήρ, ῆρος, ὁ}
+\index{ἑλκ-υστήρ, ῆρος, ὁ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ οἰκεῖα σκεύη}]
+\subsection{ἠλεκτρῐκὸν σάρον [ᾰ], τό}
+\index{ἠλεκτρῐκὸν σάρον [ᾰ], τό}
+\subsection{ξυστικὸν σίδηρον, τό}
+\index{ξυστικὸν σίδηρον, τό}
+\subsection{σάρον [ᾰ], τό}
+\index{σάρον [ᾰ], τό} ~\\
+κόρ-ηθρον, τό
+\index{κόρ-ηθρον, τό} ~\\
+σάρ-ωτρον, τό
+\index{σάρ-ωτρον, τό}
+\subsection{χειρο-πληθὲς σάρον [ᾰ], τό}
+\index{χειρο-πληθὲς σάρον [ᾰ], τό}
+\subsection{πτύον [ῠ] κόνεως, τό}
+\index{πτύον [ῠ] κόνεως, τό}
+\subsection{πλῠν-τήριον, τό}
+\index{πλῠν-τήριον, τό}
+\subsection{σμῆμα, ατος, τό}
+\index{σμῆμα, ατος, τό}
+\subsection{καταψύκ-της, ου, ὁ}
+\index{καταψύκ-της, ου, ὁ}
+\subsection{κλῖμαξ, ᾰκος, ἡ}
+\index{κλῖμαξ, ᾰκος, ἡ}
+\subsection{ἠλεκτρῐκὸν κᾰμῑν-ιον, τό}
+\index{ἠλεκτρῐκὸν κᾰμῑν-ιον, τό}
+\subsection{ῥαπ-το-μηχᾰν-ή, ἡ}
+\index{ῥαπ-το-μηχᾰν-ή, ἡ}
+\subsection{φρύγ-ετρον [ῡ], τό}
+\index{φρύγ-ετρον [ῡ], τό}
+\subsection{ῥάκος [ᾰ], εος, τό}
+\index{ῥάκος [ᾰ], εος, τό}
+\subsection{κάδος [ᾰ], ὁ}
+\index{κάδος [ᾰ], ὁ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{οἱ σῖτοι καὶ αἱ πόσεις (α')}]
+\subsection{ὀπτὴ ὄρνις, ὄρνῑθος, ἡ}
+\index{ὀπτὴ ὄρνις, ὄρνῑθος, ἡ}
+\subsection{ὀπτά, ῶν, τά}
+\index{ὀπτά, ῶν, τά}
+\subsection{ἔμβαμμα, ατος, τό}
+\index{ἔμβαμμα, ατος, τό}
+\subsection{μᾶζα, ἡ}
+\index{μᾶζα, ἡ}
+\subsection{ὀξῠ-γᾰλα, ακτος, τό}
+\index{ὀξῠ-γᾰλα, ακτος, τό}
+\e{θεόβρωμα, ατος, τό}
+\ee{σοκολάτα, ἡ}
+\subsection{δι-πῠρίτης [ρῑ], ὁ}
+\index{δι-πῠρίτης [ρῑ], ὁ} ~\\
+δί-πῠρος ἄρτος, ὁ
+\index{δί-πῠρος ἄρτος, ὁ}
+\ee{παξαμᾶς, ᾶ, ὁ}
+\subsection{πηκτὸν γάλα, γάλακτος, τό}
+\index{πηκτὸν γάλα, γάλακτος, τό} ~\\
+πακτά, ἡ
+\index{πακτά, ἡ}
+\subsection{λάχᾰνα [λᾰ], τά}
+\index{λάχᾰνα [λᾰ], τά}
+\subsection{θρίδαξ, ᾰκος, ἡ}
+\index{θρίδαξ, ᾰκος, ἡ} ~\\ 
+θρῐδᾰκ-ίνη [κῑ], ἡ
+\index{θρῐδᾰκ-ίνη [κῑ], ἡ}
+\subsection{ὄρυζ-α, ἡ}
+\index{ὄρυζ-α, ἡ}
+\subsection{φυστή, ἡ}
+\index{φυστή, ἡ}
+\subsection{πέρνα, ης, ἡ}
+\index{πέρνα, ης, ἡ}
+\subsection{στρεπτ-ός, ὁ}
+\index{στρεπτ-ός, ὁ}
+\subsection{γλύκυσμα, ατος, τό}
+\index{γλύκυσμα, ατος, τό}
+\subsection{τρωκ-τὸν κόμμῐ, (κόμμεως) τό}
+\index{τρωκ-τὸν κόμμῐ, (κόμμεως) τό}
+\subsection{ἄλευρα [ᾰ], τά}
+\index{ἄλευρα [ᾰ], τά}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{οἱ σῖτοι καὶ αἱ πόσεις (β')}]
+\subsection{ζωμός, ὁ}
+\index{ζωμός, ὁ}
+\subsection{πέμμα, ατος, τό}
+\index{πέμμα, ατος, τό}
+\subsection{τῡρός, ὁ}
+\index{τῡρός, ὁ}
+\subsection{τεϊοδόχη, ἡ}
+\index{τεϊοδόχη, ἡ}
+\subsection{κῠλῐκ-ιον τεΐου, τό}
+\index{κῠλῐκ-ιον τεΐου, τό}
+\subsection{τέϊον, τό}
+\index{τέϊον, τό}
+\subsection{τετᾰρῑχ-ευμένα μῆλα, τά}
+\index{τετᾰρῑχ-ευμένα μῆλα, τά} ~\\
+ἠρτυμένα μῆλα, τά 
+\index{ἠρτυμένα μῆλα, τά}
+\subsection{βού-τῡρον, τό}
+\index{βού-τῡρον, τό}
+\subsection{μαργᾰρ-ίνη [ῑ], ἡ}
+\index{μαργᾰρ-ίνη [ῑ], ἡ}
+\subsection{ἀρτί-διον, τό}
+\index{ἀρτί-διον, τό}
+\subsection{παστά, τά}
+\index{παστά, τά}
+\subsection{σκωληκοειδὴ παστά, τά}
+\index{σκωληκοειδὴ παστά, τά}
+\subsection{ἄρτος, ὁ}
+\index{ἄρτος, ὁ}
+\subsection{χόρδ-ευμα, ατος, τό}
+\index{χόρδ-ευμα, ατος, τό} ~\\
+ἀλλᾶς, ᾶντος, ὁ
+\index{ἀλλᾶς, ᾶντος, ὁ}
+\subsection{σάκχᾰρ, αρος, τό}
+\index{σάκχᾰρ, αρος, τό}
+\subsection{γάλα, γάλακτος, τό}
+\index{γάλα, γάλακτος, τό}
+\subsection{σῐνᾱπ-ῐ, τό}
+\index{σῐνᾱπ-ῐ, τό}
+\subsection{πλᾰκοῦς, οῦντος, ὁ}
+\index{πλᾰκοῦς, οῦντος, ὁ}
+\subsection{λέκῐθος, ἡ}
+\index{λέκῐθος, ἡ} ~\\
+κρόκος τοῦ ᾠοῦ, ὁ
+\index{κρόκος τοῦ ᾠοῦ, ὁ}
+\subsection{λευκὸν τοῦ ᾠοῦ, τό}
+\index{λευκὸν τοῦ ᾠοῦ, τό}
+\subsection{ᾠόν, τό}
+\index{ᾠόν, τό}
+\subsection{καφές, έδος, ὁ}
+\index{καφές, έδος, ὁ}
+\subsection{καφεϊκὴ ὑδρ-ία, ἡ}
+\index{καφεϊκὴ ὑδρ-ία, ἡ}
+\subsection{κῠλῐκ-ιον καφέδος, τό}
+\index{κῠλῐκ-ιον καφέδος, τό}
+\subsection{πᾰλάθ-η [λᾰ], ἡ}
+\index{πᾰλάθ-η [λᾰ], ἡ}
+\subsection{κρέας, κρέως, τό}
+\index{κρέας, κρέως, τό}
+\subsection{τόμος, ὁ}
+\index{τόμος, ὁ}
+\subsection{φρυκτὰ μῆλα, τά}
+\index{φρυκτὰ μῆλα, τά}
+\subsection{ἁλᾰτο-δοχεῖον [ᾰ], τό}
+\index{ἁλᾰτο-δοχεῖον [ᾰ], τό}
+\subsection{ἅλς, ἁλός [ᾰ], o}
+\index{ἅλς, ἁλός [ᾰ], o} ~\\
+ἅλας, ᾰτος, τό
+\index{ἅλας, ᾰτος, τό}
+\subsection{ἔλαιον, τό}
+\index{ἔλαιον, τό}
+\subsection{ὄξος, εος, τό}
+\index{ὄξος, εος, τό}
+\subsection{πεπερο-δοχεῖον, τό} % https://books.google.com/books?id=3jw7AQAAMAAJ&pg=PA705&lpg=PA705&dq=%CF%80%CE%B5%CF%80%CE%B5%CF%81%CE%BF%CE%B4%CE%BF%CF%87%CE%B5%E1%BF%96%CE%BF%CE%BD&source=bl&ots=pZD3oTBnHD&sig=QyKpOopZQSU6cHwV6A22omZQvCM&hl=en&sa=X&ved=0ahUKEwjH7pv0vuXaAhXmsVQKHUizDRIQ6AEIKTAA#v=onepage&q=%CF%80%CE%B5%CF%80%CE%B5%CF%81%CE%BF%CE%B4%CE%BF%CF%87%CE%B5%E1%BF%96%CE%BF%CE%BD&f=false
+\index{πεπερο-δοχεῖον, τό} 
+\subsection{πέπερῐ, πεπέρεως, τό}
+\index{πέπερῐ, πεπέρεως, τό}
+\subsection{τρώξῐμα, τά}
+\index{τρώξῐμα, τά} ~\\
+φυλλ-άς, άδος, ἡ
+\index{φυλλ-άς, άδος, ἡ}
+\subsection{μέλῐ, ῐτος, τό}
+\index{μέλῐ, ῐτος, τό}
+\subsection{\protect\hspace{-2ex}--\ref{53.40} πόσεις, εων, αἱ}
+\index{πόσεις, εων, αἱ} \setcounter{subsection}{36}
+\subsection{ζῦθος, ου, ὁ}
+\index{ζῦθος, ου, ὁ}
+\subsection{οἰνό-πνευμα, ατος, τό}
+\index{οἰνό-πνευμα, ατος, τό}
+\subsection{ἀφρώδης οἶνος, ὁ}
+\index{ἀφρώδης οἶνος, ὁ}
+\subsection{οἶνος, ὁ}
+\index{οἶνος, ὁ} \label{53.40} \index{πόσεις, εων, αἱ}
+\subsection{λάγῡνος [ᾰ], ὁ}
+\index{λάγῡνος [ᾰ], ὁ}
+\subsection{ἰχθῦς, ύος, ὁ}
+\index{ἰχθῦς, ύος, ὁ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{οἱ καρποί}]
+{\renewcommand \thesubsection {\thesection} \index{καρποί, οἱ}}
+\subsection{μῆλον, τό}
+\index{μῆλον, τό}
+\subsection{καρδί-α ὀπώρ-ας, ἡ}
+\index{καρδί-α ὀπώρ-ας, ἡ}
+\subsection{ἄπιον, τό}
+\index{ἄπιον, τό}
+\subsection{κερᾰσ-ιον, τό}
+\index{κερᾰσ-ιον, τό}
+\subsection{μοῦσα, ης, ἡ}
+\index{μοῦσα, ης, ἡ} ~\\
+βανάνα, ης, ἡ 
+\index{βανάνα, ης, ἡ}
+\subsection{Περσικὸν μῆλον, τό}
+\index{περσικὸν μῆλον, τό@Περσικὸν μῆλον, τό}
+\subsection{Σινικὸν κίτρον, τό}
+\index{σινικὸν κίτρον, τό@Σινικὸν κίτρον, τό} ~\\
+πορτοκάλιον, τό
+\index{πορτοκάλιον, τό}
+\subsection{χᾰμ-αι-κερᾰσ-ιον, τό}
+\index{χᾰμ-αι-κερᾰσ-ιον, τό}
+\subsection{Ἰδαῖον βάτον, τό}
+\index{ἰδαῖον βάτον, τό@Ἰδαῖον βάτον, τό}
+\subsection{κοκκῠ-μηλον, τό}
+\index{κοκκῠ-μηλον, τό}
+\subsection{κίτρον, τό}
+\index{κίτρον, τό}
+\subsection{ἀμυγδᾰλ-η, ἡ}
+\index{ἀμυγδᾰλ-η, ἡ}
+\subsection{φραγκοστάφῠλον [ᾰ], τό}
+\index{φραγκοστάφῠλον [ᾰ], τό}
+\subsection{στᾰφῠλ-ή, ἡ}
+\index{στᾰφῠλ-ή, ἡ}
+βότρυς, υος, ὁ
+\subsection{ῥάξ, ῥᾱγός, ἡ}
+\index{ῥάξ, ῥᾱγός, ἡ}
+\subsection{κάρῠον [ᾰ], τό}
+\index{κάρῠον [ᾰ], τό}
+\subsection{δάκτῠλος φοίνῑκος, ὁ}
+\index{δάκτῠλος φοίνῑκος, ὁ} ~\\
+βάλᾰνος [βᾰ] φοίνῑκος, ἡ
+\index{βάλᾰνος [βᾰ] φοίνῑκος, ἡ}
+\subsection{σῦκον, τό}
+\index{σῦκον, τό}
+\subsection{ᾰνᾰνᾱσιον, τό}        
+\index{ᾰνᾰνᾱσιον, τό}        
+\subsection{μηλο-πέπων, ονος, ὁ}
+\index{μηλο-πέπων, ονος, ὁ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ λάχανα}]
+\subsection{θρίδαξ, ᾰκος, ἡ}
+\index{θρίδαξ, ᾰκος, ἡ} ~\\ 
+θρῐδᾰκ-ίνη [κῑ], ἡ
+\index{θρῐδᾰκ-ίνη [κῑ], ἡ}
+\subsection{κράμβ-η, ἡ}
+\index{κράμβ-η, ἡ}
+\subsection{κᾰρωτόν, τό}
+\index{κᾰρωτόν, τό}
+\subsection{κρόμμῠον, τό}
+\index{κρόμμῠον, τό}
+\subsection{σκόρ(ο)δον, τό}
+\index{σκόρ(ο)δον, τό}
+\subsection{σίκῠος [ῐ] ἢ σῐκῠός, ὁ}
+\index{σίκῠος [ῐ] ἢ σῐκῠός, ὁ}
+\subsection{πράσον [ᾰ], τό}
+\index{πράσον [ᾰ], τό}
+\subsection{ἀσφάρᾰγος [φᾰ], ὁ}
+\index{ἀσφάρᾰγος [φᾰ], ὁ}
+\subsection{λῠκο-περσικόν τό}
+\index{λῠκο-περσικόν τό}
+\subsection{φάσηλος [ᾰ], ὁ}
+\index{φάσηλος [ᾰ], ὁ}
+\subsection{πίσος [ῐ], ὁ}
+\index{πίσος [ῐ], ὁ}
+\subsection{γεώμηλον, τό}
+\index{γεώμηλον, τό}
+\subsection{πετρο-σέλῑνον, τό}
+\index{πετρο-σέλῑνον, τό}
+\subsection{καρτὸν κρόμμῠον, τό}
+\index{καρτὸν κρόμμῠον, τό}
+\subsection{ῥᾰφᾰν-ος, ἡ}
+\index{ῥᾰφᾰν-ος, ἡ}
+\subsection{καψικόν, τό}
+\index{καψικόν, τό}
+\subsection{ἐλαία, ἡ}
+\index{ἐλαία, ἡ}
+\subsection{σέλῑνον, τό}
+\index{σέλῑνον, τό}
+\subsection{ἀρᾰβό-σῑτος, ὁ}
+\index{ἀρᾰβό-σῑτος, ὁ}
+\subsection{κολοκύνθ-η, ἡ}
+\index{κολοκύνθ-η, ἡ}
+\subsection{βλίτον, τό}
+\index{βλίτον, τό} ~\\
+σπανάκιον, τό
+\index{σπανάκιον, τό}
+\subsection{ἐδώδιμον στρύχνον, τὸ}
+\index{ἐδώδιμον στρύχνον, τὸ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{ὁ κῆπος}]
+{\renewcommand \thesubsection {\thesection} \index{κῆπος, ὁ}}
+\subsection{πρᾰσι-ά, ἡ}
+\index{πρᾰσι-ά, ἡ}
+\subsection{θάμνος, ὁ}
+\index{θάμνος, ὁ}
+\subsection{δένδρον, τὸ}
+\index{δένδρον, τὸ}
+\subsection{ἄνθος, ους, τό}
+\index{ἄνθος, ους, τό}
+\subsection{\protect\hspace{-2ex}--\ref{56.10} κηπουρ-ικὰ ἐργᾰλ-εῖα, τά}
+\index{κηπουρ-ικὰ ἐργᾰλ-εῖα, τά} \setcounter{subsection}{4}
+\subsection{ἄμη, ἡ}
+\index{ἄμη, ἡ}
+\subsection{ἀγρεῖφνα, ἡ}
+\index{ἀγρεῖφνα, ἡ}
+\subsection{ἁρπάγ-η, ἡ}
+\index{ἁρπάγ-η, ἡ}
+\subsection{ἀρδάλιον, τό}
+\index{ἀρδάλιον, τό}
+\subsection{κηπουρ-ικὸς σωλήν, ῆνος, ὁ}
+\index{κηπουρ-ικὸς σωλήν, ῆνος, ὁ} ~\\
+κηπουρ-ικὸς σίφων, ωνος, ὁ
+\index{κηπουρ-ικὸς σίφων, ωνος, ὁ}
+\subsection{δρέπᾰνον, τό}
+\index{δρέπᾰνον, τό} \label{56.10}  \index{κηπουρ-ικὰ ἐργᾰλ-εῖα, τά}
+\subsection{κοπρ-ία, ἡ}
+\index{κοπρ-ία, ἡ}
+\subsection{βάθρον, τό}
+\index{βάθρον, τό}
+\subsection{αἰώρα, ἡ}
+\index{αἰώρα, ἡ}
+\subsection{μονό-τροχος, ὁ}
+\index{μονό-τροχος, ὁ}
+\subsection{ἅμαξα [ᾰ] χόρτου, ἡ}
+\index{ἅμαξα [ᾰ] χόρτου, ἡ}
+\subsection{κρήν-η, ἡ}
+\index{κρήν-η, ἡ}
+\subsection{ποτίζω τὸν χόρτον}
+\index{ποτίζω τὸν χόρτον}
+\subsection{χόρτος, ὁ}
+\index{χόρτος, ὁ}
+\subsection{χορτο-κόπιον, τό}
+\index{χορτο-κόπιον, τό}
+\subsection{\protect\hspace{-2ex}--\ref{56.23} κάρπ-ιμα δένδρα, τά}
+\index{κάρπ-ιμα δένδρα, τά} \setcounter{subsection}{19}
+\subsection{μηλέα, ἡ}
+\index{μηλέα, ἡ}
+\subsection{ἄπιος, [ᾰ], ἡ}
+\index{ἄπιος, [ᾰ], ἡ}
+\subsection{κοκκῠ-μηλέα, ἡ}
+\index{κοκκῠ-μηλέα, ἡ}
+\subsection{κερᾰσός, ὁ}
+\index{κερᾰσός, ὁ}
+\label{56.23} \index{κάρπ-ιμα δένδρα, τά} 
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ φυτά}]
+\subsection{δένδρον, τό}
+\index{δένδρον, τό}
+\subsection{κορῠφ-ή, ἡ}
+\index{κορῠφ-ή, ἡ}
+\subsection{πρέμν-ον, τό}
+\index{πρέμν-ον, τό}
+\subsection{κλάδος [ᾰ], ου, ὁ}
+\index{κλάδος [ᾰ], ου, ὁ}
+\subsection{φύλλον, τό}
+\index{φύλλον, τό}
+\subsection{στέλεχ-ος, εος, τό}
+\index{στέλεχ-ος, εος, τό}
+\subsection{ῥίζ-α, ης, ἡ}
+\index{ῥίζ-α, ης, ἡ}
+\subsection{λόχμ-η, ἡ}
+\index{λόχμ-η, ἡ}
+\subsection{μύκης [ῠ], ητος, ὁ}
+\index{μύκης [ῠ], ητος, ὁ}
+\subsection{βρύον [ῠ], τό}
+\index{βρύον [ῠ], τό} 
+\subsection{κισσός, ὁ}
+\index{κισσός, ὁ}
+\subsection{βρόμος, ὁ}
+\index{βρόμος, ὁ}
+\subsection{κρῑθ-ή, ἡ}
+\index{κρῑθ-ή, ἡ}
+\subsection{πῡρός, ὁ}
+\index{πῡρός, ὁ}
+\subsection{κνίδη [ῑ], ἡ}
+\index{κνίδη [ῑ], ἡ}
+\subsection{γεντιᾱνή, ἡ}
+\index{γεντιᾱνή, ἡ}
+\subsection{ἀνθεμ-ίς, ίδος, ἡ}
+\index{ἀνθεμ-ίς, ίδος, ἡ}
+\subsection{τρῐφυλλ-ον, τό}
+\index{τρῐφυλλ-ον, τό}
+\subsection{λυκίσκος, ὁ}
+\index{λυκίσκος, ὁ}
+\subsection{ἄμπελος, ἡ}
+\index{ἄμπελος, ἡ}
+\subsection{μήκων, ωνος, ἡ}
+\index{μήκων, ωνος, ἡ}
+\subsection{ἐλάτη [ᾰ], ἡ}
+\index{ἐλάτη [ᾰ], ἡ}
+\subsection{ἐλατίνη [ᾰ] βελόνη, ἡ}
+\index{ἐλατίνη [ᾰ] βελόνη, ἡ}
+\subsection{κύτταρ-ος, ὁ}
+\index{κύτταρ-ος, ὁ}
+\subsection{ἐρείκ-η, ἡ}
+\index{ἐρείκ-η, ἡ}
+\subsection{φοῖνιξ, ῑκος, ἡ}
+\index{φοῖνιξ, ῑκος, ἡ}
+\subsection{πίτυς [ῐ], υος, ἡ}
+\index{πίτυς [ῐ], υος, ἡ}
+\subsection{ἱππο-κάστᾰνον, τό}
+\index{ἱππο-κάστᾰνον, τό}
+\subsection{ἰτέα [ῑ], ἡ}
+\index{ἰτέα [ῑ], ἡ}
+\subsection{Ἡρακλεωτικὴ κᾰρύα [ῠ], ἡ}
+\index{ἡρακλεωτικὴ κᾰρύα [ῠ], ἡ@Ἡρακλεωτικὴ κᾰρύα [ῠ], ἡ}  ~\\
+Ποντικὴ κᾰρύα [ῠ], ἡ
+\index{ποντικὴ κᾰρύα [ῠ], ἡ@Ποντικὴ κᾰρύα [ῠ], ἡ}  ~\\
+κόρῠλος, ὁ
+\index{κόρῠλος, ὁ}
+\subsection{σημύδα, ἡ}
+\index{σημύδα, ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{ἡ κάπνισις}]
+\subsection{καπν-ιστής, οῦ, ὁ}
+\index{καπν-ιστής, οῦ, ὁ} ~\\
+καπν-ίστρια, ἡ
+\index{καπν-ίστρια, ἡ}
+\subsection{μὴ καπν-ιστής, οῦ, ὁ}
+\index{μὴ καπν-ιστής, οῦ, ὁ} ~\\
+μὴ καπν-ίστρια, ἡ
+\index{μὴ καπν-ίστρια, ἡ}
+\subsection{βακτηρ-ίδιον καπνοῦ, τό}
+\index{βακτηρ-ίδιον καπνοῦ, τό} ~\\
+σῐγᾰρέττον, τό
+\index{σῐγᾰρέττον, τό}
+\subsection{διῡλ-ιστήρ, ῆρος, ὁ}
+\index{διῡλ-ιστήρ, ῆρος, ὁ}
+\subsection{ἐνείλ-ημα καπνοῦ, ατος, τό}
+\index{ἐνείλ-ημα καπνοῦ, ατος, τό}
+σῐγάρον [ᾰ], τό
+\index{σῐγάρον [ᾰ], τό}
+\subsection{καπνὸς τὸ φῠτόν, ὁ}
+\index{καπνὸς τὸ φῠτόν, ὁ}
+\subsection{καπνο-θήκη, ἡ}
+\index{καπνο-θήκη, ἡ}
+\subsection{καπνο-σῦριγξ, ιγγος, ἡ}
+\index{καπνο-σῦριγξ, ιγγος, ἡ}
+\subsection{ἀναπτήρ, ῆρος, ὁ}
+\index{ἀναπτήρ, ῆρος, ὁ}
+\subsection{πῠρεῖον, τό}
+\index{πῠρεῖον, τό}
+\subsection{τεφρο-δοχεῖον, τό}
+\index{τεφρο-δοχεῖον, τό}
+\subsection{τέφρ-α, ἡ}
+\index{τέφρ-α, ἡ}
+\subsection{κηρός, ὁ}
+\index{κηρός, ὁ}
+\subsection{φλόξ, φλογός, ἡ}
+\index{φλόξ, φλογός, ἡ}
+\subsection{ἐλλύχν-ιον, τό}
+\index{ἐλλύχν-ιον, τό}
+\subsection{κηρός, ὁ}
+\index{κηρός, ὁ}
+\subsection{λυχν-ία, ἡ}
+\index{λυχν-ία, ἡ} ~\\
+λυχν-εῖον, τό
+\index{λυχν-εῖον, τό}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ζῷα · τὰ ἄγρια ζῷα (α')}]
+\subsection{ἱππο-πότᾰμος, ὁ}
+\index{ἱππο-πότᾰμος, ὁ}
+\subsection{κάμηλος [ᾰ], ὁ, ἡ}
+\index{κάμηλος [ᾰ], ὁ, ἡ}
+\subsection{κῦφος, εος, τό}
+\index{κῦφος, εος, τό}
+\subsection{τάρανδος [ᾰ], ὁ}
+\index{τάρανδος [ᾰ], ὁ}
+\subsection{πίθηκος [ῐ], ὁ}
+\index{πίθηκος [ῐ], ὁ}
+\subsection{φώκη, ἡ}
+\index{φώκη, ἡ}
+\subsection{σῠαγρ-ος, ὁ}
+\index{σῠαγρ-ος, ὁ} ~\\
+ὖς ἄγριος, ὑός, ὁ
+\index{ὖς ἄγριος, ὑός, ὁ}
+\subsection{ἔλᾰφος, ὁ, ἡ}
+\index{ἔλᾰφος, ὁ, ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ζῷα · τὰ ἄγρια ζῷα (β')}]
+\subsection{σκίουρος [ῐ], ὁ}
+\index{σκίουρος [ῐ], ὁ}
+\subsection{ἀλώπηξ [ᾰ], εκος, ἡ}
+\index{ἀλώπηξ [ᾰ], εκος, ἡ}
+\subsection{ἀσπάλαξ [πᾰ], ακος, ὁ}
+\index{ἀσπάλαξ [πᾰ], ακος, ὁ} ~\\
+σπάλαξ [σπᾰ], ᾰκος, ἡ
+\index{σπάλαξ [σπᾰ], ᾰκος, ἡ}
+\subsection{ἀγρία αἴξ, αἰγός, ἡ}
+\index{ἀγρία αἴξ, αἰγός, ἡ}
+\subsection{ἐλέφας, αντος, ὁ}
+\index{ἐλέφας, αντος, ὁ}
+\subsection{προβοσκ-ίς, ίδος, ἡ}
+\index{προβοσκ-ίς, ίδος, ἡ}
+\subsection{λέων, οντος, ὁ}
+\index{λέων, οντος, ὁ}
+\subsection{ἀκανθό-χοιρος, ὁ}
+\index{ἀκανθό-χοιρος, ὁ} ~\\
+ἐχῖνος, ὁ
+\index{ἐχῖνος, ὁ}
+\subsection{ἄλκη, ἡ}
+\index{ἄλκη, ἡ}
+\subsection{ἁλματοῦρος, ὁ}
+\index{ἁλματοῦρος, ὁ}
+\subsection{ἄρκτος, ἡ}
+\index{ἄρκτος, ἡ}
+\subsection{λύκος [ῠ], ὁ}
+\index{λύκος [ῠ], ὁ}
+\subsection{κᾰμηλο-πάρδᾰλις, εως, ἡ}
+\index{κᾰμηλο-πάρδᾰλις, εως, ἡ}
+\subsection{τίγρῐς, τίγριος, ἡ}
+\index{τίγρῐς, τίγριος, ἡ}
+\subsection{δορκάς, άδος [ᾰ], ἡ}
+\index{δορκάς, άδος [ᾰ], ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ζῷα · τὰ τιθασὰ (ἥμερα) ζῷα}]
+\subsection{κύων [ῠ], ὁ, ἡ}
+\index{κύων [ῠ], ὁ, ἡ}
+\subsection{ῥύγχ-ος, εος, τό}
+\index{ῥύγχ-ος, εος, τό}
+\subsection{δέρμα, ατος, τό}
+\index{δέρμα, ατος, τό}
+\subsection{οὐρά,ἡ}
+\index{οὐρά,ἡ} ~\\
+κέρκος, ἡ
+\index{κέρκος, ἡ}
+\subsection{αἴλουρος, ὁ, ἡ}
+\index{αἴλουρος, ὁ, ἡ}
+\subsection{τρίχες [ῐ] ῥῑνός, τριχῶν, ἡ}
+\index{τρίχες [ῐ] ῥῑνός, τριχῶν, ἡ}
+\subsection{μῦς, μῠός, ὁ}
+\index{μῦς, μῠός, ὁ}
+\subsection{λᾰγώς / λαγῶς, ώ / ῶ, ὁ}
+\index{λᾰγώς / λαγῶς, ώ / ῶ, ὁ}
+\subsection{δᾰσῠ-πους, ποδος, ὁ}
+\index{δᾰσῠ-πους, ποδος, ὁ}
+\ee{κύνικλος, ὁ}
+\subsection{ὗς, ὑός [ῠ], ὁ, ἡ}
+\index{ὗς, ὑός [ῠ], ὁ, ἡ}
+\subsection{ἀρουρ-αῖος [ᾰρ], ὁ}
+\index{ἀρουρ-αῖος [ᾰρ], ὁ}
+\subsection{πρόβᾰτον, τό}
+\index{πρόβᾰτον, τό}
+\subsection{ἔριον, τό}
+\index{ἔριον, τό}
+\subsection{ἀμνός, ὁ}
+\index{ἀμνός, ὁ}
+\subsection{αἴξ, αἰγός, ὁ}
+\index{αἴξ, αἰγός, ὁ} ~\\
+τράγος [ᾰ], ὁ
+\index{τράγος [ᾰ], ὁ}
+\subsection{ὄνος, ὁ, ἡ}
+\index{ὄνος, ὁ, ἡ}
+\subsection{βοῦς, βοός, ἡ}
+\index{βοῦς, βοός, ἡ} ~\\
+δᾰμᾰλ-ις, εως, ἡ 
+\index{δᾰμᾰλ-ις, εως, ἡ}
+\subsection{θηλή, ἡ}
+\index{θηλή, ἡ}
+\subsection{μόσχος, ὁ, ἡ}
+\index{μόσχος, ὁ, ἡ}
+\subsection{ἵππος, ὁ, ἡ}
+\index{ἵππος, ὁ, ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ζῷα · οἱ ὄρνιθες (α')}]
+{\renewcommand \thesubsection {\thesection} \index{ὄρνις, ὄρνῑθος, ὁ}}
+\subsection{γλαύξ (γλαῦξ), γλαυκός, ἡ}
+\index{γλαύξ (γλαῦξ), γλαυκός, ἡ}
+\subsection{βύας, ου, ὁ}
+\index{βύας, ου, ὁ}
+\subsection{περιστερ-ά, ἡ}
+\index{περιστερ-ά, ἡ}
+\subsection{πτέρυξ, ῠγος, ἡ}
+\index{πτέρυξ, ῠγος, ἡ}
+\subsection{πτερόν, τό}
+\index{πτερόν, τό}
+\subsection{στρουθός, ὁ}
+\index{στρουθός, ὁ}
+\subsection{αἰγίθαλλος ἢ αἰγίθᾱλος, ὁ}
+\index{αἰγίθαλλος ἢ αἰγίθᾱλος, ὁ}
+\subsection{σπίζα, ἡ}
+\index{σπίζα, ἡ}
+\subsection{ἀετός, οῦ, ὁ}
+\index{ἀετός, οῦ, ὁ}
+\subsection{ἀλεκτορ-ίς [ᾰ], ίδος, ἡ}
+\index{ἀλεκτορ-ίς [ᾰ], ίδος, ἡ}
+\subsection{νεοσσός, ὁ}
+\index{νεοσσός, ὁ}
+\subsection{γύψ, γῡπός, ὁ}
+\index{γύψ, γῡπός, ὁ}
+\subsection{νῆττα, ἡ}
+\index{νῆττα, ἡ}
+\subsection{χήν, χηνός, ὁ, ἡ}
+\index{χήν, χηνός, ὁ, ἡ}
+\subsection{φᾱσιᾱνός, ὁ}
+\index{φᾱσιᾱνός, ὁ}
+\subsection{τᾰώς / ταῶς, ώ / ῶ, ὁ}
+\index{τᾰώς / ταῶς, ώ / ῶ, ὁ}
+\subsection{κύκνος, ὁ}
+\index{κύκνος, ὁ}
+\e{κόραξ, ᾰκος, ὁ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ζῷα · οἱ ὄρνιθες (β')}]
+{\renewcommand \thesubsection {\thesection} \index{ὄρνις, ὄρνῑθος, ὁ}}
+\e{κορῠδός, ἡ} 
+\e{κόκκυξ, ῡγος, ὁ}
+\e{ψάρ, ψᾱρός, ὁ}
+\e{δρῠο-κολάπτης, ου, ὁ}
+\e{κόσσῠφ-ος, ὁ}
+\e{ψιττᾰκός, ὁ}
+\e{πελαργ-ός, ὁ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ζῷα · ἄλλα (α')}]
+\e{ψῡχ-ή, ἡ}
+\e{βομβῠλι-ός (βομβῠλι-ύλιος), ὁ}
+\e{ἀρίγγη, ἡ}
+\e{ἀμία, ἡ} ~\\
+τρώκ-της, ου, ὁ
+\index{τρώκ-της, ου, ὁ}
+\e{γῠρῖνος ἢ γύρῑνος, ὁ}
+\e{φάλλαινα, ἡ} ~\\
+κῆτος, εος, τό
+\index{κῆτος, εος, τό}
+\e{κόχλι-ας, ου, ὁ, [\textit{ὀστρᾰκ-ηρός}]} ~\\
+λεῖμαξ, ᾰκος, ἡ [\textit{ἀνόστρᾰκος}]
+\index{λεῖμαξ, ᾰκος, ἡ [\textit{ἀνόστρᾰκος}]}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ζῷα · ἄλλα (β')}]
+\e{δελφίς (\textit{ὕστερον} δελφίν), ῖνος, ὁ}
+\e{χελών-η, ἡ}
+\e{ὄφις, ὄφεως, ὁ} 
+\e{κροκό-δῑλος, ὁ}
+\e{σαύρ-α, ἡ} 
+\ee{σαῦρος, ὁ}
+\e{κᾱρίς, ἡ}
+\ee{βρᾰχύ-ουρον, τό}
+\e{βάτρᾰχος [βᾰ], ὁ}
+\e{καρκίνος [ῐ], ὁ}
+\e{κόγχ-η, ἡ}
+\ee{τελλίνη [ῑ], ἡ [\textit{ἐδώδιμος}]}
+\e{ὄστρε-ον ἢ ὄστρειον, τό}
+\e{νυκτερ-ίς, ίδος, ἡ}
+\e{καρχᾰρ-ίας, ου, ὁ}
+\ee{γᾰλεός, ὁ}
+\e{κάμπη, ἡ}
+\e{μέλισσᾰ, ης, ἡ}
+\e{μυῖα, ἡ}
+\e{κάνθᾰρος, ὁ}
+\e{σφήξ, σφηκός, ὁ}
+\e{ἕλμινς, ινθος, ἡ}
+\e{μύρμηξ, ηκος, ὁ}
+\e{ἀράχν-ης, ου, ὁ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ δημόσια οἰκοδομήματα (α')}]
+\e{φρούρ-ιον, τό}
+\ee{ὀχῠρ-ωμα, ατος, τό}
+\e{ἀνεμο-μῠλ-η, ἡ}
+\e{ἐργᾰσ-τήριον, τό}
+\e{σῐδηρο-δρομ-ικὸς σταθμός, ὁ}
+\e{κωδωνο-στάσιον [στᾰ], τό}
+\e{κώδων, ωνος, ὁ}
+\e{ἱερόν, τό}
+\ee{νᾱός, ὁ}
+\e{κοιμ-ητήριον, τό}
+\e{δῐδασκᾰλ-εῖον, τό}
+\e{κῑν-ηματο-γρᾰφ-ικὸν θέᾱτρον, τό}
+\ee{κῑν-ηματο-γράφος [ᾰ], ὁ}
+\e{πανδοκεῖον (\textit{ὕστερον} πανδοχεῖον), τό}
+\ee{ξενο-δοχεῖον, τό}
+\e{θέᾱτρον, τό}
+\e{βουλ-ευτήριον, τό}
+\e{γυμνᾰσ-ιον [ᾰ], τό}
+\e{ἀγορά [ᾰγ], ᾶς, ἡ}
+\e{γεροντο-κομεῖον, τό}
+\e{ἀλωή [ᾰ], ἡ}
+\e{νοσο-κομεῖον, τό}
+\e{νηπῐ-ᾰγωγ-εῖον, τό}
+\e{παιδ-ικὸν πεδίον, τό}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ δημόσια οἰκοδομήματα (β')}]
+\e{ἀμφιθέατρον, τό}
+\e{κολυμβ-ήθρα, ἡ}
+\e{πῐνᾰκο-θήκη, ἡ}
+\e{καθεδρ-ικὸς νᾱός, ὁ}
+\e{μουσεῖον, τό}
+\e{βοτᾰν-ικὸν κῆπος, ὁ}
+\e{πᾱν-επιστήμιον, τό}
+\e{ζῳολογ-ικὸς κῆπος, ὁ}
+\ee{θηριοτροφ-εῖον, τό}
+\e{ὑδρο-μύλη [μῠ], ἡ}
+\e{ὑδρο-τροχός, ὁ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{οἰκοδομήματα ποικίλα}]
+\e{ἀνεμο-τροχός, ὁ}
+\e{ἀνεμόμῠλος, ὁ}
+\ee{ἀνεμούριον, τό}
+\e{πτέρυξ ἀνεμομύλου, ῠγος, ἡ}
+\e{ὑδρο-μύλη [μῠ], ἡ}
+\e{μῠλ-ικὸς τροχός, ὁ}
+\e{λίθος μῠλ-ίας, ου, ὁ}
+\ee{μῠλ-η, ἡ}
+\ee{μύλος [ῠ], ὁ}
+\e{στοά, ᾶς, ἡ}
+\e{φάρος, ὁ}
+\e{φῠτουργ-εῖον, τό}
+\e{ἔπαυλ-ις, εως, ἡ}
+\e{σταθμός, ὁ}
+\e{σῑτο-βολών, ῶνος, ὁ}
+\ee{ἀπο-θήκη, ἡ}
+\e{ὀρεινὴ νομ-ή, ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ πωλητήρια}]
+\e{παντο-πώλιον, τό}
+\e{φαρμᾰκο-πώλιον, τό}
+\e{κουρ-εῖον, τό}
+\e{πωλ-ητήριον ἱμᾰτίων [ῑμ-], τό}
+\e{ἀρτο-πώλιον, τό}
+\e{κρεο-πώλιον, τό}
+\e{πωλ-ητήριον τροφ-ῆς, τό}
+\e{λᾰχᾰνοπώλ-ιον, τό}
+\e{ὑπερᾰγορά, ᾶς, ἡ}
+\e{ἑτοιμο-πωλεῖον, τό}
+\e{ὑᾰλ-ίνη [ῐ] θῠρίς, ίδος, ἡ}
+\e{τράπεζ-α [τρᾰ], ης, ἡ}
+\e{κᾰπηλ-εῖον, τό}
+\e{σκῡτοτομ-εῖον, τό}
+\e{περιηγ-ητικὸν πρακ-τήριον, τό}
+\e{βιβλιο-πωλεῖον, τό}
+\e{κᾰφεῖον, τό}
+\e{πρᾱτ-ήριον καυσίμων [ῐ], τό}
+\e{βενζίνη, ἡ}
+\e{δοχ-εῖον βενζίνης, τό}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὸ γραφεῖον (α')}]
+{\renewcommand \thesubsection {\thesection} \index{γρᾰφ-εῖον, τό}}
+\e{χαρτο-φῠλάκιον [ᾰκ], τό}
+\e{ἀναγρᾰφ-ή, ἡ}
+\ee{ὑπομνήματα, ων, τά}
+\e{δί-πτῠχον, τό}
+\e{χάρτ-ης, ου, ὁ}
+\ee{πάπῡρος [ᾰ], ὁ ἢ ἡ}
+\e{ἀρχεῖον, τό}
+\e{ἡμερο-λόγιον, τό}
+\e{γρᾰφ-ικὴ τράπεζ-α [τρᾰ], ης, ἡ}
+\e{ἐπιστολ-ικὸν περι-κάλυμμα [κᾰ], ατος, τό}
+\e{ἐπιστολ-ικὸς χάρτ-ης, ου, ὁ} 
+\e{δοχ-εῖον ἐπιστολ-ῶν, τό}
+\e{λογιστ-ικὴ μηχᾰν-ή, ἡ}
+\ee{ὑπο-λογιστής, οῦ, ὁ}
+\e{ἕδρ-α γρᾰφ-είου, ἡ}
+\e{ζύγαστρον [ῠ], τό}
+\e{κάλᾰθος [κᾰ] ἀχρήσ-των, ὁ}
+\e{τηλέ-φωνον, τό}
+\e{γρᾰφ-ικὴ μηχᾰν-ή, ἡ}
+\ee{γρᾰφο-μηχᾰν-ή, ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὸ γραφεῖον (β')}]
+{\renewcommand \thesubsection {\thesection} \index{γρᾰφ-εῖον, τό}}
+\e{ὑπᾰγορ-ευτικὴ μηχᾰν-ή, ἡ}
+\e{φωτο-τῠπ-ικὴ μηχᾰν-ή, ἡ}
+\e{φωτο-τῠπ-ία, ἡ}
+\e{πρόσοδοι, αἱ}
+\ee{προσιόντα, ων, τά}
+\e{δᾰπᾰν-ήματα, ων, τά}
+\ee{ἀνᾱλ-ώματα, ων, τά} 
+\e{χρωμᾰτ-ικὴ ταινία, ἡ}
+\e{συρραπτικόν, τό}
+\e{τρῡπ-ητής, οῦ, ὁ}
+\ee{διάτορ-ον μηχᾰν-ημα, ατος, τό}
+\e{ἀριθμητικὴ [ᾰ] μηχᾰν-ή, ἡ}
+\ee{ἀριθμο-μηχᾰν-ή [ᾰ], ἡ}
+\e{γραμμᾰτ-εῖον, τό}
+\ee{σημειωματάριον, τό}
+\e{κυκλο-μόλυβδος, ὁ}
+\ee{χρωστὴρ μόλυβδος, ῆρος, ὁ}
+\e{σφαιρ-ωτὸς στυλογράφος, ὁ}
+\e{στυλογράφος, ὁ}
+\e{μέλᾰν, ᾰνος, τό}
+\e{συνδετ-ήρ, ῆρος, ὁ}
+\e{ἐξᾰλειπ-τικὸν κόμμῐ, εως, τό}
+\e{κόλλᾰ, ης, ἡ}
+\e{χαρτο-κόπτης, ου, ὁ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὸ κουρεῖον}]
+\e{κάτοπτρον, τό}
+\ee{εἴσοπτρον (ἔσοπτρον), τό} \index{ἔσοπτρον, τό}
+\e{πηκτικὸν ὑγρόν, τό}
+\e{σμῆγμ-α κόμ-ης, ατος, τό}
+\e{νιπτήρ, ῆρος, ὁ}
+\ee{λου-τήριον, τό}
+\e{οὐλο-ποιὸν εἴλημα, ατος, τό}
+\e{κουρ-εύτρια, ἡ}
+\e{τρῐχο-ξηραν-τήρ, ῆρος, ὁ}             
+\e{ἱμᾰτ-ίδιον [ῑδ], τό}
+\e{κουρ-εύς, έως, ὁ}
+\e{ἐκμᾰγεῖον, τό}
+\e{πρόσ-θετοι κόμ-αι, αἱ}
+\ee{πηνήκ-η, ἡ}
+\ee{φενάκη [ᾱ], ἡ}
+\e{περόν-ιον κόμ-ης, τό}
+\e{κτείς, κτενός, ὁ}
+\ee{κομμ-ώτριον, τό}
+\e{ψήκτρ-α κόμ-ης, ἡ}
+\e{ψᾰλ-ίς, ίδος, ἡ}
+\subsection{[ἠλεκτρῐκὸν] ξῠρόν, τό}
+\index{ἠλεκτρῐκὸν ξῠρόν, τό@[ἠλεκτρῐκὸν] ξῠρόν, τό}
+\index{ξῠρόν, τό}
+\e{κόσμ-ημα τρῐχῶν, ατος, τό}
+\ee{κόμμ-ωσις κόμ-ης, εως, ἡ}
+\ee{κτεν-ισμός, ὁ}
+\e{προκόμιον, τό}
+\e{βόστρῠχ-ος, ὁ}
+\ee{ὄστλιγξ, ιγγος, ἡ}
+\ee{κίκιννος [κῐκ], ὁ}
+\e{διαμερ-ισμὸς κόμ-ης, ὁ}
+\e{πλεκτᾰν-η, ἡ}
+\ee{συμπλοκὴ τρῐχῶν, ἡ}
+\e{φᾰλακρ-ότης, ητος, ἡ}
+\ee{φᾰλάκρ-ωμα, ατος, τό}
+\e{ὑπήν-η, ἡ}
+\ee{μύσταξ, ᾰκος, ὁ}
+\e{γένει-ον, τό}          
+\e{πώγων, ωνος, ὁ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὸ καπηλεῖον}]
+\e{ξενο-δοχεῖον, τό}
+\e{λάγῡνος [ᾰ], ὁ}
+\e{οὐίσκιον, τό}
+\e{πόσεις, εων, αἱ}
+\e{ζῡθοχό-η, ἡ}
+\e{ποτήριον οἴνου, τό}
+\ee{ἔκ-πωμα οἴνου, ατος, τό}
+\e{κάπηλος [ᾰ], ὁ, ἡ}
+\e{ζῦθος, ου, ὁ}
+\e{τεφρο-δοχεῖον, τό}
+\e{ὑπό-στρωμα, ατος, τό}
+\e{ὑπήρετ-ις ξενο-δοχείου, ιδος, ἡ}
+\ee{παῖς ξενο-δοχείου, παιδός, ἡ}
+\e{σῖτοι, οἱ}
+\e{ξένος, ὁ}
+\e{χειρό-μακτρον, τό}
+\e{ἐπιτρᾰπέζ-ιος ὀθόν-η, ἡ}
+\ee{τρᾰπέζ-οθόν-η, ἡ}
+\e{ὑπηρέτ-ης ξενο-δοχείου, ου, ὁ}
+\ee{παῖς ξενο-δοχείου, παιδός, ὁ}
+\e{λόγ-ισμα, ατος, τό}
+\e{οἰνό-πνευμα, ατος, τό}
+\e{τράπεζ-α [τρᾰ], ης, ἡ}
+\e{ἕδρ-α, ἡ}
+\e{ὑᾰλ-ῐνον ποτήριον ζύθου [ῡ], τό}
+\ee{ὑᾰλ-ῐνον ἔκ-πωμα ζύθου [ῡ], ατος, τό}
+\e{μᾰγείρ-αινα, ἡ}
+\ee{μᾰγείρ-ισσα, ἡ}
+\e{χύτρ-α, ἡ}
+\e{ἐσχάρ-α [ᾰ], ἡ}
+\e{τάγηνον [ᾰ], τό}
+\e{μᾰγειρ-ος, ὁ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὸ καφεῖον}]
+\e{κῠλῐκ-ιον καφέδος, τό}
+\e{καφεϊκὴ ὑδρ-ία, ἡ}
+\e{καφές, έδος, ὁ}
+\e{μικρὸν κοχλι-άριον, τό}
+\e{περόν-ιον, τό}
+\e{γλύκυσμα, ατος, τό}
+\subsection{[ἐδώδιμος] πᾰγετ-ός, ὁ}
+\index{ἐδώδιμος πᾰγετ-ός, ὁ@[ἐδώδιμος] πᾰγετ-ός, ὁ}
+\index{πᾰγετ-ός, ὁ}
+\e{ἀφρό-γᾰλα, ακτος, τό}
+\e{πέμμα, ατος, τό}
+\e{ἐκπεπῐεσμένος καφές, έδος, ὁ}
+\e{λάγᾰνον [λᾰ], τό}
+\ee{ἀρτο-λάγᾰνον [λᾰ], τό}
+\e{τεϊοδόχη, ἡ}
+\e{κῠλῐκ-ιον τεΐου, τό}
+\e{τέϊον, τό}
+\e{καφὲς μόκας, έδος, ὁ}
+\e{ἀρτί-διον, τό}
+\e{μελῐτ-ωμα, ατος, τό}
+\e{μηχᾰν-ὴ πᾰγετ-οῦ, ἡ}
+\e{πόσῐς θεοβρώματος, εως, ἡ}
+\ee{κᾰκᾰον, τό}
+\e{κιτρᾶτον, τό}
+\e{μήλῐνος χῡμ-ός (χῡλ-ός), ὁ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὸ πανδοκεῖον}]
+\e{ἀνέλκυστήρ, ῆρος, ὁ}
+\e{θῠρωρ-ός, ὁ}
+\e{ὑποδοχ-ή, ἡ}
+\e{ὑπάλληλος ὑποδοχ-ῆς, ὁ}
+\e{ἀποσκευή, ἡ}
+\e{ξένος, ὁ}
+\e{διοικ-ητής, οῦ, ὁ}
+\ee{ἐπιμελ-ητής, οῦ, ὁ}
+\ee{ἐπίτροπ-ος, ὁ}
+\e{θερμο-πώλιον, τό}
+\e{οἰνόχο-ος, ὁ}
+\ee{τρικλῑν-ιάρχης, ου, ὁ}
+\e{ὑψηλὸς δίφρος, ὁ}
+\e{κλεὶς δωμᾰ-τίου, κλειδός, ἡ}
+\e{σύγγρᾰφος, ἡ}
+\ee{δελτίον ταὐτότητος, τό}
+\e{ἔγγρᾰφ-ον αἰτ-ήσεως, τό}
+\e{ἑστιᾱτ-ήριον, τό}
+\e{μονό-κλῑνον δωμάτ-ιον [ᾰ], τό}
+\e{διπλοῦν δωμάτ-ιον [ᾰ], τό}
+\e{δωμάτ-ιον [ᾰ] μετὰ [ὑετ-ίου] λουτροῦ, τό}
+\e{δωμάτ-ιον [ᾰ] χωρὶς [ὑετ-ίου] λουτροῦ, τό}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{αἱ ὁδοί τε καὶ ἡ κίνησις}]
+\e{αὐτο-κῑν-ητικὸν ἀτῠχ-ημα, ατος, τό}
+\e{ἀσθενο-φόρος ἅμαξα [ᾰ], ἡ}
+\e{οὐρὰ ὀχ-ημάτων, ἡ}
+\ee{στοῖχος ὀχ-ημάτων, ὁ}
+\e{αὐτο-κῑνητό-δρομος, ὁ}
+\e{ἐκτροπ-ή, ἡ}
+\e{τετρᾰ-οδία, ἡ}
+\ee{τετρᾰ-όδιον, τό}
+\e{πρωτεύουσα ὁδός, ἡ}
+\ee{λεωφόρος [ὁδός], ἡ}
+\e{παρακειμέμη ὁδός, ἡ}
+\e{κοιλ-αδο-γέφῡρα, ἡ}
+\e{πεζός, ὁ}
+\e{πεζοδρόμιον, τό}
+\e{διάβᾰσις πεζῶν, εως, ἡ}
+\e{μονόδρομ-ος ὁδός, ἡ}
+\ee{ὁδός μόνου δρόμου, ἡ}
+\e{ὁδοίπορ-ος, ὁ}
+\e{σωλην-άριον, τό}
+\e{σταθμὸς λεωφορείου, ὁ}
+\e{στᾰτὴ περιοχ-ή, ἡ}
+\e{πυροσβέσται, οἱ}
+\e{διαλείπων λύχνος, ὁ}
+\e{ἀστυ-νομία, ἡ}
+\e{φᾱνάριον, τό}
+\e{μέτρον στάσεως [ᾰ], τό}
+\e{σημεῖον ἵστασθαι, τό}
+\e{σημεῖον προσέχειν, τό}
+\e{στειβομένη ὁδός, ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{ὀχήματα ποικίλα}]
+\e{λεωφορεῖον, τό}
+\e{ἁρμάμαξα [μᾰμ], ης, ἡ}
+\ee{οἰκάμαξα [μᾰμ], ης, ἡ}
+\e{μίσθιον αὐτο-κίνητον [ῑ], τό}
+\e{ἅμαξα [ᾰ] φορτ-ίων, ἡ}
+\ee{φορτᾰγωγ-ὸς ἅμαξα [ᾰ], ἡ}
+\ee{φορτηγ-όν, τό}
+\e{ἐφελκομένη ἅμαξα [ᾰ], ἡ}
+\e{τροχιόδρομος, ὁ}
+\e{ἕλκουσα ἅμαξα [ᾰ], ἡ}
+\ee{ἅμαξα [ᾰ] μετὰ γεράνου [ᾰ], ἡ}
+\e{αὐτο-κίνητον [ῑ] δίτροχον, τό}
+%\e{κῑν-ητό-κυκλον (ὄχ-ημα, ατος), τό} % https://incubator.wikimedia.org/wiki/Wp/grc/%CE%92%CE%B9%CE%BA%CE%B9%CF%80%CE%B1%CE%B9%CE%B4%CE%B5%CE%AF%CE%B1:%E1%BC%88%CE%B3%CE%BF%CF%81%CE%AC/%CE%9B%CF%8C%CE%B3%CE%B9%CE%BF%CE%B9_%E1%BC%99%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%BF%E1%BD%B6_%E1%BD%85%CF%81%CE%BF%CE%B9_%CF%80%CE%B5%CF%81%E1%BD%B6_%CF%83%CF%85%CE%B3%CF%87%CF%81%CF%8C%CE%BD%CF%89%CE%BD_%E1%BC%90%CE%BD%CE%BD%CE%BF%CE%B9%E1%BF%B6%CE%BD
+\e{πλάγιος [ᾰ] κάλᾰθος [κᾰ], ὁ}
+\ee{πλευρ-ικὸς κάλᾰθος [κᾰ], ὁ}
+\e{κῑν-ητο-κυκλιστής, οῦ, ὁ} 
+\e{ὑπόγειος σῐδηρό-δρομος, ὁ}
+\e{χειραμάξιον, τό}
+\e{ποδήλᾰτον, τό}
+\e{ποδηλ-άτης [ᾰ], ου, ὁ}
+\ee{ποδηλ-άτις, ιδος, ἡ}
+\e{ποδήλᾰτικὸν πηδάλι-ον [ᾰ], τό}
+\e{κώδων, ωνος, ὁ}
+\e{πέδῑλον, τό}
+\e{ἅλῠσις, εως, ἡ}
+\e{σκευοφορ-εῖον, τό}
+\ee{σκευοφορ-φόριον, τό}
+\e{εἱργμὸς πηλοῦ, ὁ}
+\e{ὀπίσω [ῐ] φῶς, φωτός, τό}
+\e{ἀκτίς [ῑ], ῖνος, ἡ}
+\e{ἕδρ-ιον, τό}
+\e{τρίτροχον [ῐ], τό}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ὀχήματα · τὸ αὐτοκίνητον}]
+\e{αὐτο-κίνητον [ῑ], τό}
+\e{ἁρμᾰτ-ηλάτης [λᾰ], ου, ὁ}
+\ee{ἐλᾰτ-ὴρ αὐτο-κῑνήτου, ῆρος, ὁ}
+\e{ὕᾰλο-κᾰθαρ-ιστήρ, ῆρος, ὁ}
+\e{ἀνεμο-θώραξ [ᾰ], ᾱκος, ὁ}
+\e{πείρινς, ινθος, ἡ}
+\e{φωστήρ, ῆρος, ὁ}
+\e{πῐνᾰκ-ιον αὐτο-κῑνήτου, τό}
+\e{πρόφυλ-αξ, ᾰκος, ὁ}
+\e{τροχός, ὁ}
+\e{ἅμαξα [ᾰ], ἡ}
+\ee{πλαίσῐ-ον, τό}
+\e{θύρα [ῠ] αὐτο-κῑνήτου, ἡ}
+\e{κανθός, ὁ}
+\ee{ἐπίσωτρον, τό}
+\e{σῶτρον, τό}
+\e{θῠρίς, ίδος, ἡ}
+\subsection{[ἔμπροσθ-εν] ἕδρ-α, ἡ} 
+\index{ἔμπροσθ-εν ἕδρ-α, ἡ@[ἔμπροσθ-εν] ἕδρ-α, ἡ}
+\e{κνέφαλλον, τό}
+\e{ὀπίσω [ῐ] ἕδρ-α, ἡ}
+\e{ὁρμ-ητικὴ κλείς, κλειδός, ἡ}
+\e{ζών-η ἀσφᾰλ-είας, ἡ}
+\e{μοχλὸς τᾰχῠτήτων, ὁ}
+\ee{λᾰβ-ὶς τᾰχῠτήτων, ίδος, ἡ}
+\e{τᾰχῠτῆτες, αἱ}
+\e{πηδάλι-ον [ᾰ] αὐτο-κῑνήτου, τό}
+\e{σάλπ-ιγξ, ιγγος, ἡ}
+\e{πίναξ [ῐ] αὐτο-κῑνήτου, ᾰκος, ὁ}
+\e{ὁρμ-ητήριον, τό}
+\e{ἀερό-σακ(κ)ος, ὁ}
+\e{πέδῑλον συμπλέκτου, τό}
+\ee{συμπλέκτης, ου, ὁ}
+\e{πέδῑλον χᾰλῑνοῦ, τό}
+\ee{χᾰλῑνός, ὁ}
+\e{πέδῑλον ἐπιτᾰχ-υντοῦ, τό}
+\ee{ἐπιτᾰχ-υντής, οῦ, ὁ}
+\e{χειρο-χάλῑνός [ᾰ], ὁ}
+\e{ἀνα-φλέκ-τήρ, ῆρος, ὁ}
+\e{συσσωρ-ευτής, οῦ, ὁ}
+\e{ἐνδοχεῖον, τό}
+\e{δοχ-εῖον βενζίνης, τό}
+\e{ὀχ-ημᾰτῐκὰ γράμματα, τά}
+\e{ἄδεια ἐλάσεως [ᾰ], ἡ}
+\ee{δίπλ-ωμα ἐλάσεως [ᾰ], ατος, τό}
+\e{κῑν-ητής, οῦ, ὁ}
+\e{ῥῦμα, ατος, τό}
+\e{δοχ-εῖον ἀποσκευῆς, τό}
+\e{ὀπίσω [ῐ] φῶς, φωτός, τό}
+\e{ἐξάτμ-ισις, εως, ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ὀχήματα · αἱ νῆες}]
+{\renewcommand \thesubsection {\thesection} \index{ναῦς, ἡ}}
+\e{κωπ-ῆρες πλοιᾰρ-ιον, τό}
+\e{κώπ-η, ἡ}
+\e{ἱστιο-φόρος σκάφη, ἡ}
+\e{ἱστός, ὁ}
+\e{πηδάλι-ον [ᾰ], τό}
+\e{ἱστίον, τό}
+\e{ποτᾰμ-ία ναῦς, ἡ}
+\e{πορθμ-εῖον, τό}
+\e{λῐμήν, ένσς, ὁ}
+\e{ὅρμος, ὁ}
+\e{πλοηγ-ός, ὁ}
+\e{ναύαρχ-ος, ὁ}
+\e{ἐπιβᾰτ-ης, ου, ὁ}
+\ee{ἔποχος, ὁ, ἡ}
+\ee{ἐπιβάτ-ῐς [ᾰ], ιδος, ἡ}
+\e{ναύτ-ης, ου, ὁ}
+\e{ἐπιβᾰτ-ικὴ ναῦς, ἡ}
+\ee{ἐπιβᾰτ-ικὸν πλοῖον, τό}
+\e{ἁλι-ευτικὸν πλοῖον, τό}
+\ee{ἁλιάς, άδος, ἡ}
+\e{ἀερο-πλᾰνο-φόρον, τό}
+\e{ὑπο-βρύχιον [ῠποβρῠ], τό}
+\e{πολεμ-ικὴ ναῦς, ἡ}
+\ee{πολεμ-ικὸν πλοῖον, τό}
+\e{ἄγκῡρα, ἡ}
+\subsection{Μαγνητικὴ πυξ-ίς, ίδος, ἡ}
+\index{μαγνητικὴ πυξ-ίς, ίδος, ἡ@Μαγνητικὴ πυξ-ίς, ίδος, ἡ}
+\ee{ναυτ-ικὴ πυξ-ίς, ίδος, ἡ}
+\e{ναυπήγ-ιον, τό}
+\ee{ναυπηγ-εῖον, τό}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ὀχήματα · τὰ ἀέρια ὀχήματα (α')}]
+\e{ἀερο-δρόμιον [ᾱ], τό}
+\ee{ἀερο-λῐμήν [ᾱ], ένσς, ὁ}
+\e{ἀερο-πλάνον [ᾱ,ᾰ], τό}
+\ee{ἀερο-σκάφος [ᾱ,ᾰ], εος, τό}
+\e{ἀέρι-ωθούμενον ἀερο-σκάφος [ᾱ,ᾰ], εος, τό}
+\e{θάλᾰμος [θᾰ] κῠβερν-ήσεως, ὁ}
+\e{πτέρυξ [ἀερο-πλάνου], ῠγος, ἡ}
+\e{ἀνεμο-πλάνον [ᾰ,ᾰ], τό}
+\ee{ἀνεμό-πτερον [ᾰ], τό}
+\e{ὑδρο-πλάνον [ᾱ], τό}
+\e{ἀερό-στᾰτον [ᾱ], τό}
+\e{ἑλῐκό-πτερον, τό}
+\e{ἀερό-πλοιον [ᾱ], τό}
+\e{ὑπόστεγ-ον ἀερο-σκᾰφῶν [ᾱ], τό}
+\e{προσγειόω}
+\ee{προσγειώνω}
+\ee{προσγείωσις, εως, ἡ}
+\e{ἀπογειέομαι}
+\ee{ἀπογείωσις, εως, ἡ}
+\e{διάδρομος, ὁ}
+\e{δέω, δήσω, ἔδησα, δέδεκα, δέδεμαι, ἐδέθην}
+\e{ὑπηρέτ-ης, ὁ}
+\ee{ὑπήρετ-ις, ιδος, ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ὀχήματα · τὰ ἀέρια ὀχήματα (β')}]
+\e{κῠβερν-ήτης, ου, ὁ}
+\ee{κῠβερν-ήτρια, ἡ}
+\e{ἀερο-πειρ-ᾱτεία [ᾱ], ἡ}
+\e{πορ-ευτικὴ κλῖμαξ, ᾰκος, ἡ}
+\e{πλήρ-ωμα ἀερο-σκάφους [ᾱ,ᾰ], ατος, τό}
+\e{ἀλεξίπτωτον, τό}
+\e{ὑπηρέτ-ης, ὁ}
+\e{πῠραυλος, ὁ}
+\e{ἐκτόξ-ευσις πῠραύλου, εως, ἡ}
+\e{τροχιὰ μεταφορ-ᾶς, ἡ}
+\e{τροχιά, ἡ}
+\e{ἀστρο-ναύτ-ης, ου, ὁ}
+\ee{κοσμο-ναύτ-ης, ου, ὁ}
+\e{καύσῐμον, τό}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ σιδηροδρομικά (α')}]
+\e{σῐδηρο-δρομ-ικὸς σταθμός, ὁ}
+\e{ἁμαξο-στοιχία, ἡ}
+\e{ἄφιξις, εως, ἡ}
+\e{ἔξοδος, ἡ}
+\e{σῐδηρο-τροχιά, ἡ}
+\e{ἀποβάθρα, ἡ}
+\e{ῥίσκος, ὁ}
+\e{σκευόφορ-ον ἁρμᾰτ-ιον, τό}
+\e{πίναξ [ῐ] δρομο-λογίων, ᾰκος, ὁ}
+\e{κῠλινδομένη κλῖμαξ, ᾰκος, ἡ}
+\e{τᾰμῐ-εῖον πωλ-ήσεως εἰσῐτ-ηρίων, τό}
+\e{κλειδίον σῐδηρο-τροχιᾶς, τό}
+\e{δίαιτα [ῐ] μὴ καπν-ιστῶν, ἡ}
+\e{δίαιτα [ῐ] δευτέρας τάξεως, ἡ}
+\e{σᾰνὶς ἀποσκευῆς, ίδος, ἡ}
+\e{τροχο-πέδη ἀσφᾰλ-είας, ἡ}
+\e{δίαιτα [ῐ] καπν-ιστῶν, ἡ}
+\e{ἄφοδος, ἡ}
+\ee{ἀφεδρών, ῶνος, ὁ}
+\e{δίαιτα [ῐ], ἡ}
+\e{δίαιτα [ῐ] πρώτης τάξεως, ἡ}
+\e{ἐπόπτ-ης [ἁμαξοστοιχίας], ου, ὁ}
+\e{μηχᾰν-ικός, ὁ}
+\e{ἐπιμελ-ητής [ἁμαξοστοιχίας], οῦ, ὁ}
+\e{εἰσῐτ-ήριον, τό}
+\e{εἰσῐτ-ήριον ἐπιστροφ-ῆς, τό}
+\e{σημεῖον, τό}
+\e{σῐδηρο-δρομ-ικὴ γραμμή, ἡ}
+\e{σῐδηρο-δρομ-ικὴ γέφῡρα, ἡ}
+\ee{ὑπόγειος διάβᾰσις, εως, ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ σιδηροδρομικά (β')}]
+\e{ἠλεκτρο-κῑν-ητος μηχᾰν-ή, ἡ}
+\e{τοπ-ικὴ ἁμαξο-στοιχία, ἡ}
+\e{δῑσελο-κῑν-ητος μηχᾰν-ή, ἡ}
+\e{τᾰχεῖα ἁμαξο-στοιχία, ἡ}
+\e{σῐδηρο-δρομ-ικὸν ὄχ-ημα, ατος, τό}
+\e{ὑπερ-αστικὴ ἁμαξο-στοιχία, ἡ}
+\e{ἐμπορ-ικὴ ἁμαξο-στοιχία, ἡ}
+\e{μηχᾰν-ὴ ἕλξεως [ἁμαξο-στοιχίας], ἡ}
+\e{ἀτμο-μηχᾰν-ή, ἡ}
+\ee{ἀτμάμαξα [ᾰ], ἡ}
+\ee{ἀτμο-κῑν-ητος μηχᾰν-ή, ἡ}
+\e{ἑστιᾱτ-όριον ὄχ-ημα, ατος, τό}
+\e{κλῑνάμαξα [ᾰ], ἡ}
+\e{ὀδοντωτὸς σιδηρόδρομος, ὁ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ σιδηροδρομικά (γ')}]
+\e{ὄχ-ημα ἀποσκευῆς, ατος, τό}
+\e{τᾰχῠ-δρομικὸν ὄχ-ημα, ατος, τό}
+\e{ἀνα-βᾰτήρ, ῆρος, ὁ}
+\e{τηλεφόρος δρόμος, ὁ}
+\ee{καλωδιόδρομος, ὁ}
+\e{κορῠφ-αῖος σταθμός, ὁ}
+\e{ὀδοντωτὸς σῐδηρό-δρομος, ὁ}
+\e{ὀρεινὸς σῐδηρό-δρομος, ὁ}
+\e{σταθμὸς κοιλ-άδος, ὁ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{ἡ πορεία}]
+{\renewcommand \thesubsection {\thesection} \index{πορ-εία, ἡ}}
+\e{περιηγ-ητικὸν πρακ-τήριον, τό}
+\e{συσκευ-άζω}
+\ee{ἀνασκευ-άζω}
+\e{διαβᾰτ-ήριον, τό}
+\e{ὁδοιπόρ-ος, ὁ}
+\ee{ὁδ-ίτης [ῑ], ου, ὁ}
+\e{ὠνέομαι (ἐωνούμην, ὠνήσομαι, ἐπριάμην, ἐώνημαι, ἐωνήθην) εἰσῐτ-ήριον}
+\e{ῥίσκος, ὁ}
+\e{περίπᾰτ-ος, ὁ}
+\ee{βᾰδίζω (βαδιοῦμαι, βεβάδικα)}
+\ee{βαίνω (βήσομαι, ἔβην, βέβηκα)}
+\e{προσκῠν-ημα, ατος, τό}
+\ee{ἱερὰ ἀποδημ-ία, ἡ}
+\ee{ἱερὰ ὁδοιπορ-ία, ἡ}
+\e{πανδοκεῖον (\textit{ὕστερον} πανδοχεῖον), τό}
+\e{περιηγ-ητικὸν λεωφορεῖον, τό}
+\e{περιηγ-ητής, οῦ, ὁ}
+\e{πορ-εύομαι}
+\e{περιηγ-ητικὸν βιβλίον, τό}
+\e{γεωγρᾰφ-ικὸς πίναξ [ῐ], ᾰκος, ὁ}
+\e{περιηγ-ητικὴ ἀγέλ-η, ἡ}
+\e{φωτο-γρᾰφ-έω}
+\e{ἀναμνη-στικόν, τό}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὸ ταχυδρομεῖον}]
+\e{τᾰχῠδρομεῖον, τό}
+\e{θῠρὶς δεσμ-ῶν, ίδος, ἡ}
+\e{τᾰχῠ-δρομικὸς ὑπάλληλος, ὁ}
+\e{τᾰχῠ-δρομικὴ θῠρὶς, ίδος, ἡ}
+\e{γραμματο-κῐβώτ-ιον, τό}
+\e{τᾰχῠ-δρομικὴ δέσμ-η, ἡ}
+\e{δελτίον δέσμ-ης, τό}
+\e{ἐπιστολ-ή, ἡ}
+\e{ἐπιστολ-ικὸν περι-κάλυμμα [κᾰ], ατος, τό}
+\e{τᾰχῠ-δρομικὸς ἀριθμός [ᾰ], ὁ}
+\ee{τᾰχῠ-δρομικὸς κῶδιξ, ικος, ὁ}
+\e{ἐπιγρᾰφ-ὴ ἐπιστολ-ῆς, ἡ}
+\e{κατεπειγομένη ἐπιστολ-ή, ἡ}
+\e{ἠσφαλισμένη ἐπιστολ-ή, ἡ}
+\e{τηλε-γρᾰφ-ημα, ατος, τό}
+\e{ἐπιστολ-ικὸν δελτάριον, τό}
+\e{φωτο-γρᾰφ-ικὸν δελτάριον, τό}
+\e{συνεστῶσα ἐπιστολ-ή, ἡ}
+\e{γραμματό-σημον, τό}
+\e{τᾰχῠ-δρόμος, ὁ}
+\e{τᾰχῠ-δρομικὴ παρά-δοσις, εως, ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὸ τηλέφωνον}]
+\e{τηλε-φων-ικὸς θάλᾰμος [θᾰ], ὁ}
+\e{τηλέ-φωνον, τό}
+\e{ἀκου-στικόν, τό}
+\ee{τηλε-φων-ικὸς δέκ-της, ου, ὁ}
+\e{ἐκλεκτ-ικὸς δίσκος, ὁ}
+\e{τηλε-φων-ικὴ σύνδεσις, εως, ἡ}
+\e{προθετικὸς ἀριθμός [ᾰ], ὁ}
+\e{τηλε-φων-ικὸς ἀριθμός [ᾰ], ὁ}
+\e{τηλε-φων-ικὸς κατάλογ-ος, ὁ}
+\e{κῑν-ητὸν τηλέ-φωνον, τό}
+\e{τηλε-φων-ικὸς κωδωνισμός, ὁ}  
+\e{πληκτρο-λόγ-ιον, τό}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ἐργαστήρια}]
+\e{ζῡθο-ποιεῖον, τό}
+\e{ἐργᾰσ-τήριον αὐτο-κῑνήτων, τό}
+\e{ἠλεκτρῐκὸν ἐργᾰσ-τήριον, τό}
+\ee{ἠλεκτρῐκὸς σταθμός, ὁ}
+\e{κερᾰμ-εῖον, τό}
+\ee{κερᾰμ-ευτικὸν ἐργᾰσ-τήριον, τό}
+\e{μέταλλον ἀνθράκων [ᾰ], τό}
+\ee{ἀνθρᾰκωρῠχ-εῖον, τό}
+\e{τῠπ-ογρᾰφ-εῖον, τό}
+\e{πῡρην-ῐκὸν ἐργᾰσ-τήριον, τό}
+\ee{πῡρην-ῐκὸς σταθμός, ὁ}
+\e{ἐργᾰσ-τήριον ἀερίου [ᾱ], τό}
+\e{ἐργᾰσ-τήριον ὕφασ-μάτων [ῠ], τό}
+\e{ἐργᾰσ-τήριον ξῠλ-είας, τό}
+\ee{πρῑονι-στήριον, τό}
+\e{λᾱτομ-εῖον, τό}
+\ee{λᾱτομ-ία, ἡ}
+\ee{λῐθοτομ-ία, ἡ}
+\e{χαρτουργεῖον, τό}
+\e{χημικὸν ἐργᾰσ-τήριον, τό}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ἐργαλεῖα}]
+{\renewcommand \thesubsection {\thesection} \index{ἐργᾰλ-εῖον, τό}}
+\e{σφῦρᾰ, ἡ}
+\e{κοπεύς, έως, ὁ}
+\ee{σμῑλ-η, ἡ}
+\ee{γλυφ-εῖον, τό}
+\e{λᾰβ-ίς, ίδος, ἡ}
+\e{ἑλῐκο-κλειδίον, τό}
+\e{κόχλι-ας, ου, ὁ,}
+\ee{ἕλιξ, ῐκος, ἡ}
+\e{περικόχλιον, τό}
+\e{γόμφος, ὁ}
+\ee{ἧλος, ὁ}
+\e{ψᾰλ-ίς, ίδος, ἡ}
+\e{πέλεκῠς, εως, ὁ}
+\e{ῥῑν-η, ἡ}
+\e{τρύπᾰν-ον [ῡ], τό}
+\e{ἀερο-στάθμ-η [ᾱ], ἡ}
+\e{ῥῠκάν-η [ᾰ], ἡ}
+\e{κνώδαξ, ᾱκος, ὁ}
+\e{μοχλός, ὁ}
+\e{σμύρις, ιδος, ἡ}
+\e{ἄκμων, ονος, ὁ}
+\e{φῦσαι, ῶν, αἱ}
+\e{ἔχμα, ατος, τό}
+\e{ἠλεκτρῐκὸν τρύπᾰν-ον [ῡ], τό}
+\e{πρίων, πρίονος, ὁ}
+\e{βᾰρεῖα σφῦρᾰ, ἡ}
+\e{ὀδοντωτὸς τροχός, ὁ}
+\e{τόρν-ος, ὁ}
+\e{ἐργᾰλ-εῖον κασσῐτερο-κολλ-ήσεως, τό}
+\e{ἐλᾰτ-ήρ, ῆρος, ὁ}
+\e{πτυσσόμενον μέτρον, τό}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{αἱ μηχαναί}]
+{\renewcommand \thesubsection {\thesection} \index{μηχᾰν-ή, ἡ}}
+\e{γέρᾰνος, ἡ}
+\e{ἑλκ-υστικόν, τό}
+\e{ἄροτρον [ᾰ], τό}
+\e{ἐκ-σκᾰφεύς, έως, ὁ}
+\e{ἑρπ-υστικὸν ὄχ-ημα, ατος, τό}
+\e{μεταφορ-ικὸς ἱμάς, ἱμάντος, ὁ}
+\e{ὁδο-στρω-τήρ, ῆρος, ὁ}
+\e{ὑφαν-τικὸς ἱστός, ὁ}
+\e{μηχᾰν-ικὴ ῥῠκάν-η [ᾰ], ἡ}
+\e{θεριζο-αλωνιστικὴ μηχᾰν-ή, ἡ}
+\e{ἐκγλυπτ-ικὴ μηχᾰν-ή, ἡ} 
+\e{μ[ε]ιγνῦσα μηχᾰν-ή (λῐθο-κόλλης), ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ τεχνικὰ ὄργανα}]
+\e{λογιστ-ικὴ μηχᾰν-ή, ἡ}
+\ee{ὑπο-λογιστής, οῦ, ὁ}
+\e{ὀθόν-η, ἡ}
+\e{σκληρὸς δίσκος, ὁ}
+\e{πληκτρο-λόγ-ιον, τό}
+\e{διαποδιαμορφωτής, οῦ, ὁ}
+\e{μῠΐδιον, τό}
+\e{δισκ-άριον, τό}
+\e{ἠλεκτρονικὸν τᾰχῠδρομεῖον, τό}
+\e{τηλέ-φωνον, τό}
+\e{τηλέ-φων-ητής, οῦ, ὁ}
+\e{κῑν-ητὸν τηλέ-φωνον, τό}
+\e{ἐκ-τῠπ-ωτής, οῦ, ὁ}
+\e{φορ-ητὸς ὑπο-λογιστής, οῦ, ὁ}
+\e{ἐπεξ-εργᾰσ-τὴς ἐγγράφ-ου [ᾰ], οῦ, ὁ} 
+\ee{ἐπεξ-εργᾰσ-τὴς κειμένου, οῦ, ὁ}
+\e{τηλε-ομοιο-τῠπ-ικὴ μηχᾰν-ή, ἡ}
+\e{τηλε-ομοιό-τῠπον, τό}
+\ee{τηλε-ομοιο-τῠπία, ἡ}
+\e{φωνο-γράφος, ὁ}
+\e{ἀκτῑνο-φων-ικὸς δέκ-της, ου, ὁ}
+\e{καταγρᾰφ-εὺς εἰκονο-ταινιῶν, έως, ὁ}
+\e{τηλε-οπτ-ικὸς δέκ-της, ου, ὁ}
+\e{εἰκονο-ταινία, ἡ}
+\e{ὀρθὸς προβολ-εύς, έως, ὁ}
+\e{προβολ-εὺς διαφᾰν-ειῶν, έως, ὁ}
+\e{μικρο-σκόπιον, τό}
+\e{κῑν-ηματο-γρᾰφ-ικὴ μηχᾰν-ή, ἡ}
+\e{μαγνητο-φων-ικὸν κῐβώτ-ιον, τό}
+\e{κῑβωτο-ειδὲς μαγνητό-φωνον, τό}
+\ee{κῑβωτό-φωνον, τό}
+\e{φωτο-γρᾰφ-ικὴ μηχᾰν-ή, ἡ}
+\e{μικρό-φωνον, τό}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ γεωμετρικὰ σχήματα}]
+\e{κύκλος, ὁ}
+\e{ἔλλειψις, εως, ἡ}
+\e{τετράγων-ον [ᾰ], τό}
+\e{ὀρθο-γώνιον, τό}
+\e{τραπέζ-ιον, τό}
+\e{τρίγωνον [ῐ], τό}
+\e{ἑξάγωνον [ᾰ], τό}
+\e{ῥόμβος, ὁ}
+\e{παραλληλόγραμμον, τό}
+\e{γωνία, ἡ}
+\e{ἀκτίς [ῑ], ῖνος, ἡ}
+\e{διάμετρ-ος, ἡ}
+\e{κῠλινδρ-ος, ὁ}
+\e{κύβος [ῠ], ὁ}
+\e{πῡρᾰμίς, ίδος, ἡ}
+\e{κῶνος, ου, ὁ}
+\e{σφαῖρᾰ, ας, ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὸ ὡρολόγιόν τε καὶ ὁ χρόνος}]
+\e{ὡρολόγ-ιον χειρός, τό}
+\e{ὡρολόγ-ιον θῡλακ-ίου, τό}
+\e{ψηφιακὸν ὡρολόγ-ιον, τό}
+\e{ὡρολόγ-ιον τοίχου, τό}
+\e{πλάξ ὡρολογ-ίου, πλᾰκός, ἡ}
+\e{δείκ-της, ου, ὁ}
+\e{κρεμ-αστὸν ὡρολόγ-ιον, τό}
+\ee{ἐκκρεμ-ές, τό}
+\e{ἐκκρεμ-ές, τό}
+\e{χρονόμετρον, τό}
+\e{μηχᾰν-ὴ ὡρολογ-ίου, ἡ}
+\ee{μηχᾰνισμὸς ὡρολογ-ίου, ὁ}
+\e{γνώμων, ονος, ὁ}
+\ee{σκῐοθηρ-ικὸν ὡρολόγ-ιον, τό}
+\ee{σκῐοθήρ-ης, ου, ὁ}
+\ee{ἡλιο-τρόπιον, τό}
+\ee{ἡλιᾰκὸν ὡρολόγ-ιον, τό}
+\e{στᾰτὸν ὡρολόγ-ιον, τό}
+\e{λεπτόν, τό}
+\e{δεύτερον λεπτόν, τό}
+\e{ἐγερ-τικὸν ὡρολόγ-ιον, τό}
+\ee{ἐγερτήριον, τό}
+\ee{ἐξυπνήτηριον, τό}
+\e{ὥρα, ἡ}
+\e{ὀγδόη ὥρα τρῐᾱκοστὸν λεπτόν}
+\ee{ὀγδόη ὥρα καὶ ἡμίσεια}
+\e{δεκάτη [ᾰ] ὥρα πεντεκαι-δέκᾰτον λεπτόν}
+\ee{δεκάτη [ᾰ] ὥρα καὶ τέταρτον}
+\e{ἑβδόμη ὥρα πεμτὸν καὶ τεσσᾰρᾰκοστ-ὸν λεπτόν}
+\ee{ὀγδόη ὥρα παρὰ τέταρτον}
+\e{ἐνάτη [ᾰ] ὥρα εἰκοστὸν λεπτόν}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{ὁ ἠλεκτρισμός}]
+{\renewcommand \thesubsection {\thesection} \index{ἠλεκτρισμός, ὁ}}
+\e{ἠλεκτρῐκὸν ῥεῦμα, ατος, τό}
+\e{ἠλεκτρῐκὸς ἀγωγός, ὁ}
+\e{ἠλεκτρῐκὸς κάλως [ᾰ], κάλω, ὁ}
+\e{βύσμα, ατος, τό}
+\e{δοτ-ήρ, ῆρος, ὁ}
+\e{διακόπτης, ου, ὁ}
+\e{ἠλεκτρῐκὸς λαμπ-τήρ, ῆρος, ὁ}
+\e{ἠλεκτρῐκὸν φῶς, φωτός, τό}
+\e{ἅπτω, ἅψω, ἧψα, ἧμμαι, ἥφθην}
+\ee{ἀνάπτω}
+\e{σβέννῡμι, σβέσω, ἔσβεσα, ἔσβηκα, ἐσβέσθην, ἔσβην}
+\ee{ἀπο-σβέννῡμι}
+\ee{κατα-σβέννῡμι}
+\e{ἠλεκτρῐκὸς συσσωρευτής, οῦ, ὁ}
+\e{σῠνεχὲς ῥεῦμα, ατος, τό}
+\e{ἐναλλ-ασσόμενον ῥεῦμα, ατος, τό}
+\e{βόλτιον, τό}
+\e{βάττιον, τό}
+\e{ἀμπέρ, τό}
+\e{τριφᾰσικὸν ῥεῦμα, ατος, τό}
+\e{ἠλεκτρῐκὸν ἐργᾰσ-τήριον, τό}
+\ee{ἠλεκτρῐκὸς σταθμός, ὁ}
+\e{μετρ-ητὴς ῥεύματος, οῦ, ὁ}
+\e{ἐνᾱέριος ἀγωγός, ὁ}
+\e{ἠλεκτρῐκὸς στῦλος τῆς ὑψηλῆς τάσεως [ᾰ], ὁ}
+\e{φᾱνός, ὁ}
+\e{στῦλος τοῦ φᾱνοῦ, ὁ}
+\ee{φᾱνοστᾰτ-ης, ου, ὁ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ὄργανα μεταδόσεως (α')}]
+{\renewcommand \thesubsection {\thesection} \index{ὄργανα μετα-δόσεως, τά}}
+\e{ὑπερ-βρᾰχῆ κύματα [ῡ], τά}
+\e{βρᾰχῆ κύματα [ῡ], τά}
+\e{μέσα κύματα [ῡ], τά}
+\e{μᾰκρὰ κύματα [ῡ], τά}
+\e{τηλε-όρ-ᾱσις, ἡ}
+\e{ἀκτῑνο-φωνία, ἡ}
+\e{τηλε-οπτ-ικὸς δέκ-της, ου, ὁ}
+\e{τηλε-οπτ-ικὸν πρόγραμμα, ατος, τό}
+\e{τηλε-θεᾱτ-ής, οῦ, ὁ}
+\e{ἀκτῑνο-φων-ικὸς δέκ-της, ου, ὁ}
+\e{καθοδ-ικὸς σωλήν, ῆνος, ὁ}
+\e{κεραία, ἡ}
+\e{πομπ-ός, ὁ}
+\e{νέα, τά [ἀκτῑνο-φων-ικά / τηλε-οπτ-ικά]} 
+\ee{ἀγγελία, ἡ [ἀκτῑνο-φων-ική / τηλε-οπτ-ική]} 
+\e{ἄγγελος, ἡ [ἀκτῑνο-φων-ική / τηλε-οπτ-ική]}      
+\ee{ἄγγελος, ὁ [ἀκτῑνο-φων-ικος / τηλε-οπτ-ικός]}
+\e{μικρό-φωνον, τό}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ὄργανα μεταδόσεως (β')}]
+{\renewcommand \thesubsection {\thesection} \index{ὄργανα μετα-δόσεως, τά}}
+\e{τῠπογρᾰφία, ἡ}
+\e{βύβλος ἢ βίβλος, ἡ}
+\ee{βιβλίον ἢ βυβλίον, τό}
+\e{σελίς, ίδος, ἡ}
+\e{δερματό-δετος βίβλος, ἡ}
+\e{σκληρό-δετος  βίβλος, ἡ}
+\e{χαρτό-δετος βίβλος, ἡ}
+\e{ἐξώ-φυλλον, τό}
+\e{σελὶς ἐπιγρᾰφ-ῆς, ίδος, ἡ}
+\e{ἐφημερ-ίς, ίδος, ἡ}
+\e{ἑβδομ-ᾰδικὴ ἔκ-δοσις, εως, ἡ}
+\e{γράμμα, ατος, τό}
+\e{κεφάλαι-ον [ᾰ] γράμμα, ατος, τό}
+\e{μικρὸν γράμμα, ατος, τό}
+\e{συγγρᾰφ-εύς, έως, ὁ, ἡ}
+\e{ἔκ-δοσις, εως, ἡ}
+\e{τῠπ-ογρᾰφ-εῖον, τό}
+\e{ἐκ-δοτ-ικὸς οἶκος, ὁ}
+\e{κύριον [ῡ] [τῆς ἐφημερ-ίδος] ἄρθρον, τό}
+\e{βιβλιο-δέτης, ου, ὁ}
+\e{δημοσιο-γράφος [ᾰ], ὁ, ἡ}
+\ee{ἐφημεριδο-γράφος [ᾰ], ὁ, ἡ}
+\e{σῠν-τάκ-της, ου, ὁ}
+\ee{σῠν-τάκ-τρια, ἡ}
+\e{ἀρχι-σῠν-τάκ-της, ου, ὁ}
+\e{περιοδ-ικὸν σύγ-γραμμα, ατος, τό}
+\ee{περιοδ-ικόν, τό}
+\e{γρᾰφ-ή, ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ὄργανα μεταδόσεως (γ')}]
+{\renewcommand \thesubsection {\thesection} \index{ὄργανα μετα-δόσεως, τά}}
+\e{φωτο-γρᾰφ-ικὴ μηχᾰν-ή, ἡ}
+\e{εἰκών, όνος, ἡ}
+\ee{φωτο-γρᾰφ-ημα, ατος, τό}
+\e{φωτο-γράφος [ᾰ], ὁ}
+\e{φωτο-γρᾰφ-ικὸν τρῐπόδ-ιον, τό}
+\e{κῑν-ηματο-γρᾰφ-ικὴ μηχᾰν-ή, ἡ}
+\e{κῑν-ηματο-γρᾰφ-ικὸς προβολ-εύς, έως, ὁ}
+\e{στερεο-φων-ικὸν  συγκρότ-ημα, ατος, τό}
+\e{σκηνῐκ-ὸν σύγ-γραμμα, ατος, τό}
+\e{φωνο-γράφος, ὁ}
+\ee{γραμμό-φωνον, τό}
+\e{φωνο-γρᾰφ-ικὸς δίσκος, ὁ}
+\e{σύμ-πηκτος δίσκος, ὁ}
+\ee{ὀπτ-ικὸς δίσκος, ὁ}
+\ee{ψηφιακὸς δίσκος, ὁ}
+\e{κῑν-ηματο-γρᾰφ-ικὴ ταινία, ἡ}
+\e{εὐρεῖα [κῑν-ηματο-γρᾰφ-ικὴ] ταινία, ἡ}
+\e{στενὴ [κῑν-ηματο-γρᾰφ-ικὴ] ταινία, ἡ}
+\e{κῑν-ηματο-γρᾰφ-ικὸν τεχν-ύφιον, τό}
+\e{ὑπο-κρῐτής, οῦ, ὁ}
+\ee{μῖμος, ου, ὁ}
+\ee{ὑπο-κρίτρια, ἡ}
+\e{κῑν-ηματο-γρᾰφ-ικὴ ἐγγρᾰφ-ή, ἡ}
+\e{εἰσᾰγωγ-εύς, έως, ὁ}
+\ee{σκηνοθέτ-ης, ου, ὁ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ τυπογραφικά}]
+\e{σελίς, ίδος, ἡ}
+\e{ἐπιγρᾰφ-ή, ἡ}
+\e{κράσπεδ-ον, τό}
+\e{κῶλον, τό}
+\e{γραμμή, ἡ}
+\e{γράμμα, ατος, τό}
+\e{κεφάλαι-ον [ᾰ] γράμμα, ατος, τό}
+\e{μικρὸν γράμμα, ατος, τό}
+\e{στιγ-μή, ἡ}
+\ee{τελεία [στιγ-μή], ἡ}
+\e{διαστολ-ή, ἡ}
+\e{Λᾰτίνὴ [ῑ] ἄνω τελεία, ἡ}
+\e{διπλὴ στιγ-μή, ἡ}
+\ee{δύο στιγ-μαι, αἱ}
+\ee{ἄνω καὶ κάτω τελεία, ἡ}
+\e{παῦλα, ἡ}
+\subsection{Λᾰτῑνον ἐρωτ-ηματικόν, τό}
+\index{λᾰτῑνον ἐρωτ-ηματικόν, τό@Λᾰτῑνον ἐρωτ-ηματικόν, τό}
+\e{θαυμ-αστικόν, τό}
+\e{εἰσᾰγωγ-ικά, τά}
+\e{λόγος, ὁ}
+\e{λέξις, εως, ἡ}
+\e{πλᾰγία γρᾰφ-ή, ἡ}
+\e{ἔντον-ος γρᾰφ-ή, ἡ}
+\e{σημεί-ωσις, εως, ἡ}
+\ee{ὑποσημεί-ωσις, εως, ἡ}
+\ee{παρασημεί-ωσις, εως, ἡ}
+\e{ὀξὺς τόν-ος, ὁ}
+\ee{ὀξεῖα κεραία, ἡ}
+\e{βᾰρὺς τόν-ος, ὁ}
+\ee{βᾰρεῖα κεραία, ἡ}
+\e{περι-σπώμενος τόν-ος, ὁ}
+\ee{περι-σπωμένη κεραία, ἡ}
+\e{ψῑλὸν πνεῦμα, ατος, τό}
+\e{δᾰσὺ πνεῦμα, ατος, τό}
+\e{μέση στιγ-μή, ἡ}
+\e{ὑπερτελεία στιγ-μή, ἡ}
+\ee{ἐρωτ-ηματικόν, τό}
+\setlength{\unitlength}{5cm}
+\begin{picture}(1, .4)
+\put(0,0){22}
+\put(0,.15){\Huge ά}
+\put(0,.15){\Huge \textcolor{lightgray}{α}}
+\put(0.15,0){23}
+\put(0.15,.15){\Huge ὰ}
+\put(0.15,.15){\Huge \textcolor{lightgray}{α}}
+\put(0.3,0){24}
+\put(0.3,.15){\Huge ᾶ}
+\put(0.3,.15){\Huge \textcolor{lightgray}{α}}
+\put(0.45,0){25}
+\put(0.45,.15){\Huge ἀ}
+\put(0.45,.15){\Huge \textcolor{lightgray}{α}}
+\put(0.6,0){26}
+\put(0.6,.15){\Huge ἁ}
+\put(0.6,.15){\Huge \textcolor{lightgray}{α}}
+\put(0.75,0){27}
+\put(0.75,.15){\Huge ·}
+\put(0.9,0){28}
+\put(0.9,.15){\Huge ;}
+\end{picture}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{ἡ τράπεζά τε καὶ τὸ ἀργύριον}]
+\e{τράπεζ-α [τρᾰ], ης, ἡ}
+\e{τρᾰπεζῑτ-ης, ου, ὁ}
+\e{τρᾰπεζῑτ-ικὴ θῠρὶς, ίδος, ἡ}
+\e{λογᾰρ-ιασμός κατα-θέσεων, ὁ}
+\e{τρᾰπεζῑτ-ικὸν βιβλ-άριον, τό}
+\e{νόμ-ισμα, ατος, τό}
+\ee{κέρμα, ατος, τό}
+\e{χαρτο-νόμ-ισμα, ατος, τό}
+\e{τόκος, ὁ}
+\e{τρᾰπεζῑτ-ικὴ ἐπι-τᾰγή, ἡ}
+\e{ὑποθήκ-η, ἡ}
+\e{μετοχ-ή, ἡ}
+\e{χρεώ-γρᾰφ-ον, τό}
+\ee{χρημᾰτό-γρᾰφ-ον, τό}
+\e{λογᾰρ-ιασμός, ὁ}
+\e{ἀποχή, ἡ}
+\ee{ἄφεσις, εως, ἡ}
+\ee{ἀπόδειξις, εως, ἡ}
+\e{οἰκονομ-ικὸς κύκλος, ὁ}
+\e{οἰκονομ-ικὴ τάσις [ᾰ], εως, ἡ}
+\e{δάν-ειον [ᾰ], τό}
+\e{διάθεσις χρημάτων [ᾰ], εως, ἡ}
+\e{ξένον νόμ-ισμα, ατος, τό}
+\e{χρημᾰτο-κῐβώτ-ιον, τό}
+\e{προθεσμία κατά-θεσις, εως, ἡ}
+\e{προθεσμία κατά-θεσις, εως, ἡ}
+\e{χρημᾰτ-ιστήριον, τό}
+\e{χρημᾰτ-ιστής, οῦ, ὁ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{ἡ οἰκονομία τε καὶ ἡ ἀσφάλεια (α')}]
+\e{ἀσφάλ-εια [φᾰ] κατὰ τῶν ἀτῠχ-ημάτων, ας, ἡ}
+\e{ἀσφάλ-εια [φᾰ] ὑγιείας [ῠ], ας, ἡ}
+\e{κοινων-ικὴ ἀσφάλ-εια [φᾰ], ας, ἡ}
+\e{ὀχ-ημᾰτῐκὴ ἀσφάλ-εια [φᾰ], ας, ἡ}
+\e{ἀσφάλ-εια [φᾰ] κατὰ τῆς κλοπ-ῆς, ας, ἡ}
+\e{ἀσφάλ-εια [φᾰ] ζωῆς, ας, ἡ}
+\e{ἐμπορ-ία, ἡ}
+\e{κᾰπηλ-εία, ἡ}
+\e{τῑμ-ή, ἡ}
+\ee{ἀξία, ἡ}
+\e{κέρδος, εος, τό}
+\ee{ὠφέλ-εια, ἡ}
+\e{ζημία, ἡ}
+\ee{βλάβ-η [ᾰ], ἡ}
+\e{ἐλάττ-ωσις τῆς τῑμ-ῆς, εως, ἡ}
+\e{παρά-δοσις, εως, ἡ}
+\e{ἀπό-δοσις, εως, ἡ}
+\ee{καταβολ-ή, ἡ}
+\e{ἐμπορ-ική, ἡ}
+\e{διαφήμισις, εως, ἡ}
+\e{ἐμπορ-ικὸς ἀγων-ισμός, ὁ}
+\ee{ἀντᾰγωνιστικ-ότης, ητος, ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{ἡ οἰκονομία τε καὶ ἡ ἀσφάλεια (β')}]
+\e{τελεί-ωσις τοῦ κρίματος, εως, ἡ}
+\e{ἐργᾰτ-ης, ου, ὁ}
+\ee{ἐργᾰζόμενος, ὁ}
+\e{μισθο-δότης, ου, ὁ}
+\ee{ἐργοδότ-ης, ου, ὁ}
+\e{ὑπὸ σύνταξιν κατάταξις, εως, ἡ}
+\e{προ-στᾰσία τῇ ἀπο-λύσει [ῠ], ἡ}
+\e{ἀπό-λῠσις, εως, ἡ}
+\e{μετοχ-ή κέρδους, ἡ}
+\e{σύνοδος τῶν μετόχων, ἡ}
+\e{κοινο-πρᾱγία, ἡ}
+\e{χρεωκοπ-ία, ἡ}
+\ee{πτωχ-ευσις, εως, ἡ}
+\e{ἐμπορ-ικὴ συμπλοκή, ἡ}
+\e{κοινων-ικὴ παροχ-ή, ἡ}
+\e{συλλογ-ῐμαία σύμβᾰσις, εως, ἡ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ πολιτικά (α')}]
+\e{βουλή, ἡ}
+\ee{κοινοβούλ-ιον, τό}
+\e{βουλ-ευτής, οῦ, ὁ}
+\e{ὑπουργ-ός, ὁ, ἡ}
+\e{κῠβέρν-ησις, εως, ἡ}
+\e{πρωθ-υπουργ-ός, ὁ}
+\e{πρόεδρ-ος κοινοβουλ-ίου, ὁ}
+\e{ὑπουργ-ὸς τῶν ἐσωτερικῶν, ὁ}
+\e{ὑπουργ-ὸς τῶν ἐξωτερικῶν, ὁ}
+\e{ὑπουργ-ὸς τῆς δημοσίας ἐκπαιδ-εύσεως, ὁ}
+\e{ὑπουργ-ὸς τῆς οἰκονομ-ίας, ὁ}
+\e{ὑπουργ-ὸς τῆς γεωργ-ίας, ὁ}
+\e{ὑπουργ-ὸς τῶν οἰκονομ-ικῶν, ὁ}
+\e{αἵρεσις, εως, ἡ}
+\ee{ἐκλογ-ή, ἡ}
+\e{ψηφοφορ-ία, ἡ}
+\e{νόμος, ὁ}
+\e{νομο-θεσία, ἡ}
+\e{λογο-θέτης, ου, ὁ}
+\ee{καγκελλάριος, ὁ}
+\e{τέλος, εος, τό}
+\ee{φόρος, ὁ}
+\ee{δασμός, ὁ}
+\e{πολῑτ-ῐκὴ μερ-ίς, ίδος, ἡ}
+\ee{φρατρία, ἡ}
+\ee{πολῑτ-ῐκὸν κόμμα, ατος, τό}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ πολιτικά (β')}]
+\e{συντεχν-ία, ἡ}
+\e{ἀπεργία, ἡ}
+\e{πολῑτ-ῐκὸς σύλλογ-ος, ὁ}
+\ee{δια-δήλ-ωσις, εως, ἡ}
+\e{πολῑτ-ῐκὴ ἔρευν-α, ης, ἡ}
+\ee{δημο-σκόπ-ευσις, εως, ἡ}
+\e{ἀπογρᾰφ-ή, ἡ}
+\e{παραγγ-έλλων, οντος, ὁ}
+\ee{ὑπόψηφος, ὁ}
+\e{παραχώρ-ησις, εως, ἡ}
+\ee{ἀπόθεσις, εως, ἡ}
+\e{δήμαρχ-ος, ὁ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ἱστορικά (α')}]
+\e{ἱερόν, τό}
+\ee{νεώς, ώ, ὁ}
+\ee{νᾱός, ὁ}
+\e{κίων [ῑ], ονος, ἡ}
+\ee{στῦλος, ὁ}
+\e{κῑόκρᾱνον, τό}
+\ee{κῑονό-κρᾱνον, τό}
+\e{ὑδρᾰγώγ-ιον, τό}
+\ee{ὑδρᾰγωγ-ία, ἡ}
+\e{θρῐαμβ-ικὴ πύλη [ῠ], ἡ}
+\ee{τροπαιοφόρ-ος ἁψίς, ῖδος, ἡ}
+\e{ἀμφορ-εύς, έως, ὁ}
+\e{λᾰβύρινθ-ος [ῠ], ὁ}
+\e{ψηφο-θέτημα, ατος, τό}
+\ee{ψηφο-λόγημα, ατος, τό}
+\subsection{Ῥωμ-αῖος, ὁ}
+\index{ῥωμ-αῖος, ὁ, τό@Ῥωμ-αῖος, ὁ}
+\e{τήβεννα, ἡ}
+\ee{τήβεννος, ἡ}
+\e{ἀμφιθέατρον, τό}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ἱστορικά (β')}]
+\e{φρούρ-ιον, τό}
+\ee{ὀχῠρ-ωμα, ατος, τό}
+\e{πύργος, ὁ}
+\e{περιαιρ-ετὴ γέφῡρα, ἡ}
+\e{ξίφος [ῐ], εος, τό}
+\e{ἱππ-εύς, έως, ὁ}
+\e{τόξ-ευμα, ατος, τό}
+\ee{βέλος, εος, τό}
+\e{τόξον, τό}
+\e{τοξότης, ου, ὁ}
+\e{βᾰσῐλ-εύς, έως, ὁ}
+\e{αὐλικός, ὁ}
+\e{μονᾰχ-ός, ὁ}
+\e{φορ-εῖον, τό}
+\e{μετέωρον ὄχ-ημα, ατος, τό}
+\e{μοναστήριον, τό}
+\e{βᾰσίλ-ειον τῆς ἀναγενν-ήσεως, τό}
+\ee{βᾰσίλ-εια τῆς ἀναγενν-ήσεως, τά}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{ὁ οἶκος}]
+{\renewcommand \thesubsection {\thesection} \index{οἶκος, ὁ}}
+\e{γῠνή, γυναικός, ἡ}
+\e{ἀνήρ, ἀνδρός, ὁ}
+\e{γραῦς, γρᾱός, ἡ}
+\ee{πρεσβ-ῦτις, ιδος, ἡ}
+\e{γέρων, οντος, ὁ}
+\ee{πρεσβ-ύτης [ῡ], ου, ὁ}
+\e{γῠνή, γυναικός, ἡ}
+\ee{γᾰμετ-ή, ἡ}
+\ee{παρά-κοιτῐς, ῐος, ἡ}
+\e{ἀνήρ, ἀνδρός, ὁ}
+\ee{γᾰμέτ-ης, ου, ὁ}
+\e{μήτηρ, μητρός, ἡ}
+\e{πᾰτήρ, πατρός, ὁ}
+\e{θῠγάτηρ [ᾰ], θυγατρός, ἡ}
+\e{υἱός, ὁ}
+\e{ἀδελφ-ή [ᾰ], ἡ}
+\e{ἀδελφός [ᾰ], ὁ}
+\e{παῖς, παιδός, ὁ}
+\ee{κόρος, ὁ}
+\e{παῖς, παιδός, ἡ}
+\ee{κόρη, ἡ}  
+\e{ἀνεψι-ός, ὁ}
+\e{ἀνεψι-ά, ἡ}
+\e{θεία πρὸς μητρός, ἡ}
+\ee{τηθὶς πρὸς μητρός, ίδος, ἡ}
+\ee{ἀδελφ-ὴ [ᾰ] τῆς μητρός, ἡ}
+\e{μητρ-άδελφος [ᾰδ], ὁ}
+\ee{θεῖος πρὸς μητρός, ὁ}
+\ee{ἀδελφ-ὸς [ᾰ] τῆς μητρός, ὁ}
+\e{θεία πρὸς πατρός, ἡ}
+\ee{τηθὶς πρὸς πατρός, ίδος, ἡ}
+\ee{ἀδελφ-ὴ [ᾰ] τῆς πατρός, ἡ}
+\e{πατρ-άδελφος [ᾰδ], ὁ}
+\ee{θεῖος πρὸς πατρός, ὁ}
+\ee{ἀδελφ-ὸς [ᾰ] τοῦ πατρός, ὁ}
+\e{πενθερ-ά, ἡ}
+\e{γαμβρός, ὁ}
+\e{πενθερός, ὁ}
+\e{γῠνὴ τοῦ υἱοῦ, γυναικός, ἡ}
+\ee{νῠός, ἡ}
+\ee{νύμφ-η, ἡ}
+\e{πάππος, ὁ}
+\e{υἱων-ός [ἐκ τοῦ υἱοῦ], ὁ}
+\ee{υἱιδεύς [ἐκ τοῦ υἱοῦ], έως, ὁ}
+\ee{υἱιδοῦς [ἐκ τοῦ υἱοῦ], οῦ, ὁ}
+\ee{θῠγατρ-ῐδοῦς [ἐκ τῆς θυγατρός], οῦ, ὁ}
+\ee{υἱὸς ἐκ τοῦ υἱοῦ ἢ ἐκ τῆς θυγατρός, ὁ}
+\e{μήτηρ τοῦ πατρὸς ἢ τῆς μητρός}
+\ee{μεγᾰλο-μήτηρ, ἡ}
+\ee{μάμμη, ἡ}
+\ee{τήθη, ἡ}
+\e{υἱων-ή [ἐκ τοῦ υἱοῦ], ἡ}
+\ee{θῠγατρ-ῐδῆ, ἡ}
+\e{μήτηρ τοῦ πάππου, ἡ}
+\ee{προμάμμη, ἡ}
+\e{πρόπαππος, ὁ}
+\e{προδρομ-εγγόνη, ἡ}
+\e{προέγγονος, ὁ}       
+\ee{προϋιωνός, ὁ}
+~
+\end{multicols}
+\newpage  
+\begin{multicols}{2}[\section{τὰ ὑπερφυῆ τε καὶ τὰ τῆς φαντασίας}]
+\e{φαρμᾰκ-ίς, ίδος, ἡ}
+\ee{φαρμᾰκ-εύτρια, ἡ}
+\ee{μάγος, ἡ}
+\ee{ἐπῳδ-ός, ἡ}
+\e{δαίμων, ονος, ἡ}
+\ee{νύμφ-η, ἡ} ~\\
+{Νηρηΐς ἢ Νηρεΐς, ΐδος, ἡ} ~\\
+\index{νηρηΐς ἢ νηρεΐς, ΐδος, ἡ@Νηρηΐς ἢ Νηρεΐς, ΐδος, ἡ}
+Ναϊ-άς, άδος, ἡ ~\\
+\index{ναϊ-άς, άδος, ἡ@Ναϊ-άς, άδος, ἡ}
+\e{μονο-κέρως, ω, ὁ}
+\subsection{Λάμιᾰ [ᾰ], ἡ}
+\index{λάμιᾰ [ᾰ], ἡ@Λάμιᾰ [ᾰ], ἡ}
+\ee{βδέλλ-ᾰ, ἡ}
+\e{μάγος, ὁ}
+\e{ἄγγελος, ὁ}
+\e{διάβολ-ος, ὁ}
+\subsection{Γίγας [ῐ], αντος, ὁ}
+\index{γίγας [ῐ], αντος, ὁ@Γίγας [ῐ], αντος, ὁ}
+\subsection{Γοργάς, άδος, ἡ}
+\index{γοργάς, άδος, ἡ@Γοργάς, άδος, ἡ} ~\\
+Σειρήν, ῆνος, ἡ
+\index{σειρήν, ῆνος, ἡ@Σειρήν, ῆνος, ἡ}
+\subsection{Πήγᾰσος, ὁ}
+\index{πήγᾰσος, ὁ@Πήγᾰσος, ὁ}
+\e{νᾶνος, ὁ}
+\e{φάσμα, ατος, τό}
+\ee{φάντᾰσ-μα, ατος, τό}
+\e{δράκων [ᾰ], οντος, ὁ}
+~
+\end{multicols}
+\newpage
+\thispagestyle{plain}
+\phantomsection
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\indexname}
+\thispagestyle{plain}
+\printindex
+
+
+
+\end{document} 
+
+

@@ -1,0 +1,5 @@
+xelatex lexicon
+sed -i "s/-//g" lexicon.idx
+xindy -C utf8 -M texindy -M page-ranges -M RL_module.xdy -I latex lexicon.idx
+xelatex lexicon
+
