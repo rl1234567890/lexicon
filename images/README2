@@ -1,0 +1,11 @@
+#! /bin/csh
+
+# pdftk ../lexicon.pdf burst
+
+foreach i (`count 1 254`)
+  set seq = `num2seq -n 4 ${i}`
+  echo $seq
+  convert -flatten -density 300 lexicon_${seq}.pdf lexicon_${seq}.jpg
+end
+
+

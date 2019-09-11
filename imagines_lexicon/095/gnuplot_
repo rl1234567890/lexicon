@@ -1,0 +1,9 @@
+set term post color 22 enhanced  linewidth 2  fontfile '/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb'
+
+set out "waves.ps"
+set samples 10000
+unset border
+unset tics
+unset title
+
+plot [0:pi] sin(10*x) notitle, sin(20*x)+2.2 notitle, sin(40*x)+4.4 notitle, sin(80*x)+6.6 notitle

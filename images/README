@@ -1,0 +1,23 @@
+#! /bin/csh
+
+# pdftk ../lexicon.pdf burst
+ pdftk A=../lexicon.pdf B=../imagines_lexicon/001/001.pdf cat A1-9 B output tmp.pdf 
+
+foreach i (`count 2 107 2`)
+  set seqe = `num2seq ${i}`
+  set j = `calc ${i} + 1`
+  set seqo = `num2seq ${j}`
+  set pe = `calc ${i}+ 10`
+  set po = `calc ${i}+ 9`
+#    pdftk A=tmp B=/Users/lionel/Greek/imagines_lexicon/${seq}/${seq}.pdf
+#  echo $i, $j
+#  echo $seqe, $seqo
+  pdftk C=tmp.pdf A=../imagines_lexicon/${seqe}/${seqe}.pdf \
+  B=../imagines_lexicon/${seqo}/${seqo}.pdf \
+  D=../lexicon.pdf cat C D${po}-${pe} A B output tmp1.pdf
+  \mv tmp1.pdf tmp.pdf
+#  echo $pe, $po
+end
+
+
+ pdftk A=../lexicon.pdf B=tmp.pdf cat B A117-148 output lexicon.pdf 
